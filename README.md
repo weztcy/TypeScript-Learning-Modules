@@ -1,746 +1,767 @@
 # TypeScript Learning Modules
 
-[![Language](https://img.shields.io/badge/Language-TypeScript_5+-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Runtime](https://img.shields.io/badge/Runtime-Node.js_v22+-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Runner](https://img.shields.io/badge/Runner-tsx_4.23-black?logo=typescript&logoColor=white)](https://github.com/privatenumber/tsx)
-[![Curriculum](https://img.shields.io/badge/Curriculum-18_Modules_%7C_300_Lessons-brightgreen)](./TypeScript_modules.md)
-[![Pedagogy](https://img.shields.io/badge/Level-Beginner_to_Advanced-orange)](./TypeScript_modules.md)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-ES2022%20%7C%20v7.0%2B-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20%2B%20LTS-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Execution Runner](https://img.shields.io/badge/Runner-tsx%20v4.23%2B-blueviolet)](https://github.com/privatenumber/tsx)
+[![Modules](https://img.shields.io/badge/Modules-18%20Comprehensive-007ACC)](#learning-roadmap)
+[![Code Examples](https://img.shields.io/badge/Code%20Examples-300%20Programs-blue)](#learning-modules--subtopics)
+[![Execution Outputs](https://img.shields.io/badge/Verified%20Outputs-300%20Captures-brightgreen)](#learning-modules--subtopics)
+[![Curriculum Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-orange)](#learning-roadmap)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ![TypeScript Learning Modules Banner](./screenshots/banner.png)
 
 ## Project Description
 
-**TypeScript Learning Modules** is a comprehensive, production-grade programming curriculum and executable code repository designed to guide learners from fundamental TypeScript syntax to enterprise-level architecture. Comprising **18 structured pedagogical modules** and **300 self-contained, executable lessons**, this repository provides an exhaustive, hands-on path for mastering modern TypeScript.
+**TypeScript Learning Modules** is a comprehensive, production-grade educational curriculum and code learning repository engineered to guide learners from fundamental type annotations to advanced type-level metaprogramming and enterprise full-stack software architecture. Built on modern **ECMAScript (ES2022 / ESNext)** and powered by the high-performance **Node.js** runtime and **tsx** execution engine, this curriculum systematically explores every dimension of TypeScript: syntax primitives, memory models, first-class functions, composite collections, structural typing, discriminated unions, generic programming, mapped and conditional types, object-oriented design patterns, modular project architectures, asynchronous concurrency pipelines, browser DOM manipulation, backend services with Express 5, database integrations, automated testing, application security, and full-featured capstone systems.
 
-Each lesson in the curriculum is paired with concrete problem definitions, fully typed source implementations, and verified terminal execution output captures stored in dedicated `output/` folders. Topics progress systematically through fundamental type systems, control flow analysis, functional abstractions, generics, mapped and conditional types, object-oriented design patterns, module systems, asynchronous workflows, DOM manipulation, backend services with Node.js and Express, schema validation with Zod, automated testing with Vitest/Jest, defensive security practices, and culminate in full-scale capstone projects.
+The repository is architected around **300 self-contained, standalone single-file TypeScript programs** structured into **18 pedagogical modules**. Every single lesson isolates a concrete language mechanism, type-level computation, or architectural pattern without burdensome boilerplate or convoluted project configurations. Every file is executable directly via `npx tsx <filename>.ts` and features informative educational inline commentary clarifying every critical line of code. Furthermore, each lesson includes an authentic terminal execution screenshot captured under its module's `output/` directory, allowing learners to verify their local execution results directly against known baselines.
 
-Whether you are a developer transitioning from JavaScript seeking static type safety or an experienced engineer refining advanced type manipulation and Clean Architecture skills, this repository serves as both an end-to-end learning path and a comprehensive desktop reference.
-
----
+Whether you are a newcomer building foundational programming intuition, a JavaScript developer transitioning to static typing, or an experienced backend engineer architecting scalable enterprise systems, this repository provides a rigorous, transparent, and verifiable path toward complete TypeScript mastery.
 
 ## Learning Objectives
 
-Learners studying this curriculum will develop verified, production-ready competencies across modern TypeScript development:
+Upon completing this curriculum, learners will have developed concrete, verified proficiencies across four distinct pedagogical tiers:
 
-- **Static Typing & Foundational Syntax**: Master type annotations, type inference, strict null checks (`strict: true`), primitive types (`string`, `number`, `boolean`, `bigint`, `symbol`), and special utility types (`unknown`, `never`, `void`, `any`).
-- **Control Flow & Modern Operators**: Leverage Control Flow Analysis (CFA), nullish coalescing (`??`), optional chaining (`?.`), bitwise operations, exhaustive switch matching with `never`, and complex looping algorithms.
-- **Functions & Functional Paradigms**: Architect robust function signatures using return type annotations, optional/default/rest parameters, function overloads, closures, contextual `this`, and custom type assertion functions.
-- **Data Structures & Domain Modeling**: Construct structured data schemas using readonly arrays, fixed-size named tuples, custom object models, index signatures, type aliases, interfaces, and numeric/string enums.
-- **Type Narrowing & Discriminated Unions**: Build type-safe application logic with discriminated unions, user-defined type guards (`is`), equality/truthiness narrowing, the `satisfies` operator, and branded (nominal) types.
-- **Generics & Generic Abstractions**: Design highly reusable APIs with generic functions, classes, interfaces, generic constraints (`extends`), keyof/typeof operators, and indexed access types (`T[K]`).
-- **Advanced Type Systems**: Formulate complex type-level computations using conditional types (`infer`), mapped types with property modifiers (`+readonly`, `-?`), key remapping (`as`), template literal types, recursive JSON types, and standard utility types (`Partial`, `Pick`, `Omit`, `Record`, `Awaited`, etc.).
-- **Object-Oriented Architecture**: Implement robust OOP systems with access modifiers (`public`, `private`, `protected`), parameter properties, abstract classes, inheritance, polymorphism, composition, and parameter decorators.
-- **Module Architecture & Project Configuration**: Configure enterprise TypeScript environments using ECMAScript modules, ambient declarations (`declare module`, `.d.ts`), path aliases, project references, and fine-tuned `tsconfig.json` compiler flags.
-- **Asynchronous Engineering & Robust Error Handling**: Manage concurrent asynchronous operations via Promises, `async/await`, `AbortController`, typed Fetch pipelines, exponential retry strategies, custom error hierarchies, and functional `Result<T, E>` pattern modeling.
-- **Browser DOM & Frontend Engineering**: Manipulate browser elements with typed DOM hierarchies, event listener contracts, programmatic form validation, Web Storage APIs, Web Workers, WebSockets, and HTML5 Canvas.
-- **Backend Services & Tooling**: Develop typed Node.js backends utilizing file system promises, streams, `EventEmitter`, cryptographic hashing, worker threads, Express.js REST APIs with routing middleware, Prisma ORM, and runtime schema validation with Zod.
-- **Testing, Security & Quality Assurance**: Write automated test suites using Vitest and Jest, perform compile-time type testing, enforce linting and formatting with ESLint/Prettier, prevent security vulnerabilities (XSS, path traversal), and model JWT authentication and Role-Based Access Control (RBAC).
-- **Full-Stack Capstone Implementation**: Synthesize all curriculum concepts into end-to-end enterprise applications implementing Clean Architecture, repository patterns, business state mutation guards, and analytical dashboards.
+### Tier 1: Syntax Primitives, Type Annotations, and Imperative Foundations (Modules 01-05)
+- Master TypeScript program anatomy, compilation and execution lifecycles (`tsc`, `tsx`), developer console formatting, and strict type checking (`strict: true`).
+- Understand variable declarations (`let`, `const`, `var`), lexical scoping, temporal dead zones (TDZ), and explicit type annotations across primitive types (`string`, `number`, `boolean`, `bigint`, `symbol`, `null`, `undefined`).
+- Leverage top and bottom types (`any`, `unknown`, `never`, `void`), compiler type inference, and exact value literal types.
+- Implement arithmetic, assignment, relational, logical, and bitwise operations, utilizing nullish coalescing (`??`), optional chaining (`?.`), runtime type inspection (`typeof`, `instanceof`, `in`), and compiler Control Flow Analysis (CFA).
+- Build iterative workflows (`for`, `while`, `do...while`, `for...of`, `for...in`), nested loops, loop jump statements (`break`, `continue`), and numerical algorithms (factorials, primes, Fibonacci).
+- Modularize logic with function declarations, expressions, arrow functions, optional/default parameters, rest parameters (`...args`), function overloads, higher-order functions (HOFs), closures, explicit `this` parameters, and assertion functions (`asserts`).
 
----
+### Tier 2: Data Modeling, Composite Structures, and Type Narrowing (Modules 06-08)
+- Manipulate typed arrays, enforce immutability with `readonly T[]` and `ReadonlyArray<T>`, and execute functional transformations (`map`, `filter`, `reduce`, `sort`).
+- Model fixed-length positional sequences using tuples, labeled named tuples, and optional tuple elements.
+- Construct complex domain models using object literals, explicit type annotations, destructuring, `readonly` fields, dynamic index signatures, and excess property checks.
+- Master structural typing using type aliases (`type`) and interfaces (`interface`), callable signatures, interface inheritance (`extends`), declaration merging, and numeric/string/const enums.
+- Synthesize flexible types using union types (`|`) and intersection types (`&`), and implement robust pattern matching with tagged discriminated unions.
+- Refine types dynamically using built-in type guards, custom user-defined type guards with type predicates (`is`), equality/truthiness narrowing, and compile-time exhaustiveness checking with `never`.
+- Apply modern type enforcement utilities including the `satisfies` operator, type assertions (`as`), `const` assertions (`as const`), non-null assertions (`!`), and branded nominal types.
+
+### Tier 3: Advanced Typing, OOP Architecture, and Metaprogramming (Modules 09-12)
+- Engineer reusable abstractions with Generic Programming: generic functions (`<T>`), multiple type parameters, constraints (`extends`), generic interfaces, classes, and type aliases.
+- Master type-level query operators: `keyof`, `typeof`, indexed access types (`T[K]`), generic key constraints, generic constructor factories (`new () => T`), and variance concepts.
+- Execute advanced type-level computations: conditional types (`T extends U ? X : Y`), pattern matching with `infer`, mapped types (`[K in Keys]`), modifier mapping (`+`, `-`, `readonly`, `?`), key remapping (`as`), template literal types, and recursive types.
+- Harness TypeScript standard utility types (`Partial`, `Required`, `Readonly`, `Pick`, `Omit`, `Record`, `Exclude`, `Extract`, `NonNullable`, `ReturnType`, `Parameters`, `InstanceType`, `Awaited`) and build custom utility types.
+- Architect class hierarchies with Object-Oriented Programming (OOP): constructors, access modifiers (`public`, `private`, `protected`), parameter properties, getters/setters, static members, abstract classes, method overriding, polymorphism, composition, and experimental decorators.
+- Organize modular codebases using ECMAScript Modules (ESM: named/default imports/exports, dynamic imports), module resolution strategies, module augmentation, ambient declarations (`declare module`, `.d.ts`, `declare global`), namespaces, project references, and `tsconfig.json` compiler optimization.
+
+### Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems (Modules 13-18)
+- Coordinate asynchronous workflows with Promises, `.then()`/`.catch()` pipelines, Promise combinators (`all`, `allSettled`, `race`), `async/await`, async iterators/generators, `AbortController`, Fetch API integrations, retry patterns with exponential backoff, custom error hierarchies, and the functional `Result<T, E>` pattern.
+- Build typed browser client interfaces: DOM selection, typed element hierarchies (`HTMLElement`, `HTMLInputElement`), event listener handling (`MouseEvent`, `KeyboardEvent`), form validation, `FormData`, Web Storage (`localStorage`, `sessionStorage`), URL APIs, Observers (`IntersectionObserver`, `MutationObserver`), Web Workers, and WebSockets.
+- Develop backend Node.js solutions utilizing core modules: `process`, CLI arguments, `fs.promises` file I/O, `path`, typed environment variables, native HTTP servers/clients, streams, `EventEmitter`, `crypto`, `worker_threads`, child processes, and `@types/node`.
+- Build enterprise backend services with Express 5 and NestJS patterns: DTO contracts, RFC 7807 error formats, Express routing and custom middleware, CRUD REST APIs, database connection pooling, Repository Pattern, typed SQL queries, Prisma Client ORM, runtime schema validation with Zod (`z.infer`), and Dependency Injection (DI).
+- Implement software quality assurance and defensive engineering: unit testing with custom assertion harnesses, Vitest (`describe`, `it`, `expect`), Jest matchers, mock spies/stubs, integration testing, compile-time type testing, ESLint, Prettier, secure input validation (path traversal defense), XSS sanitization, JWT authentication typing, and Role-Based Access Control (RBAC).
+- Construct two production-grade capstone applications: an Academic Student Management System with GPA calculation and honours classifications, and an Enterprise Full-Stack Task Manager featuring multi-tier Clean Architecture and sprint productivity analytics.
 
 ## Learning Roadmap
 
-The curriculum is structured into 18 sequential pedagogical modules grouped into 5 progressive learning tiers:
+The curriculum is organized into **18 pedagogical modules** structured in progressive learning sequence across four tiers:
 
-### Tier 1: Fundamentals & Basic Syntax (Modules 01–04)
-- [Module 01: Introduction to TypeScript & Program Structure](./module-01-pengenalan-typescript-dan-struktur-program/README.md) — 10 Lessons (01–10) · Environment setup, compiler workflow, strict mode, basic syntax.
-- [Module 02: Variables & Primitive Data Types](./module-02-variabel-dan-tipe-data-dasar/README.md) — 16 Lessons (11–26) · `let`/`const`/`var`, primitive types, `unknown`, `never`, type inference, literal types.
-- [Module 03: Operators & Decision Making](./module-03-operator-dan-pengambilan-keputusan/README.md) — 16 Lessons (27–42) · Operators, ternary expressions, nullish coalescing, CFA, exhaustive switch matching.
-- [Module 04: Loops & Flow Control](./module-04-perulangan-dan-kontrol-alur/README.md) — 16 Lessons (43–58) · Iteration constructs (`for`, `while`, `for...of`), nested loops, counters, numerical algorithms.
-
-### Tier 2: Functions, Data Structures & Modeling (Modules 05–08)
-- [Module 05: Functions & Parameters](./module-05-fungsi-dan-parameter/README.md) — 18 Lessons (59–76) · Function declarations, overloads, rest/optional parameters, closures, assertion functions.
-- [Module 06: Arrays, Tuples & Objects](./module-06-array-tuple-dan-object/README.md) — 18 Lessons (77–94) · Readonly arrays, array methods (`map`/`filter`/`reduce`), named tuples, index signatures.
-- [Module 07: Type Aliases, Interfaces & Enums](./module-07-type-aliases-interface-dan-enum/README.md) — 16 Lessons (95–110) · Type aliases vs interfaces, declaration merging, enums, data modeling.
-- [Module 08: Union, Intersection & Type Narrowing](./module-08-union-intersection-dan-type-narrowing/README.md) — 18 Lessons (111–128) · Discriminated unions, custom type guards, `satisfies`, assertions, branded types.
-
-### Tier 3: Advanced Type Systems & OOP (Modules 09–12)
-- [Module 09: Generics & Generic Programming](./module-09-generics-dan-pemrograman-generik/README.md) — 18 Lessons (129–146) · Generic functions/classes, constraints, `keyof`, indexed access types, variance.
-- [Module 10: Advanced Types & Type Manipulation](./module-10-advanced-types/README.md) — 22 Lessons (147–168) · Conditional types (`infer`), mapped types, template literals, built-in utility types.
-- [Module 11: Classes & Object-Oriented Programming](./module-11-class-dan-object-oriented-programming/README.md) — 20 Lessons (169–188) · Access modifiers, abstract classes, polymorphism, composition, decorators.
-- [Module 12: Modules & Project Management](./module-12-modules-dan-pengelolaan-proyek/README.md) — 18 Lessons (189–206) · ES modules, declaration files (`.d.ts`), path aliases, compiler configuration.
-
-### Tier 4: Asynchronous & Platform Runtimes (Modules 13–15)
-- [Module 13: Asynchronous Programming & Error Handling](./module-13-asynchronous-programming-dan-error-handling/README.md) — 22 Lessons (207–228) · Promises, `async/await`, Fetch API, retry patterns, `Result<T, E>` pattern.
-- [Module 14: Browser DOM & Frontend TypeScript](./module-14-browser-dom-dan-frontend-typescript/README.md) — 20 Lessons (229–248) · Typed DOM elements, events, form validation, Web Storage, Workers, Canvas.
-- [Module 15: Node.js & Backend TypeScript](./module-15-node-js-dan-backend-typescript/README.md) — 16 Lessons (249–264) · Node process, file system I/O, streams, `EventEmitter`, crypto, worker threads.
-
-### Tier 5: Enterprise Architecture, Tooling & Capstones (Modules 16–18)
-- [Module 16: APIs, Databases & Frameworks](./module-16-api-database-dan-framework/README.md) — 18 Lessons (265–282) · REST API DTOs, Express.js server, Prisma ORM, Zod validation, NestJS architecture.
-- [Module 17: Testing, Tooling & Application Security](./module-17-testing-tooling-dan-keamanan/README.md) — 16 Lessons (283–298) · Vitest, Jest, ESLint, Prettier, secure input validation, XSS prevention, JWT & RBAC.
-- [Module 18: Practical Capstone Projects](./module-18-proyek-praktik-typescript/README.md) — 2 Capstone Projects (299–300) · Student Academic Management System & Full-Stack Task Manager.
-
----
+| Module | Title | Level | Topics & Core Focus | Lessons | Material Link |
+| :---: | :--- | :---: | :--- | :---: | :---: |
+| **01** | Introduction to TypeScript and Program Structure | Level 1 | TypeScript runtime architecture, static typing philosophy, program anatomy, educational documentation syntax, developer console output formatting, basic variable declarations, compiler invocation (tsc), compilation and execution lifecycles, tsconfig.json configurations, strict mode enforcement, and interactive code playground experimentation. | 10 | [`module-01-pengenalan-typescript-dan-struktur-program`](./module-01-pengenalan-typescript-dan-struktur-program) |
+| **02** | Variables and Basic Data Types | Level 1 | Modern and legacy variable declarations (let, const, var), scoping and temporal dead zones (TDZ), explicit type annotations, primitive data types (string, number, boolean, bigint, symbol), nullability handling (null, undefined), top and bottom types (any, unknown, never, void), automatic type inference mechanisms, and literal types. | 16 | [`module-02-variabel-dan-tipe-data-dasar`](./module-02-variabel-dan-tipe-data-dasar) |
+| **03** | Operators and Control Flow Decision Making | Level 1 | Arithmetic, assignment, comparison, logical, and bitwise operators, unary increment and decrement, inline ternary conditional expressions, nullish coalescing (??), optional chaining (?.), runtime type reflection operators (typeof, instanceof, in), single and multi-branch decision trees (if, else if, else), switch statements with exhaustive branch checking, and compiler Control Flow Analysis (CFA). | 16 | [`module-03-operator-dan-pengambilan-keputusan`](./module-03-operator-dan-pengambilan-keputusan) |
+| **04** | Loops and Iteration Control Flow | Level 1 | Iterative control flow structures (for, while, do-while), collection iterations (for...of, for...in), nested loop matrices, jump statements (break, continue), iteration state counters, typed array iteration, loop boundary conditions, numerical pyramid patterns, factorial computation, prime number filtering, and Fibonacci sequence generation. | 16 | [`module-04-perulangan-dan-kontrol-alur`](./module-04-perulangan-dan-kontrol-alur) |
+| **05** | Functions and Parameter Signatures | Level 1 | Function declarations, expressions, arrow functions, parameter typing, return type annotations, optional and default parameters, rest parameter arrays (...args), function signature overloads, function type aliases, synchronous and asynchronous callbacks, higher-order functions (HOFs), recursion, introductory generic functions, lexical scoping, closures, explicit this parameter typings, and custom assertion functions (asserts). | 18 | [`module-05-fungsi-dan-parameter`](./module-05-fungsi-dan-parameter) |
+| **06** | Arrays, Tuples, and Objects | Level 2 | Homogeneous array data structures, type annotations (T[] vs Array<T>), compile-time readonly arrays, array transformation and iteration methods (map, filter, reduce), sorting algorithms, array destructuring patterns, fixed-length typed tuples, labeled named tuples, optional tuple elements, object literal declarations, type annotations, object destructuring, readonly properties, dynamic index signatures, and excess property checking. | 18 | [`module-06-array-tuple-dan-object`](./module-06-array-tuple-dan-object) |
+| **07** | Type Aliases, Interfaces, and Enums | Level 2 | Custom type definitions with type aliases, object shape modeling with interfaces, optional and readonly interface properties, callable interface signatures, index signatures, interface inheritance (extends), automated declaration merging, architectural trade-offs between type aliases and interfaces, numeric, string, and const enums, string literal union alternatives, object type composition, and domain data modeling. | 16 | [`module-07-type-aliases-interface-dan-enum`](./module-07-type-aliases-interface-dan-enum) |
+| **08** | Unions, Intersections, and Type Narrowing | Level 2 | Union types (|), intersection types (&), tagged discriminated unions with discriminant properties, runtime type narrowing strategies, standard type guards (typeof, instanceof, in), custom user-defined type guards, type predicates (is), equality and truthiness narrowing, exhaustive switch matching with never guards, the satisfies operator, type assertions (as), deep immutability via const assertions (as const), non-null assertions (!), and nominal branded types. | 18 | [`module-08-union-intersection-dan-type-narrowing`](./module-08-union-intersection-dan-type-narrowing) |
+| **09** | Generics and Generic Programming | Level 3 | Generic function signatures (<T>), multiple type parameters, type parameter constraints (extends), generic interfaces, generic class definitions, generic type aliases, default type arguments, key query operator (keyof), runtime-to-type capture (typeof), indexed access types (T[K]), generic key constraints, generic constructor factory patterns (new () => T), generic data collection classes, generic callbacks, compiler type inference, type variance foundations, and generic type guards. | 18 | [`module-09-generics-dan-pemrograman-generik`](./module-09-generics-dan-pemrograman-generik) |
+| **10** | Advanced and Mapped Types | Level 3 | Conditional type expressions (T extends U ? X : Y), conditional type inference, type pattern matching with the infer keyword, mapped types, mapped type modifiers (+, -, readonly, ?), key remapping via the as clause, template literal string types, recursive type modeling, recursive conditional types, built-in utility types (Partial, Required, Readonly, Pick, Omit, Record, Exclude, Extract, NonNullable, ReturnType, Parameters, InstanceType, Awaited), and custom enterprise utility types. | 22 | [`module-10-advanced-types`](./module-10-advanced-types) |
+| **11** | Classes and Object-Oriented Programming (OOP) | Level 3 | Class syntax and object instantiation, class field definitions, typed methods, constructor initialization, access modifier encapsulation (public, private, protected), readonly class properties, concise parameter properties, getters and setters, static members, abstract classes and abstract method contracts, class inheritance (extends, super), method overriding, interface implementation (implements), polymorphism, object composition and aggregation, advanced generic classes, and parameter decorators with reflection metadata. | 20 | [`module-11-class-dan-object-oriented-programming`](./module-11-class-dan-object-oriented-programming) |
+| **12** | Modules, Project References, and Configuration | Level 3 | ECMAScript Modules (ESM) named and default exports, named and default imports, namespace imports (import * as), re-exports (export *), dynamic asynchronous imports (import()), module resolution algorithms, module augmentation, declaration merging across files, ambient modules (declare module), type declaration files (.d.ts), global scope augmentation (declare global), namespaces, TypeScript project references, path mapping aliases in tsconfig.json, compiler options, and project configuration. | 18 | [`module-12-modules-dan-pengelolaan-proyek`](./module-12-modules-dan-pengelolaan-proyek) |
+| **13** | Asynchronous Programming and Error Handling | Level 4 | Asynchronous callbacks, Promise initialization and typing (Promise<T>), Promise chaining (.then(), .catch(), .finally()), Promise combinators (Promise.all, Promise.allSettled, Promise.race), async/await syntax, asynchronous error handling with try/catch, async return signatures, generic promise wrappers, async iterators (Symbol.asyncIterator), async generators, request cancellation with AbortController, Fetch API integration for GET and POST requests, API response typing, async retry strategies with exponential backoff, custom error class hierarchies, and functional error modeling with the Result<T, E> pattern. | 22 | [`module-13-asynchronous-programming-dan-error-handling`](./module-13-asynchronous-programming-dan-error-handling) |
+| **14** | Browser, DOM, and Frontend TypeScript | Level 4 | Document Object Model (DOM) node selection (getElementById, querySelector), DOM element type hierarchies (HTMLElement, HTMLInputElement), text content manipulation, typed attribute operations, dynamic CSS class manipulation (classList), programmatic element creation, typed event listeners and event objects (MouseEvent, KeyboardEvent), form input controls and client-side validation, FormData handling, Web Storage APIs (localStorage, sessionStorage), URL and URLSearchParams APIs, IntersectionObserver, MutationObserver, Web Workers, client WebSockets, Canvas 2D graphics, and modular frontend compilation. | 20 | [`module-14-browser-dom-dan-frontend-typescript`](./module-14-browser-dom-dan-frontend-typescript) |
+| **15** | Node.js and Backend TypeScript | Level 4 | Node.js backend execution runtime, process metadata and memory inspection, CLI argument parsing (process.argv), asynchronous file I/O operations (fs.promises), cross-platform path management (path), typed environment variables (process.env), native HTTP web server construction, outbound HTTP client requests, stream data pipelines (Readable, Writable), event-driven architectures (EventEmitter), cryptographic hashing and tokens (crypto), multithreaded worker threads, child process execution, Node.js ambient type definitions (@types/node), and Node.js module interop. | 16 | [`module-15-node-js-dan-backend-typescript`](./module-15-node-js-dan-backend-typescript) |
+| **16** | APIs, Databases, and Enterprise Frameworks | Level 4 | REST API contract design with DTOs and standardized response wrappers, request validation pipelines, RFC 7807 compliant error format standards, Express 5 server initialization and typed route handlers, modular Express routers, custom middleware pipelines (request logging and auth guards), controller separation, complete CRUD REST APIs with Express, database connection management and connection pools, Repository Pattern architecture, typed SQL query result sets, Prisma Client ORM workflows, Prisma CRUD operations, runtime schema validation and static inference with Zod (z.infer), NestJS decorator-based controllers, @Injectable() service layers, Dependency Injection (DI) architectures, and NestJS REST API implementations. | 18 | [`module-16-api-database-dan-framework`](./module-16-api-database-dan-framework) |
+| **17** | Testing, Tooling, and Application Security | Level 4 | Unit testing principles, modern test execution with Vitest (describe, it, expect), test assertions and matchers with Jest, mock functions (spies and stubs), integration testing methodologies, API endpoint testing, test fixtures and data factories, compile-time static type testing (type assertions), static code analysis with ESLint TypeScript rules, automated code formatting with Prettier, npm package management and lockfile auditing, strongly typed environment configuration loaders, defensive input validation against path traversal attacks, Cross-Site Scripting (XSS) input sanitization, JWT authentication claim modeling, and Role-Based Access Control (RBAC) authorization guards. | 16 | [`module-17-testing-tooling-dan-keamanan`](./module-17-testing-tooling-dan-keamanan) |
+| **18** | Practical Capstone Projects | Level 4 | Full-scale capstone software systems consolidating the entire 18-module TypeScript curriculum into enterprise-grade applications: (1) an Object-Oriented Academic Student Management System with course enrollment, credit weighting, automated GPA calculation, honors classifications (Cum Laude, Magna Cum Laude), and formal academic transcript generation; and (2) an enterprise-style Full-Stack Task Manager Application featuring multi-tier Clean Architecture (Controllers, Services, Repositories, DTOs, functional Result<T, E> error handling, state transition guards, and sprint productivity analytics dashboards). | 2 | [`module-18-proyek-praktik-typescript`](./module-18-proyek-praktik-typescript) |
 
 ## Prerequisites
 
-Before getting started with this curriculum, ensure your environment meets the following requirements:
+To run, compile, and experiment with the code examples in this repository, ensure your development environment satisfies the following baseline requirements:
 
-- **Node.js Runtime**: Version `18.0.0` or higher (tested on Node.js `v22+`).
-- **Package Manager**: `npm` (version `9.0.0` or higher, bundled with Node.js).
-- **Core Knowledge**: Basic familiarity with general programming concepts (variables, conditional branches, loops, and functions). Prior experience with JavaScript is helpful but not strictly required as concepts are developed from first principles.
-- **Terminal & Shell**: Any modern shell environment:
-  - Linux / macOS: `bash` or `zsh`
-  - Windows: PowerShell or Command Prompt (`cmd.exe`)
-
----
+- **Node.js Runtime:** **Node.js 20+ LTS** (or Node.js 18+ LTS) is recommended. The repository has been verified on Node.js v26.13.0 LTS. Node.js provides the JavaScript runtime engine required to execute compiled code and tooling.
+- **Package Manager:** **npm** (v9.x, v10+, or v11+ bundled with Node.js) for installing project dependencies and executing CLI runners.
+- **TypeScript Runner:** **tsx** (v4.23+), bundled as a development dependency. `tsx` provides zero-config, high-speed execution for TypeScript files directly without a manual ahead-of-time compile step.
+- **TypeScript Compiler:** **tsc** (v5.x / v7.0+), bundled in `devDependencies` to perform full project type checking and JavaScript emission.
+- **Command-Line Environment:** Terminal shell such as PowerShell, Command Prompt (cmd), Bash, or Zsh.
+- **Code Editor / IDE:** Any modern editor supporting TypeScript language services (Visual Studio Code, Cursor, WebStorm, or Neovim).
+- **Prior Experience:** Familiarity with basic programming concepts is helpful, but no prior TypeScript experience is necessary. The curriculum starts from the absolute fundamentals (`01_hello_world.ts`) and progresses systematically.
 
 ## Tech Stack & Tools
 
-The repository utilizes a modern TypeScript execution ecosystem configured for rapid development, static verification, and enterprise software engineering:
+| Category | Technology / Tool | Version / Standard | Purpose in Curriculum |
+| :--- | :--- | :--- | :--- |
+| **Core Language** | TypeScript | v7.0.2 (Target ES2022, Module ESNext) | Primary typed programming language and compiler |
+| **Runtime Engine** | Node.js | v20+ LTS (Tested v26.13.0) | Underlying JavaScript runtime environment and standard I/O |
+| **Fast TS Runner** | tsx | ^4.23.15 | High-speed, zero-config TypeScript execution powered by esbuild |
+| **Package Manager** | npm (Node Package Manager) | v10.x / v11.x (Tested v11.20.0) | Dependency management and script lifecycle automation |
+| **Web Framework** | Express | ^5.3.0 | Backend HTTP web server, routing, and RESTful API architecture |
+| **Schema Validation**| Zod | ^4.6.7 | Runtime input validation and static TypeScript type inference (`z.infer`) |
+| **Type Definitions**| @types/node, @types/express | ^26.6.5, ^5.0.6 | Ambient TypeScript typings for Node.js core modules and Express |
+| **Testing Paradigms**| Vitest & Jest Patterns | Modern Matcher Assertions | Unit testing, integration testing, and mock function harnesses |
+| **Execution Model** | Standalone Single-File Execution | `npx tsx <file>.ts` | Instant file execution without heavy build tooling overhead |
 
-- **Core Programming Language**: [TypeScript](https://www.typescriptlang.org/) (`typescript` `^7.0.2` / target `ES2022`, module `ESNext`, strict mode enabled)
-- **Zero-Config Execution Engine**: [tsx](https://github.com/privatenumber/tsx) (`^4.23.15`) for immediate, on-the-fly TypeScript execution without manual pre-compilation
-- **Backend Web Framework**: [Express.js](https://expressjs.com/) (`express` `^5.3.0`)
-- **Schema Validation & Type Inference**: [Zod](https://zod.dev/) (`zod` `^4.6.7`)
-- **Type Definitions**:
-  - `@types/node` (`^26.6.5`)
-  - `@types/express` (`^5.0.6`)
-- **Testing & Quality Tooling Covered**: [Vitest](https://vitest.dev/), [Jest](https://jestjs.io/), [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
+## Getting Started
 
----
-
-## Getting Started / Installation & Setup
-
-Follow these verified steps to clone, configure, and execute the repository locally:
+Follow these steps to set up your local development environment and run your first TypeScript lesson:
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/weztcy/TypeScript-Learning-Modules.git
-cd "TypeScript Learning Modules"
+cd "TypeScript-Learning-Modules"
 ```
 
-### 2. Install Project Dependencies
-Install the required development tools and runtime dependencies specified in `package.json`:
+### 2. Verify Node.js and npm Installation
+Verify that Node.js and npm are installed and available in your system `PATH`:
+```bash
+node -v
+npm -v
+```
+*(Expected output: `v20.x.x` or later for Node.js, and `9.x.x` or later for npm)*
+
+### 3. Install Repository Dependencies
+Install `tsx`, `typescript`, `express`, `zod`, and ambient type declarations:
 ```bash
 npm install
 ```
+*(On Windows PowerShell, if script execution policy restricts `npm`, execute `npm.cmd install`)*
 
-### 3. Verify the Environment
-Execute the first lesson to verify that the TypeScript runtime operates correctly:
+### 4. Execute Your First Lesson
+Run the first fundamental lesson directly using `tsx`:
 ```bash
-npx tsx module-01-pengenalan-typescript-dan-struktur-program/01_hello_world.ts
+cd module-01-pengenalan-typescript-dan-struktur-program
+npx tsx 01_hello_world.ts
 ```
-
-*Expected Verification Output:*
-```text
-=== Program Pertama TypeScript ===
-Halo Dunia, Selamat Datang di Pemrograman TypeScript!
-```
-
----
+*(Alternatively, from the repository root: `npx tsx module-01-pengenalan-typescript-dan-struktur-program/01_hello_world.ts`)*
 
 ## How to Use This Repository
 
-To maximize pedagogical retention and master TypeScript effectively, follow this structured 5-step learning workflow:
+To maximize conceptual understanding and practical mastery, follow this recommended six-step study workflow for each subtopic:
 
-1. **Select a Module & Review Theory**:
-   Begin by navigating to the desired module folder and opening its dedicated `README.md` (e.g., [Module 01 README](./module-01-pengenalan-typescript-dan-struktur-program/README.md)). Review the pedagogical scope, learning objectives, and core concepts.
-2. **Inspect the Implementation Source Code**:
-   Open the target `.ts` file in your code editor. Read through the type annotations, interface contracts, function signatures, and explanatory in-line comments.
-3. **Execute the Code**:
-   Run the lesson file from the root directory using the `npx tsx` command:
-   ```bash
-   npx tsx <module-folder>/<lesson-file>.ts
-   ```
-4. **Compare with Verified Output**:
-   Check the output produced in your terminal against the official execution capture located in that module's `output/` directory (e.g., `<module-folder>/output/<lesson-file>.png`). Verify that all calculations, formatted tables, and type-guarded outputs match.
-5. **Experiment & Extend**:
-   Modify types, test edge cases, intentionally introduce type errors to observe compiler diagnostic messages, and refactor the implementation to deepen your understanding.
+```
+[Select Module] ──> [Study Theory & README] ──> [Inspect Source Code]
+                                                       │
+                                                       ▼
+[Experiment & Refactor] <── [Compare with Output/ PNG] <── [Execute with tsx]
+```
 
----
+1. **Select a Module:** Begin with Module 01 if you are new to TypeScript, or jump directly to targeted modules (such as Module 08 for Discriminated Unions, Module 09 for Generics, Module 10 for Advanced Types, or Module 16 for Express & Zod) based on your learning goals.
+2. **Review the Module README:** Read the dedicated `README.md` inside each module folder for a conceptual overview, learning objectives, and curriculum index.
+3. **Inspect the Source Code:** Open the corresponding `.ts` file in your editor. Each file is designed to be self-explanatory, featuring comprehensive educational comments that explain language nuances and structural design.
+4. **Execute the Code:** Run the file in your terminal using `npx tsx <filename>.ts`.
+5. **Verify Against Execution Screenshots:** Compare your console output against the verified capture in `output/<filename>.png` to ensure expected behavior.
+6. **Experiment and Refactor:** Tweak type definitions, alter constraints, introduce intentional type errors to observe compiler diagnostics, and test edge cases to solidify your mental model.
 
 ## Learning Modules & Subtopics
 
-### Module 01: Introduction to TypeScript and Program Structure
-- **Module Directory**: [`module-01-pengenalan-typescript-dan-struktur-program`](./module-01-pengenalan-typescript-dan-struktur-program/README.md)
-- **Pedagogical Scope**: Foundational TypeScript philosophy as a typed superset of JavaScript, file structure, comments, console outputs, variable declaration foundations, compiler workflows with `tsc`, `tsconfig.json` options, strict mode enforcement, and playground experimentation.
-- **Subtopics & Source Implementations**:
-  - [`01_hello_world.ts`](./module-01-pengenalan-typescript-dan-struktur-program/01_hello_world.ts) — First TypeScript program with explicit string typing and console output.
-  - [`02_typescript_structure.ts`](./module-01-pengenalan-typescript-dan-struktur-program/02_typescript_structure.ts) — Structural anatomy of a TypeScript program, type aliases, and typed functions.
-  - [`03_comments.ts`](./module-01-pengenalan-typescript-dan-struktur-program/03_comments.ts) — Single-line, multi-line, and JSDoc/TSDoc documentation conventions.
-  - [`04_console_output.ts`](./module-01-pengenalan-typescript-dan-struktur-program/04_console_output.ts) — Output formatting via `console.log`, `info`, `warn`, `error`, and `table`.
-  - [`05_variable_declaration.ts`](./module-01-pengenalan-typescript-dan-struktur-program/05_variable_declaration.ts) — Basic variable declaration concepts and initial type assignment.
-  - [`06_typescript_compiler.ts`](./module-01-pengenalan-typescript-dan-struktur-program/06_typescript_compiler.ts) — Compilation stages and AST generation principles.
-  - [`07_compile_and_run.ts`](./module-01-pengenalan-typescript-dan-struktur-program/07_compile_and_run.ts) — Compilation to JavaScript and immediate runtime execution.
-  - [`08_typescript_configuration.ts`](./module-01-pengenalan-typescript-dan-struktur-program/08_typescript_configuration.ts) — Breakdown of compiler options in `tsconfig.json`.
-  - [`09_strict_mode.ts`](./module-01-pengenalan-typescript-dan-struktur-program/09_strict_mode.ts) — Type safety enforcement through strict mode and null checks.
-  - [`10_typescript_playground.ts`](./module-01-pengenalan-typescript-dan-struktur-program/10_typescript_playground.ts) — Interactive code testing combining modern syntax and utility logic.
-- **Verified Execution Preview**:
+Below is the complete curriculum covering all **18 modules** and **300 standalone lessons**. Every lesson includes a direct link to its source file and its verified execution capture.
 
-  ![Execution Output: Hello World Program](./module-01-pengenalan-typescript-dan-struktur-program/output/01_hello_world.png)
+### Module 01: Pengenalan TypeScript dan Struktur Program (Introduction to TypeScript and Program Structure)
 
----
+- **Pedagogical Tier:** Tier 1: Syntax Primitives, Type Annotations, and Imperative Foundations
+- **Pedagogical Level:** Level 1: Fundamental
+- **Module Overview:** TypeScript runtime architecture, static typing philosophy, program anatomy, educational documentation syntax, developer console output formatting, basic variable declarations, compiler invocation (tsc), compilation and execution lifecycles, tsconfig.json configurations, strict mode enforcement, and interactive code playground experimentation.
+- **Module Directory:** [`./module-01-pengenalan-typescript-dan-struktur-program/`](./module-01-pengenalan-typescript-dan-struktur-program) | **Lessons Count:** 10
 
-### Module 02: Variables and Primitive Data Types
-- **Module Directory**: [`module-02-variabel-dan-tipe-data-dasar`](./module-02-variabel-dan-tipe-data-dasar/README.md)
-- **Pedagogical Scope**: Declaration keywords (`let`, `const`, `var`), lexical scoping, primitive types (`string`, `number`, `boolean`, `bigint`, `symbol`), special types (`null`, `undefined`, `any`, `unknown`, `never`, `void`), type annotations, type inference, and literal types.
-- **Subtopics & Source Implementations**:
-  - [`11_let_variable.ts`](./module-02-variabel-dan-tipe-data-dasar/11_let_variable.ts) — Reassignable variable declarations with block-level scoping.
-  - [`12_const_variable.ts`](./module-02-variabel-dan-tipe-data-dasar/12_const_variable.ts) — Immutable identifier binding and reference immutability.
-  - [`13_var_variable.ts`](./module-02-variabel-dan-tipe-data-dasar/13_var_variable.ts) — Function-scoped variables and hoisting pitfalls in legacy code.
-  - [`14_type_annotations.ts`](./module-02-variabel-dan-tipe-data-dasar/14_type_annotations.ts) — Explicit type annotations on variables, constants, and parameters.
-  - [`15_string_type.ts`](./module-02-variabel-dan-tipe-data-dasar/15_string_type.ts) — String manipulation, template literals, and string operations.
-  - [`16_number_type.ts`](./module-02-variabel-dan-tipe-data-dasar/16_number_type.ts) — Floating-point, integer, hex, binary, and octal numeric types.
-  - [`17_boolean_type.ts`](./module-02-variabel-dan-tipe-data-dasar/17_boolean_type.ts) — Boolean flags and truth evaluation.
-  - [`18_bigint_type.ts`](./module-02-variabel-dan-tipe-data-dasar/18_bigint_type.ts) — Arbitrary-precision integers for large numerical computations.
-  - [`19_symbol_type.ts`](./module-02-variabel-dan-tipe-data-dasar/19_symbol_type.ts) — Unique and immutable primitive symbol keys.
-  - [`20_null_undefined.ts`](./module-02-variabel-dan-tipe-data-dasar/20_null_undefined.ts) — Handling absent values and uninitialized variables safely.
-  - [`21_any_type.ts`](./module-02-variabel-dan-tipe-data-dasar/21_any_type.ts) — Opting out of type checking and migration strategies.
-  - [`22_unknown_type.ts`](./module-02-variabel-dan-tipe-data-dasar/22_unknown_type.ts) — Type-safe counterpart of any requiring narrowing before use.
-  - [`23_never_type.ts`](./module-02-variabel-dan-tipe-data-dasar/23_never_type.ts) — Representing unreachable code and exhaustive checks.
-  - [`24_void_type.ts`](./module-02-variabel-dan-tipe-data-dasar/24_void_type.ts) — Indicating the absence of a return value in functions.
-  - [`25_type_inference.ts`](./module-02-variabel-dan-tipe-data-dasar/25_type_inference.ts) — Automatic deduction of types by the TypeScript compiler.
-  - [`26_literal_types.ts`](./module-02-variabel-dan-tipe-data-dasar/26_literal_types.ts) — Exact string, number, and boolean value literal types.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **01** | [`01_hello_world.ts`](./module-01-pengenalan-typescript-dan-struktur-program/01_hello_world.ts) | First TypeScript program, explicit string type annotations, and standard console output printing | [![Output 01_hello_world](./module-01-pengenalan-typescript-dan-struktur-program/output/01_hello_world.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/01_hello_world.png) |
+| **02** | [`02_typescript_structure.ts`](./module-01-pengenalan-typescript-dan-struktur-program/02_typescript_structure.ts) | TypeScript program anatomy, custom type aliases, typed parameters, and structured object execution | [![Output 02_typescript_structure](./module-01-pengenalan-typescript-dan-struktur-program/output/02_typescript_structure.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/02_typescript_structure.png) |
+| **03** | [`03_comments.ts`](./module-01-pengenalan-typescript-dan-struktur-program/03_comments.ts) | Single-line (//), multi-line (/* */), and JSDoc/TSDoc educational documentation syntax | [![Output 03_comments](./module-01-pengenalan-typescript-dan-struktur-program/output/03_comments.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/03_comments.png) |
+| **04** | [`04_console_output.ts`](./module-01-pengenalan-typescript-dan-struktur-program/04_console_output.ts) | Standard console output formatting, diagnostics, argument logging, and stream inspection | [![Output 04_console_output](./module-01-pengenalan-typescript-dan-struktur-program/output/04_console_output.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/04_console_output.png) |
+| **05** | [`05_variable_declaration.ts`](./module-01-pengenalan-typescript-dan-struktur-program/05_variable_declaration.ts) | Fundamental variable declarations, static type assignments, and identifier mutability basics | [![Output 05_variable_declaration](./module-01-pengenalan-typescript-dan-struktur-program/output/05_variable_declaration.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/05_variable_declaration.png) |
+| **06** | [`06_typescript_compiler.ts`](./module-01-pengenalan-typescript-dan-struktur-program/06_typescript_compiler.ts) | Invoking the TypeScript compiler (tsc), transpile-time diagnostics, and emitted JavaScript analysis | [![Output 06_typescript_compiler](./module-01-pengenalan-typescript-dan-struktur-program/output/06_typescript_compiler.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/06_typescript_compiler.png) |
+| **07** | [`07_compile_and_run.ts`](./module-01-pengenalan-typescript-dan-struktur-program/07_compile_and_run.ts) | Two-stage compilation lifecycle via Node.js and zero-config instant script execution via tsx | [![Output 07_compile_and_run](./module-01-pengenalan-typescript-dan-struktur-program/output/07_compile_and_run.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/07_compile_and_run.png) |
+| **08** | [`08_typescript_configuration.ts`](./module-01-pengenalan-typescript-dan-struktur-program/08_typescript_configuration.ts) | TypeScript project compiler options and compiler architecture configured via tsconfig.json | [![Output 08_typescript_configuration](./module-01-pengenalan-typescript-dan-struktur-program/output/08_typescript_configuration.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/08_typescript_configuration.png) |
+| **09** | [`09_strict_mode.ts`](./module-01-pengenalan-typescript-dan-struktur-program/09_strict_mode.ts) | Enforcing strict type checking (strict: true), null safety checks, and eliminating silent errors | [![Output 09_strict_mode](./module-01-pengenalan-typescript-dan-struktur-program/output/09_strict_mode.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/09_strict_mode.png) |
+| **10** | [`10_typescript_playground.ts`](./module-01-pengenalan-typescript-dan-struktur-program/10_typescript_playground.ts) | Interactive code experimentation, static type validation, and rapid prototyping workflows | [![Output 10_typescript_playground](./module-01-pengenalan-typescript-dan-struktur-program/output/10_typescript_playground.png)](./module-01-pengenalan-typescript-dan-struktur-program/output/10_typescript_playground.png) |
 
-  ![Execution Output: Type Annotations](./module-02-variabel-dan-tipe-data-dasar/output/14_type_annotations.png)
+### Module 02: Variabel dan Tipe Data Dasar (Variables and Basic Data Types)
 
----
+- **Pedagogical Tier:** Tier 1: Syntax Primitives, Type Annotations, and Imperative Foundations
+- **Pedagogical Level:** Level 1: Fundamental
+- **Module Overview:** Modern and legacy variable declarations (let, const, var), scoping and temporal dead zones (TDZ), explicit type annotations, primitive data types (string, number, boolean, bigint, symbol), nullability handling (null, undefined), top and bottom types (any, unknown, never, void), automatic type inference mechanisms, and literal types.
+- **Module Directory:** [`./module-02-variabel-dan-tipe-data-dasar/`](./module-02-variabel-dan-tipe-data-dasar) | **Lessons Count:** 16
 
-### Module 03: Operators and Decision Making
-- **Module Directory**: [`module-03-operator-dan-pengambilan-keputusan`](./module-03-operator-dan-pengambilan-keputusan/README.md)
-- **Pedagogical Scope**: Computational operators, strict equality, logical and bitwise manipulations, ternary expressions, modern nullish coalescing (`??`), optional chaining (`?.`), runtime type inspection (`typeof`, `instanceof`, `in`), branch logic (`if...else`), switch-case structures, exhaustive evaluation with `never`, and Control Flow Analysis (CFA).
-- **Subtopics & Source Implementations**:
-  - [`27_arithmetic_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/27_arithmetic_operators.ts) — Addition, subtraction, multiplication, division, modulo, and exponentiation.
-  - [`28_assignment_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/28_assignment_operators.ts) — Compound assignment operators (`+=`, `-=`, `*=`, `/=`).
-  - [`29_comparison_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/29_comparison_operators.ts) — Strict equality (`===`), inequality (`!==`), and relational evaluations.
-  - [`30_logical_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/30_logical_operators.ts) — Short-circuit evaluation with `&&`, `||`, and `!`.
-  - [`31_bitwise_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/31_bitwise_operators.ts) — Bitwise AND, OR, XOR, NOT, and bit-shift operations.
-  - [`32_increment_decrement.ts`](./module-03-operator-dan-pengambilan-keputusan/32_increment_decrement.ts) — Pre-increment and post-increment evaluation semantics.
-  - [`33_ternary_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/33_ternary_operator.ts) — Concise conditional branching expressions (`? :`).
-  - [`34_nullish_coalescing.ts`](./module-03-operator-dan-pengambilan-keputusan/34_nullish_coalescing.ts) — Safe fallback assignment ignoring falsy zero or empty strings (`??`).
-  - [`35_optional_chaining.ts`](./module-03-operator-dan-pengambilan-keputusan/35_optional_chaining.ts) — Safe deep property access avoiding runtime TypeError (`?.`).
-  - [`36_typeof_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/36_typeof_operator.ts) — Primitive type inspection at runtime.
-  - [`37_instanceof_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/37_instanceof_operator.ts) — Prototype chain verification for class instances.
-  - [`38_in_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/38_in_operator.ts) — Object property existence checking for type narrowing.
-  - [`39_if_statement.ts`](./module-03-operator-dan-pengambilan-keputusan/39_if_statement.ts) — Multi-tier conditional branching with `if`, `else if`, and `else`.
-  - [`40_switch_statement.ts`](./module-03-operator-dan-pengambilan-keputusan/40_switch_statement.ts) — Multi-case discrete value branching.
-  - [`41_switch_exhaustiveness.ts`](./module-03-operator-dan-pengambilan-keputusan/41_switch_exhaustiveness.ts) — Compile-time completeness verification using the `never` type.
-  - [`42_control_flow_analysis.ts`](./module-03-operator-dan-pengambilan-keputusan/42_control_flow_analysis.ts) — Flow-sensitive type deduction across logical blocks.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **11** | [`11_let_variable.ts`](./module-02-variabel-dan-tipe-data-dasar/11_let_variable.ts) | Block-scoped mutable variable declarations, reassignment rules, and temporal dead zones (TDZ) using let | [![Output 11_let_variable](./module-02-variabel-dan-tipe-data-dasar/output/11_let_variable.png)](./module-02-variabel-dan-tipe-data-dasar/output/11_let_variable.png) |
+| **12** | [`12_const_variable.ts`](./module-02-variabel-dan-tipe-data-dasar/12_const_variable.ts) | Immutable identifier bindings and constant declaration constraints using const | [![Output 12_const_variable](./module-02-variabel-dan-tipe-data-dasar/output/12_const_variable.png)](./module-02-variabel-dan-tipe-data-dasar/output/12_const_variable.png) |
+| **13** | [`13_var_variable.ts`](./module-02-variabel-dan-tipe-data-dasar/13_var_variable.ts) | Legacy function-scoped variable declarations, hoisting semantics, and scope leakage using var | [![Output 13_var_variable](./module-02-variabel-dan-tipe-data-dasar/output/13_var_variable.png)](./module-02-variabel-dan-tipe-data-dasar/output/13_var_variable.png) |
+| **14** | [`14_type_annotations.ts`](./module-02-variabel-dan-tipe-data-dasar/14_type_annotations.ts) | Explicit primitive and composite type annotations for variables, expressions, and parameters | [![Output 14_type_annotations](./module-02-variabel-dan-tipe-data-dasar/output/14_type_annotations.png)](./module-02-variabel-dan-tipe-data-dasar/output/14_type_annotations.png) |
+| **15** | [`15_string_type.ts`](./module-02-variabel-dan-tipe-data-dasar/15_string_type.ts) | Textual primitive string representation, string interpolation, escape sequences, and operations | [![Output 15_string_type](./module-02-variabel-dan-tipe-data-dasar/output/15_string_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/15_string_type.png) |
+| **16** | [`16_number_type.ts`](./module-02-variabel-dan-tipe-data-dasar/16_number_type.ts) | IEEE 754 64-bit floating point numbers, integer arithmetic, NaN, and numeric literal formats | [![Output 16_number_type](./module-02-variabel-dan-tipe-data-dasar/output/16_number_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/16_number_type.png) |
+| **17** | [`17_boolean_type.ts`](./module-02-variabel-dan-tipe-data-dasar/17_boolean_type.ts) | Logical boolean primitive type with true and false truth evaluations | [![Output 17_boolean_type](./module-02-variabel-dan-tipe-data-dasar/output/17_boolean_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/17_boolean_type.png) |
+| **18** | [`18_bigint_type.ts`](./module-02-variabel-dan-tipe-data-dasar/18_bigint_type.ts) | Arbitrary-precision integer arithmetic using bigint primitives and literals with "n" suffix | [![Output 18_bigint_type](./module-02-variabel-dan-tipe-data-dasar/output/18_bigint_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/18_bigint_type.png) |
+| **19** | [`19_symbol_type.ts`](./module-02-variabel-dan-tipe-data-dasar/19_symbol_type.ts) | Unique and immutable primitive symbol tokens created via the Symbol() factory function | [![Output 19_symbol_type](./module-02-variabel-dan-tipe-data-dasar/output/19_symbol_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/19_symbol_type.png) |
+| **20** | [`20_null_undefined.ts`](./module-02-variabel-dan-tipe-data-dasar/20_null_undefined.ts) | Primitive nullability semantics, uninitialized variable states, and intentional empty references | [![Output 20_null_undefined](./module-02-variabel-dan-tipe-data-dasar/output/20_null_undefined.png)](./module-02-variabel-dan-tipe-data-dasar/output/20_null_undefined.png) |
+| **21** | [`21_any_type.ts`](./module-02-variabel-dan-tipe-data-dasar/21_any_type.ts) | Disabling static type checking and dynamic escape hatches using the any top type | [![Output 21_any_type](./module-02-variabel-dan-tipe-data-dasar/output/21_any_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/21_any_type.png) |
+| **22** | [`22_unknown_type.ts`](./module-02-variabel-dan-tipe-data-dasar/22_unknown_type.ts) | Type-safe top type requiring mandatory runtime type narrowing before operation invocation using unknown | [![Output 22_unknown_type](./module-02-variabel-dan-tipe-data-dasar/output/22_unknown_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/22_unknown_type.png) |
+| **23** | [`23_never_type.ts`](./module-02-variabel-dan-tipe-data-dasar/23_never_type.ts) | Empty bottom type representing unreachable code branches, infinite loops, and impossible states using never | [![Output 23_never_type](./module-02-variabel-dan-tipe-data-dasar/output/23_never_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/23_never_type.png) |
+| **24** | [`24_void_type.ts`](./module-02-variabel-dan-tipe-data-dasar/24_void_type.ts) | Representing the complete absence of a return value in functions and subroutines using void | [![Output 24_void_type](./module-02-variabel-dan-tipe-data-dasar/output/24_void_type.png)](./module-02-variabel-dan-tipe-data-dasar/output/24_void_type.png) |
+| **25** | [`25_type_inference.ts`](./module-02-variabel-dan-tipe-data-dasar/25_type_inference.ts) | Automatic type deduction and contextual typing performed by the TypeScript compiler engine | [![Output 25_type_inference](./module-02-variabel-dan-tipe-data-dasar/output/25_type_inference.png)](./module-02-variabel-dan-tipe-data-dasar/output/25_type_inference.png) |
+| **26** | [`26_literal_types.ts`](./module-02-variabel-dan-tipe-data-dasar/26_literal_types.ts) | Exact value literal types restricting identifiers to specific string, number, or boolean values | [![Output 26_literal_types](./module-02-variabel-dan-tipe-data-dasar/output/26_literal_types.png)](./module-02-variabel-dan-tipe-data-dasar/output/26_literal_types.png) |
 
-  ![Execution Output: Control Flow Analysis](./module-03-operator-dan-pengambilan-keputusan/output/42_control_flow_analysis.png)
+### Module 03: Operator dan Pengambilan Keputusan (Operators and Control Flow Decision Making)
 
----
+- **Pedagogical Tier:** Tier 1: Syntax Primitives, Type Annotations, and Imperative Foundations
+- **Pedagogical Level:** Level 1: Fundamental
+- **Module Overview:** Arithmetic, assignment, comparison, logical, and bitwise operators, unary increment and decrement, inline ternary conditional expressions, nullish coalescing (??), optional chaining (?.), runtime type reflection operators (typeof, instanceof, in), single and multi-branch decision trees (if, else if, else), switch statements with exhaustive branch checking, and compiler Control Flow Analysis (CFA).
+- **Module Directory:** [`./module-03-operator-dan-pengambilan-keputusan/`](./module-03-operator-dan-pengambilan-keputusan) | **Lessons Count:** 16
 
-### Module 04: Loops and Flow Control
-- **Module Directory**: [`module-04-perulangan-dan-kontrol-alur`](./module-04-perulangan-dan-kontrol-alur/README.md)
-- **Pedagogical Scope**: Iteration constructs (`for`, `while`, `do-while`), modern collection traversal (`for...of`, `for...in`), nested iteration, flow termination (`break`, `continue`), counter state machines, typed collection processing, and classic numerical algorithms (pyramid patterns, factorials, prime test, Fibonacci).
-- **Subtopics & Source Implementations**:
-  - [`43_for_loop.ts`](./module-04-perulangan-dan-kontrol-alur/43_for_loop.ts) — Standard indexed for loops with initialization, condition, and step.
-  - [`44_while_loop.ts`](./module-04-perulangan-dan-kontrol-alur/44_while_loop.ts) — Condition-driven iterative execution.
-  - [`45_do_while_loop.ts`](./module-04-perulangan-dan-kontrol-alur/45_do_while_loop.ts) — Post-condition loops ensuring at least one execution pass.
-  - [`46_for_of_loop.ts`](./module-04-perulangan-dan-kontrol-alur/46_for_of_loop.ts) — Iterating directly over iterable values (arrays, sets, strings).
-  - [`47_for_in_loop.ts`](./module-04-perulangan-dan-kontrol-alur/47_for_in_loop.ts) — Iterating over enumerable string property keys of an object.
-  - [`48_nested_loop.ts`](./module-04-perulangan-dan-kontrol-alur/48_nested_loop.ts) — Multi-dimensional loops and coordinate grid generation.
-  - [`49_break_statement.ts`](./module-04-perulangan-dan-kontrol-alur/49_break_statement.ts) — Early termination of loop executions upon condition match.
-  - [`50_continue_statement.ts`](./module-04-perulangan-dan-kontrol-alur/50_continue_statement.ts) — Skipping current iterations and advancing to the next cycle.
-  - [`51_loop_counter.ts`](./module-04-perulangan-dan-kontrol-alur/51_loop_counter.ts) — State tracking and counter accumulators.
-  - [`52_array_iteration.ts`](./module-04-perulangan-dan-kontrol-alur/52_array_iteration.ts) — Traversing structured collections with typed elements.
-  - [`53_loop_with_types.ts`](./module-04-perulangan-dan-kontrol-alur/53_loop_with_types.ts) — Strict type annotations inside loop body declarations.
-  - [`54_loop_conditions.ts`](./module-04-perulangan-dan-kontrol-alur/54_loop_conditions.ts) — Complex compound Boolean conditions in loops.
-  - [`55_number_patterns.ts`](./module-04-perulangan-dan-kontrol-alur/55_number_patterns.ts) — Formatting triangular and matrix numerical patterns.
-  - [`56_factorial_loop.ts`](./module-04-perulangan-dan-kontrol-alur/56_factorial_loop.ts) — Iterative computation of factorial functions.
-  - [`57_prime_number.ts`](./module-04-perulangan-dan-kontrol-alur/57_prime_number.ts) — Primality testing algorithm using trial division.
-  - [`58_fibonacci_loop.ts`](./module-04-perulangan-dan-kontrol-alur/58_fibonacci_loop.ts) — Generating Fibonacci sequence terms iteratively.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **27** | [`27_arithmetic_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/27_arithmetic_operators.ts) | Standard arithmetic operators (+, -, *, /, %, **) and operator evaluation associativity | [![Output 27_arithmetic_operators](./module-03-operator-dan-pengambilan-keputusan/output/27_arithmetic_operators.png)](./module-03-operator-dan-pengambilan-keputusan/output/27_arithmetic_operators.png) |
+| **28** | [`28_assignment_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/28_assignment_operators.ts) | Compound arithmetic and bitwise assignment operators (+=, -=, *=, /=, %=, **=) | [![Output 28_assignment_operators](./module-03-operator-dan-pengambilan-keputusan/output/28_assignment_operators.png)](./module-03-operator-dan-pengambilan-keputusan/output/28_assignment_operators.png) |
+| **29** | [`29_comparison_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/29_comparison_operators.ts) | Relational comparison operators (>, <, >=, <=) and strict equality evaluations (===, !==) | [![Output 29_comparison_operators](./module-03-operator-dan-pengambilan-keputusan/output/29_comparison_operators.png)](./module-03-operator-dan-pengambilan-keputusan/output/29_comparison_operators.png) |
+| **30** | [`30_logical_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/30_logical_operators.ts) | Boolean logic evaluations using Logical AND (&&), Logical OR (||), and Logical NOT (!) | [![Output 30_logical_operators](./module-03-operator-dan-pengambilan-keputusan/output/30_logical_operators.png)](./module-03-operator-dan-pengambilan-keputusan/output/30_logical_operators.png) |
+| **31** | [`31_bitwise_operators.ts`](./module-03-operator-dan-pengambilan-keputusan/31_bitwise_operators.ts) | Low-level bitwise operations (&, |, ^, ~, <<, >>, >>>) on 32-bit integer representations | [![Output 31_bitwise_operators](./module-03-operator-dan-pengambilan-keputusan/output/31_bitwise_operators.png)](./module-03-operator-dan-pengambilan-keputusan/output/31_bitwise_operators.png) |
+| **32** | [`32_increment_decrement.ts`](./module-03-operator-dan-pengambilan-keputusan/32_increment_decrement.ts) | Prefix and postfix increment (++) and decrement (--) evaluation order and side-effects | [![Output 32_increment_decrement](./module-03-operator-dan-pengambilan-keputusan/output/32_increment_decrement.png)](./module-03-operator-dan-pengambilan-keputusan/output/32_increment_decrement.png) |
+| **33** | [`33_ternary_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/33_ternary_operator.ts) | Concise inline conditional decision expressions using the ternary conditional operator (? :) | [![Output 33_ternary_operator](./module-03-operator-dan-pengambilan-keputusan/output/33_ternary_operator.png)](./module-03-operator-dan-pengambilan-keputusan/output/33_ternary_operator.png) |
+| **34** | [`34_nullish_coalescing.ts`](./module-03-operator-dan-pengambilan-keputusan/34_nullish_coalescing.ts) | Default value assignment against null or undefined operands using the nullish coalescing operator (??) | [![Output 34_nullish_coalescing](./module-03-operator-dan-pengambilan-keputusan/output/34_nullish_coalescing.png)](./module-03-operator-dan-pengambilan-keputusan/output/34_nullish_coalescing.png) |
+| **35** | [`35_optional_chaining.ts`](./module-03-operator-dan-pengambilan-keputusan/35_optional_chaining.ts) | Safe nested property and method navigation preventing runtime errors with optional chaining (?.) | [![Output 35_optional_chaining](./module-03-operator-dan-pengambilan-keputusan/output/35_optional_chaining.png)](./module-03-operator-dan-pengambilan-keputusan/output/35_optional_chaining.png) |
+| **36** | [`36_typeof_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/36_typeof_operator.ts) | Runtime type inspection and primitive type discrimination using the typeof operator | [![Output 36_typeof_operator](./module-03-operator-dan-pengambilan-keputusan/output/36_typeof_operator.png)](./module-03-operator-dan-pengambilan-keputusan/output/36_typeof_operator.png) |
+| **37** | [`37_instanceof_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/37_instanceof_operator.ts) | Prototype-based class instance checking and object identity verification using instanceof | [![Output 37_instanceof_operator](./module-03-operator-dan-pengambilan-keputusan/output/37_instanceof_operator.png)](./module-03-operator-dan-pengambilan-keputusan/output/37_instanceof_operator.png) |
+| **38** | [`38_in_operator.ts`](./module-03-operator-dan-pengambilan-keputusan/38_in_operator.ts) | Object property existence verification and type narrowing using the in operator | [![Output 38_in_operator](./module-03-operator-dan-pengambilan-keputusan/output/38_in_operator.png)](./module-03-operator-dan-pengambilan-keputusan/output/38_in_operator.png) |
+| **39** | [`39_if_statement.ts`](./module-03-operator-dan-pengambilan-keputusan/39_if_statement.ts) | Single and dual-branch conditional decision workflows using if, else if, and else statements | [![Output 39_if_statement](./module-03-operator-dan-pengambilan-keputusan/output/39_if_statement.png)](./module-03-operator-dan-pengambilan-keputusan/output/39_if_statement.png) |
+| **40** | [`40_switch_statement.ts`](./module-03-operator-dan-pengambilan-keputusan/40_switch_statement.ts) | Multi-branch exact value matching control flow using switch, case, default, and break statements | [![Output 40_switch_statement](./module-03-operator-dan-pengambilan-keputusan/output/40_switch_statement.png)](./module-03-operator-dan-pengambilan-keputusan/output/40_switch_statement.png) |
+| **41** | [`41_switch_exhaustiveness.ts`](./module-03-operator-dan-pengambilan-keputusan/41_switch_exhaustiveness.ts) | Compile-time exhaustiveness checking and unhandled case prevention using never in switch statements | [![Output 41_switch_exhaustiveness](./module-03-operator-dan-pengambilan-keputusan/output/41_switch_exhaustiveness.png)](./module-03-operator-dan-pengambilan-keputusan/output/41_switch_exhaustiveness.png) |
+| **42** | [`42_control_flow_analysis.ts`](./module-03-operator-dan-pengambilan-keputusan/42_control_flow_analysis.ts) | TypeScript Control Flow Analysis (CFA) tracking variable types along conditional execution paths | [![Output 42_control_flow_analysis](./module-03-operator-dan-pengambilan-keputusan/output/42_control_flow_analysis.png)](./module-03-operator-dan-pengambilan-keputusan/output/42_control_flow_analysis.png) |
 
-  ![Execution Output: Fibonacci Loop Algorithm](./module-04-perulangan-dan-kontrol-alur/output/58_fibonacci_loop.png)
+### Module 04: Perulangan dan Kontrol Alur (Loops and Iteration Control Flow)
 
----
+- **Pedagogical Tier:** Tier 1: Syntax Primitives, Type Annotations, and Imperative Foundations
+- **Pedagogical Level:** Level 1: Fundamental
+- **Module Overview:** Iterative control flow structures (for, while, do-while), collection iterations (for...of, for...in), nested loop matrices, jump statements (break, continue), iteration state counters, typed array iteration, loop boundary conditions, numerical pyramid patterns, factorial computation, prime number filtering, and Fibonacci sequence generation.
+- **Module Directory:** [`./module-04-perulangan-dan-kontrol-alur/`](./module-04-perulangan-dan-kontrol-alur) | **Lessons Count:** 16
 
-### Module 05: Functions and Parameters
-- **Module Directory**: [`module-05-fungsi-dan-parameter`](./module-05-fungsi-dan-parameter/README.md)
-- **Pedagogical Scope**: Function declarations, function expressions, arrow functions, parameter type annotations, return types, optional and default parameters, rest parameters, function overloading, function type aliases, callbacks, higher-order functions, recursion, generic functions, lexical scoping, closures, contextual `this`, and assertion functions.
-- **Subtopics & Source Implementations**:
-  - [`59_function_declaration.ts`](./module-05-fungsi-dan-parameter/59_function_declaration.ts) — Standard function declaration syntax and hoisting.
-  - [`60_function_expression.ts`](./module-05-fungsi-dan-parameter/60_function_expression.ts) — Storing anonymous and named functions in variables.
-  - [`61_arrow_function.ts`](./module-05-fungsi-dan-parameter/61_arrow_function.ts) — Concise arrow functions and lexical this binding.
-  - [`62_function_parameters.ts`](./module-05-fungsi-dan-parameter/62_function_parameters.ts) — Parameter type validation and count enforcement.
-  - [`63_function_return_types.ts`](./module-05-fungsi-dan-parameter/63_function_return_types.ts) — Explicit return types and return type inference.
-  - [`64_optional_parameters.ts`](./module-05-fungsi-dan-parameter/64_optional_parameters.ts) — Defining optional parameters with `?`.
-  - [`65_default_parameters.ts`](./module-05-fungsi-dan-parameter/65_default_parameters.ts) — Initializing fallback default values for omitted arguments.
-  - [`66_rest_parameters.ts`](./module-05-fungsi-dan-parameter/66_rest_parameters.ts) — Variadic functions accepting unbounded arguments as an array (`...args`).
-  - [`67_function_overloads.ts`](./module-05-fungsi-dan-parameter/67_function_overloads.ts) — Declaring multiple function call signatures with a single implementation.
-  - [`68_function_type_alias.ts`](./module-05-fungsi-dan-parameter/68_function_type_alias.ts) — Defining reusable function signature type aliases.
-  - [`69_callback_functions.ts`](./module-05-fungsi-dan-parameter/69_callback_functions.ts) — Passing typed functions as arguments for event-driven logic.
-  - [`70_higher_order_functions.ts`](./module-05-fungsi-dan-parameter/70_higher_order_functions.ts) — Functions accepting or returning other functions.
-  - [`71_recursive_functions.ts`](./module-05-fungsi-dan-parameter/71_recursive_functions.ts) — Self-invoking recursive functions with base termination cases.
-  - [`72_generic_functions_intro.ts`](./module-05-fungsi-dan-parameter/72_generic_functions_intro.ts) — Introduction to parameterized type functions.
-  - [`73_function_scope.ts`](./module-05-fungsi-dan-parameter/73_function_scope.ts) — Variable lifespan and lexical scoping hierarchy.
-  - [`74_closures.ts`](./module-05-fungsi-dan-parameter/74_closures.ts) — Encapsulating private outer state within inner returned functions.
-  - [`75_this_parameter.ts`](./module-05-fungsi-dan-parameter/75_this_parameter.ts) — Explicitly typing contextual `this` parameter in callbacks.
-  - [`76_assertion_functions.ts`](./module-05-fungsi-dan-parameter/76_assertion_functions.ts) — Functions that assert type conditions at runtime using `asserts condition`.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **43** | [`43_for_loop.ts`](./module-04-perulangan-dan-kontrol-alur/43_for_loop.ts) | Classic indexed iterative loops with initialization, conditional guards, and step expressions | [![Output 43_for_loop](./module-04-perulangan-dan-kontrol-alur/output/43_for_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/43_for_loop.png) |
+| **44** | [`44_while_loop.ts`](./module-04-perulangan-dan-kontrol-alur/44_while_loop.ts) | Pre-condition controlled iteration workflows executing while conditional guards evaluate to true | [![Output 44_while_loop](./module-04-perulangan-dan-kontrol-alur/output/44_while_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/44_while_loop.png) |
+| **45** | [`45_do_while_loop.ts`](./module-04-perulangan-dan-kontrol-alur/45_do_while_loop.ts) | Post-condition controlled iterative loops guaranteeing at least one execution pass using do-while | [![Output 45_do_while_loop](./module-04-perulangan-dan-kontrol-alur/output/45_do_while_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/45_do_while_loop.png) |
+| **46** | [`46_for_of_loop.ts`](./module-04-perulangan-dan-kontrol-alur/46_for_of_loop.ts) | Iterating over iterable collections, arrays, and string character sequences using for...of | [![Output 46_for_of_loop](./module-04-perulangan-dan-kontrol-alur/output/46_for_of_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/46_for_of_loop.png) |
+| **47** | [`47_for_in_loop.ts`](./module-04-perulangan-dan-kontrol-alur/47_for_in_loop.ts) | Enumerating enumerable property keys of JavaScript objects and records using for...in | [![Output 47_for_in_loop](./module-04-perulangan-dan-kontrol-alur/output/47_for_in_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/47_for_in_loop.png) |
+| **48** | [`48_nested_loop.ts`](./module-04-perulangan-dan-kontrol-alur/48_nested_loop.ts) | Multi-dimensional nested loop structures, grid coordinates, and matrix traversals | [![Output 48_nested_loop](./module-04-perulangan-dan-kontrol-alur/output/48_nested_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/48_nested_loop.png) |
+| **49** | [`49_break_statement.ts`](./module-04-perulangan-dan-kontrol-alur/49_break_statement.ts) | Immediate loop termination, sentinel detection, and early exit workflows using break | [![Output 49_break_statement](./module-04-perulangan-dan-kontrol-alur/output/49_break_statement.png)](./module-04-perulangan-dan-kontrol-alur/output/49_break_statement.png) |
+| **50** | [`50_continue_statement.ts`](./module-04-perulangan-dan-kontrol-alur/50_continue_statement.ts) | Skipping remaining statements in current loop iterations and advancing to subsequent cycles via continue | [![Output 50_continue_statement](./module-04-perulangan-dan-kontrol-alur/output/50_continue_statement.png)](./module-04-perulangan-dan-kontrol-alur/output/50_continue_statement.png) |
+| **51** | [`51_loop_counter.ts`](./module-04-perulangan-dan-kontrol-alur/51_loop_counter.ts) | Maintaining stateful iteration counters, accumulators, step increments, and progress trackers | [![Output 51_loop_counter](./module-04-perulangan-dan-kontrol-alur/output/51_loop_counter.png)](./module-04-perulangan-dan-kontrol-alur/output/51_loop_counter.png) |
+| **52** | [`52_array_iteration.ts`](./module-04-perulangan-dan-kontrol-alur/52_array_iteration.ts) | Iterating through typed array collections using indexed loops and modern collection iterators | [![Output 52_array_iteration](./module-04-perulangan-dan-kontrol-alur/output/52_array_iteration.png)](./module-04-perulangan-dan-kontrol-alur/output/52_array_iteration.png) |
+| **53** | [`53_loop_with_types.ts`](./module-04-perulangan-dan-kontrol-alur/53_loop_with_types.ts) | Enforcing strict static typing and type safety across loop index variables and collection items | [![Output 53_loop_with_types](./module-04-perulangan-dan-kontrol-alur/output/53_loop_with_types.png)](./module-04-perulangan-dan-kontrol-alur/output/53_loop_with_types.png) |
+| **54** | [`54_loop_conditions.ts`](./module-04-perulangan-dan-kontrol-alur/54_loop_conditions.ts) | Complex compound boolean loop boundary conditions and sentinel termination logic | [![Output 54_loop_conditions](./module-04-perulangan-dan-kontrol-alur/output/54_loop_conditions.png)](./module-04-perulangan-dan-kontrol-alur/output/54_loop_conditions.png) |
+| **55** | [`55_number_patterns.ts`](./module-04-perulangan-dan-kontrol-alur/55_number_patterns.ts) | Algorithmic number pyramids, geometric triangles, and visual pattern generation using nested loops | [![Output 55_number_patterns](./module-04-perulangan-dan-kontrol-alur/output/55_number_patterns.png)](./module-04-perulangan-dan-kontrol-alur/output/55_number_patterns.png) |
+| **56** | [`56_factorial_loop.ts`](./module-04-perulangan-dan-kontrol-alur/56_factorial_loop.ts) | Iterative mathematical factorial calculation algorithm with accumulator variables | [![Output 56_factorial_loop](./module-04-perulangan-dan-kontrol-alur/output/56_factorial_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/56_factorial_loop.png) |
+| **57** | [`57_prime_number.ts`](./module-04-perulangan-dan-kontrol-alur/57_prime_number.ts) | Algorithmic prime number determination, divisibility tests, and prime sequence filtering | [![Output 57_prime_number](./module-04-perulangan-dan-kontrol-alur/output/57_prime_number.png)](./module-04-perulangan-dan-kontrol-alur/output/57_prime_number.png) |
+| **58** | [`58_fibonacci_loop.ts`](./module-04-perulangan-dan-kontrol-alur/58_fibonacci_loop.ts) | Iterative Fibonacci sequence generation and mathematical numerical accumulator patterns | [![Output 58_fibonacci_loop](./module-04-perulangan-dan-kontrol-alur/output/58_fibonacci_loop.png)](./module-04-perulangan-dan-kontrol-alur/output/58_fibonacci_loop.png) |
 
-  ![Execution Output: Function Overloads](./module-05-fungsi-dan-parameter/output/67_function_overloads.png)
+### Module 05: Fungsi dan Parameter (Functions and Parameter Signatures)
 
----
+- **Pedagogical Tier:** Tier 1: Syntax Primitives, Type Annotations, and Imperative Foundations
+- **Pedagogical Level:** Level 1: Fundamental
+- **Module Overview:** Function declarations, expressions, arrow functions, parameter typing, return type annotations, optional and default parameters, rest parameter arrays (...args), function signature overloads, function type aliases, synchronous and asynchronous callbacks, higher-order functions (HOFs), recursion, introductory generic functions, lexical scoping, closures, explicit this parameter typings, and custom assertion functions (asserts).
+- **Module Directory:** [`./module-05-fungsi-dan-parameter/`](./module-05-fungsi-dan-parameter) | **Lessons Count:** 18
 
-### Module 06: Arrays, Tuples, and Objects
-- **Module Directory**: [`module-06-array-tuple-dan-object`](./module-06-array-tuple-dan-object/README.md)
-- **Pedagogical Scope**: Array types (`T[]` vs `Array<T>`), readonly collections (`ReadonlyArray<T>`), mutation methods, functional transforms (`map`, `filter`, `reduce`), sorting algorithms, array destructuring, fixed-length tuples, named tuples, optional tuple elements, object models, object destructuring, readonly properties, index signatures, and excess property checking.
-- **Subtopics & Source Implementations**:
-  - [`77_array_basic.ts`](./module-06-array-tuple-dan-object/77_array_basic.ts) — Array initialization and element index access.
-  - [`78_array_type_annotations.ts`](./module-06-array-tuple-dan-object/78_array_type_annotations.ts) — Comparing `T[]` and generic `Array<T>` syntax.
-  - [`79_readonly_array.ts`](./module-06-array-tuple-dan-object/79_readonly_array.ts) — Immutable array collections preventing mutation calls.
-  - [`80_array_methods.ts`](./module-06-array-tuple-dan-object/80_array_methods.ts) — Mutating array methods (`push`, `pop`, `shift`, `unshift`, `splice`).
-  - [`81_array_map.ts`](./module-06-array-tuple-dan-object/81_array_map.ts) — Transforming collection elements immutably via `map()`.
-  - [`82_array_filter.ts`](./module-06-array-tuple-dan-object/82_array_filter.ts) — Extracting sub-arrays matching predicate criteria via `filter()`.
-  - [`83_array_reduce.ts`](./module-06-array-tuple-dan-object/83_array_reduce.ts) — Aggregating array elements into single accumulated values via `reduce()`.
-  - [`84_array_sorting.ts`](./module-06-array-tuple-dan-object/84_array_sorting.ts) — Sorting numbers, strings, and objects with custom comparators.
-  - [`85_array_destructuring.ts`](./module-06-array-tuple-dan-object/85_array_destructuring.ts) — Extracting positional array elements and rest variables.
-  - [`86_tuple_basic.ts`](./module-06-array-tuple-dan-object/86_tuple_basic.ts) — Fixed-size arrays with heterogeneous element types.
-  - [`87_named_tuple.ts`](./module-06-array-tuple-dan-object/87_named_tuple.ts) — Providing descriptive labels to tuple positions (`[name: string, age: number]`).
-  - [`88_optional_tuple_elements.ts`](./module-06-array-tuple-dan-object/88_optional_tuple_elements.ts) — Tuples with optional trailing elements (`?`).
-  - [`89_object_basic.ts`](./module-06-array-tuple-dan-object/89_object_basic.ts) — Object literal definitions and property access.
-  - [`90_object_type_annotations.ts`](./module-06-array-tuple-dan-object/90_object_type_annotations.ts) — Explicit inline and alias object typing.
-  - [`91_object_destructuring.ts`](./module-06-array-tuple-dan-object/91_object_destructuring.ts) — Unpacking object properties with renaming and default fallbacks.
-  - [`92_readonly_properties.ts`](./module-06-array-tuple-dan-object/92_readonly_properties.ts) — Preventing modification of object keys via `readonly`.
-  - [`93_index_signatures.ts`](./module-06-array-tuple-dan-object/93_index_signatures.ts) — Dynamic dictionary property typing (`[key: string]: T`).
-  - [`94_excess_property_checks.ts`](./module-06-array-tuple-dan-object/94_excess_property_checks.ts) — Compiler safeguards against undeclared object properties.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **59** | [`59_function_declaration.ts`](./module-05-fungsi-dan-parameter/59_function_declaration.ts) | Standard named function declarations, typed parameters, and explicit return type annotations | [![Output 59_function_declaration](./module-05-fungsi-dan-parameter/output/59_function_declaration.png)](./module-05-fungsi-dan-parameter/output/59_function_declaration.png) |
+| **60** | [`60_function_expression.ts`](./module-05-fungsi-dan-parameter/60_function_expression.ts) | Anonymous and named function expressions assigned to strongly typed variable identifiers | [![Output 60_function_expression](./module-05-fungsi-dan-parameter/output/60_function_expression.png)](./module-05-fungsi-dan-parameter/output/60_function_expression.png) |
+| **61** | [`61_arrow_function.ts`](./module-05-fungsi-dan-parameter/61_arrow_function.ts) | Concise ES6 arrow function syntax, implicit return expressions, and lexical scope binding | [![Output 61_arrow_function](./module-05-fungsi-dan-parameter/output/61_arrow_function.png)](./module-05-fungsi-dan-parameter/output/61_arrow_function.png) |
+| **62** | [`62_function_parameters.ts`](./module-05-fungsi-dan-parameter/62_function_parameters.ts) | Parameter type annotations, required argument enforcement, and signature contracts | [![Output 62_function_parameters](./module-05-fungsi-dan-parameter/output/62_function_parameters.png)](./module-05-fungsi-dan-parameter/output/62_function_parameters.png) |
+| **63** | [`63_function_return_types.ts`](./module-05-fungsi-dan-parameter/63_function_return_types.ts) | Explicit function return type annotations, void signatures, and type-checked return values | [![Output 63_function_return_types](./module-05-fungsi-dan-parameter/output/63_function_return_types.png)](./module-05-fungsi-dan-parameter/output/63_function_return_types.png) |
+| **64** | [`64_optional_parameters.ts`](./module-05-fungsi-dan-parameter/64_optional_parameters.ts) | Defining optional function parameters using the question mark (?) syntax modifier | [![Output 64_optional_parameters](./module-05-fungsi-dan-parameter/output/64_optional_parameters.png)](./module-05-fungsi-dan-parameter/output/64_optional_parameters.png) |
+| **65** | [`65_default_parameters.ts`](./module-05-fungsi-dan-parameter/65_default_parameters.ts) | Supplying default fallback values for parameters with automatic compiler type inference | [![Output 65_default_parameters](./module-05-fungsi-dan-parameter/output/65_default_parameters.png)](./module-05-fungsi-dan-parameter/output/65_default_parameters.png) |
+| **66** | [`66_rest_parameters.ts`](./module-05-fungsi-dan-parameter/66_rest_parameters.ts) | Capturing variable-length argument lists into typed array structures using rest parameters (...args) | [![Output 66_rest_parameters](./module-05-fungsi-dan-parameter/output/66_rest_parameters.png)](./module-05-fungsi-dan-parameter/output/66_rest_parameters.png) |
+| **67** | [`67_function_overloads.ts`](./module-05-fungsi-dan-parameter/67_function_overloads.ts) | Defining multiple callable function signature overloads with unified implementation bodies | [![Output 67_function_overloads](./module-05-fungsi-dan-parameter/output/67_function_overloads.png)](./module-05-fungsi-dan-parameter/output/67_function_overloads.png) |
+| **68** | [`68_function_type_alias.ts`](./module-05-fungsi-dan-parameter/68_function_type_alias.ts) | Declaring reusable callable function signature contracts using TypeScript type aliases | [![Output 68_function_type_alias](./module-05-fungsi-dan-parameter/output/68_function_type_alias.png)](./module-05-fungsi-dan-parameter/output/68_function_type_alias.png) |
+| **69** | [`69_callback_functions.ts`](./module-05-fungsi-dan-parameter/69_callback_functions.ts) | Synchronous and asynchronous callback function typing, error-first conventions, and invocations | [![Output 69_callback_functions](./module-05-fungsi-dan-parameter/output/69_callback_functions.png)](./module-05-fungsi-dan-parameter/output/69_callback_functions.png) |
+| **70** | [`70_higher_order_functions.ts`](./module-05-fungsi-dan-parameter/70_higher_order_functions.ts) | Designing Higher-Order Functions (HOFs) that accept or return other functions | [![Output 70_higher_order_functions](./module-05-fungsi-dan-parameter/output/70_higher_order_functions.png)](./module-05-fungsi-dan-parameter/output/70_higher_order_functions.png) |
+| **71** | [`71_recursive_functions.ts`](./module-05-fungsi-dan-parameter/71_recursive_functions.ts) | Self-referential recursive algorithms, recursive call stacks, and base termination conditions | [![Output 71_recursive_functions](./module-05-fungsi-dan-parameter/output/71_recursive_functions.png)](./module-05-fungsi-dan-parameter/output/71_recursive_functions.png) |
+| **72** | [`72_generic_functions_intro.ts`](./module-05-fungsi-dan-parameter/72_generic_functions_intro.ts) | Introduction to generic type parameters (<T>) creating flexible and type-safe reusable functions | [![Output 72_generic_functions_intro](./module-05-fungsi-dan-parameter/output/72_generic_functions_intro.png)](./module-05-fungsi-dan-parameter/output/72_generic_functions_intro.png) |
+| **73** | [`73_function_scope.ts`](./module-05-fungsi-dan-parameter/73_function_scope.ts) | Lexical scope boundaries, identifier shadowing, variable lifetimes, and function encapsulation | [![Output 73_function_scope](./module-05-fungsi-dan-parameter/output/73_function_scope.png)](./module-05-fungsi-dan-parameter/output/73_function_scope.png) |
+| **74** | [`74_closures.ts`](./module-05-fungsi-dan-parameter/74_closures.ts) | Lexical closures capturing outer scope variables, private state preservation, and factory functions | [![Output 74_closures](./module-05-fungsi-dan-parameter/output/74_closures.png)](./module-05-fungsi-dan-parameter/output/74_closures.png) |
+| **75** | [`75_this_parameter.ts`](./module-05-fungsi-dan-parameter/75_this_parameter.ts) | Explicit this parameter typing for method execution contexts and callback handlers | [![Output 75_this_parameter](./module-05-fungsi-dan-parameter/output/75_this_parameter.png)](./module-05-fungsi-dan-parameter/output/75_this_parameter.png) |
+| **76** | [`76_assertion_functions.ts`](./module-05-fungsi-dan-parameter/76_assertion_functions.ts) | Authoring custom invariant assertion functions using TypeScript asserts type return syntax | [![Output 76_assertion_functions](./module-05-fungsi-dan-parameter/output/76_assertion_functions.png)](./module-05-fungsi-dan-parameter/output/76_assertion_functions.png) |
 
-  ![Execution Output: Tuples and Fixed-size Collections](./module-06-array-tuple-dan-object/output/86_tuple_basic.png)
+### Module 06: Array, Tuple, dan Object (Arrays, Tuples, and Objects)
 
----
+- **Pedagogical Tier:** Tier 2: Data Modeling, Composite Structures, and Type Narrowing
+- **Pedagogical Level:** Level 2: Intermediate
+- **Module Overview:** Homogeneous array data structures, type annotations (T[] vs Array<T>), compile-time readonly arrays, array transformation and iteration methods (map, filter, reduce), sorting algorithms, array destructuring patterns, fixed-length typed tuples, labeled named tuples, optional tuple elements, object literal declarations, type annotations, object destructuring, readonly properties, dynamic index signatures, and excess property checking.
+- **Module Directory:** [`./module-06-array-tuple-dan-object/`](./module-06-array-tuple-dan-object) | **Lessons Count:** 18
 
-### Module 07: Type Aliases, Interfaces, and Enums
-- **Module Directory**: [`module-07-type-aliases-interface-dan-enum`](./module-07-type-aliases-interface-dan-enum/README.md)
-- **Pedagogical Scope**: Type aliases, interface declarations, optional and readonly properties, callable interface signatures, interface index signatures, inheritance via `extends`, declaration merging, type alias vs interface tradeoffs, numeric/string enums, const enums, union type alternatives, and domain data modeling.
-- **Subtopics & Source Implementations**:
-  - [`95_type_aliases.ts`](./module-07-type-aliases-interface-dan-enum/95_type_aliases.ts) — Defining custom naming aliases for primitives and objects.
-  - [`96_interface_basic.ts`](./module-07-type-aliases-interface-dan-enum/96_interface_basic.ts) — Interface contracts defining public object shapes.
-  - [`97_interface_optional_properties.ts`](./module-07-type-aliases-interface-dan-enum/97_interface_optional_properties.ts) — Optional fields within interfaces.
-  - [`98_interface_readonly_properties.ts`](./module-07-type-aliases-interface-dan-enum/98_interface_readonly_properties.ts) — Immutable interface property enforcement.
-  - [`99_interface_function_types.ts`](./module-07-type-aliases-interface-dan-enum/99_interface_function_types.ts) — Modeling callable function signatures with interfaces.
-  - [`100_interface_index_signatures.ts`](./module-07-type-aliases-interface-dan-enum/100_interface_index_signatures.ts) — Dynamic key-value index signatures in interfaces.
-  - [`101_interface_extends.ts`](./module-07-type-aliases-interface-dan-enum/101_interface_extends.ts) — Single and multi-interface inheritance via `extends`.
-  - [`102_interface_declaration_merging.ts`](./module-07-type-aliases-interface-dan-enum/102_interface_declaration_merging.ts) — Merging multiple interface definitions under the same name.
-  - [`103_type_alias_vs_interface.ts`](./module-07-type-aliases-interface-dan-enum/103_type_alias_vs_interface.ts) — Direct comparison of capabilities, union support, and performance.
-  - [`104_enum_basic.ts`](./module-07-type-aliases-interface-dan-enum/104_enum_basic.ts) — Enumerated constants for named values.
-  - [`105_numeric_enum.ts`](./module-07-type-aliases-interface-dan-enum/105_numeric_enum.ts) — Auto-incrementing and custom numeric enums.
-  - [`106_string_enum.ts`](./module-07-type-aliases-interface-dan-enum/106_string_enum.ts) — String-based enums with explicit values.
-  - [`107_const_enum.ts`](./module-07-type-aliases-interface-dan-enum/107_const_enum.ts) — Inlined const enums optimizing output bundle sizes.
-  - [`108_enum_alternatives.ts`](./module-07-type-aliases-interface-dan-enum/108_enum_alternatives.ts) — Utilizing string literal union types as modern lightweight enum alternatives.
-  - [`109_object_type_composition.ts`](./module-07-type-aliases-interface-dan-enum/109_object_type_composition.ts) — Composing complex structures from simpler types.
-  - [`110_data_modeling.ts`](./module-07-type-aliases-interface-dan-enum/110_data_modeling.ts) — Comprehensive domain data modeling for e-commerce entities.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **77** | [`77_array_basic.ts`](./module-06-array-tuple-dan-object/77_array_basic.ts) | Initializing, indexing, modifying, and calculating lengths of basic typed array collections | [![Output 77_array_basic](./module-06-array-tuple-dan-object/output/77_array_basic.png)](./module-06-array-tuple-dan-object/output/77_array_basic.png) |
+| **78** | [`78_array_type_annotations.ts`](./module-06-array-tuple-dan-object/78_array_type_annotations.ts) | Syntax conventions for typed array declarations (T[] square bracket vs Array<T> generic syntax) | [![Output 78_array_type_annotations](./module-06-array-tuple-dan-object/output/78_array_type_annotations.png)](./module-06-array-tuple-dan-object/output/78_array_type_annotations.png) |
+| **79** | [`79_readonly_array.ts`](./module-06-array-tuple-dan-object/79_readonly_array.ts) | Immutable array collections preventing mutations using readonly T[] and ReadonlyArray<T> | [![Output 79_readonly_array](./module-06-array-tuple-dan-object/output/79_readonly_array.png)](./module-06-array-tuple-dan-object/output/79_readonly_array.png) |
+| **80** | [`80_array_methods.ts`](./module-06-array-tuple-dan-object/80_array_methods.ts) | Core array mutator and accessor methods (push, pop, shift, unshift, slice, concat, includes) | [![Output 80_array_methods](./module-06-array-tuple-dan-object/output/80_array_methods.png)](./module-06-array-tuple-dan-object/output/80_array_methods.png) |
+| **81** | [`81_array_map.ts`](./module-06-array-tuple-dan-object/81_array_map.ts) | Pure functional array transformations and element projection pipelines using .map() | [![Output 81_array_map](./module-06-array-tuple-dan-object/output/81_array_map.png)](./module-06-array-tuple-dan-object/output/81_array_map.png) |
+| **82** | [`82_array_filter.ts`](./module-06-array-tuple-dan-object/82_array_filter.ts) | Declarative element filtering and subset extraction based on boolean predicates using .filter() | [![Output 82_array_filter](./module-06-array-tuple-dan-object/output/82_array_filter.png)](./module-06-array-tuple-dan-object/output/82_array_filter.png) |
+| **83** | [`83_array_reduce.ts`](./module-06-array-tuple-dan-object/83_array_reduce.ts) | Accumulating array items into scalar values or complex grouped objects using .reduce() | [![Output 83_array_reduce](./module-06-array-tuple-dan-object/output/83_array_reduce.png)](./module-06-array-tuple-dan-object/output/83_array_reduce.png) |
+| **84** | [`84_array_sorting.ts`](./module-06-array-tuple-dan-object/84_array_sorting.ts) | Custom comparison predicates for alphabetical, numerical, and object property sorting | [![Output 84_array_sorting](./module-06-array-tuple-dan-object/output/84_array_sorting.png)](./module-06-array-tuple-dan-object/output/84_array_sorting.png) |
+| **85** | [`85_array_destructuring.ts`](./module-06-array-tuple-dan-object/85_array_destructuring.ts) | Unpacking array elements into discrete variables using destructuring assignments and rest patterns | [![Output 85_array_destructuring](./module-06-array-tuple-dan-object/output/85_array_destructuring.png)](./module-06-array-tuple-dan-object/output/85_array_destructuring.png) |
+| **86** | [`86_tuple_basic.ts`](./module-06-array-tuple-dan-object/86_tuple_basic.ts) | Fixed-length typed arrays with distinct element types at specific positions (tuples) | [![Output 86_tuple_basic](./module-06-array-tuple-dan-object/output/86_tuple_basic.png)](./module-06-array-tuple-dan-object/output/86_tuple_basic.png) |
+| **87** | [`87_named_tuple.ts`](./module-06-array-tuple-dan-object/87_named_tuple.ts) | Labeled tuple elements providing descriptive names for positional types to enhance IDE documentation | [![Output 87_named_tuple](./module-06-array-tuple-dan-object/output/87_named_tuple.png)](./module-06-array-tuple-dan-object/output/87_named_tuple.png) |
+| **88** | [`88_optional_tuple_elements.ts`](./module-06-array-tuple-dan-object/88_optional_tuple_elements.ts) | Defining flexible tuple types containing optional positional elements using the ? modifier | [![Output 88_optional_tuple_elements](./module-06-array-tuple-dan-object/output/88_optional_tuple_elements.png)](./module-06-array-tuple-dan-object/output/88_optional_tuple_elements.png) |
+| **89** | [`89_object_basic.ts`](./module-06-array-tuple-dan-object/89_object_basic.ts) | Object literal instantiation, property access, dynamic modification, and property deletion | [![Output 89_object_basic](./module-06-array-tuple-dan-object/output/89_object_basic.png)](./module-06-array-tuple-dan-object/output/89_object_basic.png) |
+| **90** | [`90_object_type_annotations.ts`](./module-06-array-tuple-dan-object/90_object_type_annotations.ts) | Explicit object shape typing, property contracts, and structural type compatibility | [![Output 90_object_type_annotations](./module-06-array-tuple-dan-object/output/90_object_type_annotations.png)](./module-06-array-tuple-dan-object/output/90_object_type_annotations.png) |
+| **91** | [`91_object_destructuring.ts`](./module-06-array-tuple-dan-object/91_object_destructuring.ts) | Extracting object properties into variables, property renaming, and default value destructuring | [![Output 91_object_destructuring](./module-06-array-tuple-dan-object/output/91_object_destructuring.png)](./module-06-array-tuple-dan-object/output/91_object_destructuring.png) |
+| **92** | [`92_readonly_properties.ts`](./module-06-array-tuple-dan-object/92_readonly_properties.ts) | Enforcing compile-time immutability on specific object fields using the readonly modifier | [![Output 92_readonly_properties](./module-06-array-tuple-dan-object/output/92_readonly_properties.png)](./module-06-array-tuple-dan-object/output/92_readonly_properties.png) |
+| **93** | [`93_index_signatures.ts`](./module-06-array-tuple-dan-object/93_index_signatures.ts) | Defining dynamic string and number dictionary lookups using TypeScript index signatures | [![Output 93_index_signatures](./module-06-array-tuple-dan-object/output/93_index_signatures.png)](./module-06-array-tuple-dan-object/output/93_index_signatures.png) |
+| **94** | [`94_excess_property_checks.ts`](./module-06-array-tuple-dan-object/94_excess_property_checks.ts) | Understanding TypeScript excess property checks on fresh object literals and bypass techniques | [![Output 94_excess_property_checks](./module-06-array-tuple-dan-object/output/94_excess_property_checks.png)](./module-06-array-tuple-dan-object/output/94_excess_property_checks.png) |
 
-  ![Execution Output: Type Alias vs Interface](./module-07-type-aliases-interface-dan-enum/output/103_type_alias_vs_interface.png)
+### Module 07: Type Aliases, Interface, dan Enum (Type Aliases, Interfaces, and Enums)
 
----
+- **Pedagogical Tier:** Tier 2: Data Modeling, Composite Structures, and Type Narrowing
+- **Pedagogical Level:** Level 2: Intermediate
+- **Module Overview:** Custom type definitions with type aliases, object shape modeling with interfaces, optional and readonly interface properties, callable interface signatures, index signatures, interface inheritance (extends), automated declaration merging, architectural trade-offs between type aliases and interfaces, numeric, string, and const enums, string literal union alternatives, object type composition, and domain data modeling.
+- **Module Directory:** [`./module-07-type-aliases-interface-dan-enum/`](./module-07-type-aliases-interface-dan-enum) | **Lessons Count:** 16
 
-### Module 08: Union, Intersection, and Type Narrowing
-- **Module Directory**: [`module-08-union-intersection-dan-type-narrowing`](./module-08-union-intersection-dan-type-narrowing/README.md)
-- **Pedagogical Scope**: Union types (`|`), intersection types (`&`), discriminated unions with discriminator fields, narrowing strategies, user-defined type guards (`arg is Type`), property-based narrowing (`in`), class instance narrowing (`instanceof`), equality/truthiness narrowing, exhaustive checking with `never`, the `satisfies` operator, type assertions (`as`), `const` assertions, non-null assertions (`!`), and branded types.
-- **Subtopics & Source Implementations**:
-  - [`111_union_types.ts`](./module-08-union-intersection-dan-type-narrowing/111_union_types.ts) — Accepting multiple valid value types using `|`.
-  - [`112_intersection_types.ts`](./module-08-union-intersection-dan-type-narrowing/112_intersection_types.ts) — Combining multiple types into unified contracts using `&`.
-  - [`113_discriminated_unions.ts`](./module-08-union-intersection-dan-type-narrowing/113_discriminated_unions.ts) — Tagged unions with common discriminator properties.
-  - [`114_type_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/114_type_narrowing.ts) — Refining broad types to specific variants through conditional checks.
-  - [`115_type_guards.ts`](./module-08-union-intersection-dan-type-narrowing/115_type_guards.ts) — Utilizing native JavaScript runtime checks to narrow types.
-  - [`116_custom_type_guards.ts`](./module-08-union-intersection-dan-type-narrowing/116_custom_type_guards.ts) — Authoring custom type guard functions.
-  - [`117_type_predicates.ts`](./module-08-union-intersection-dan-type-narrowing/117_type_predicates.ts) — Type predicate syntax (`value is Type`) for narrowing functions.
-  - [`118_in_operator_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/118_in_operator_narrowing.ts) — Narrowing object unions based on property existence.
-  - [`119_instanceof_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/119_instanceof_narrowing.ts) — Narrowing class hierarchy instances.
-  - [`120_equality_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/120_equality_narrowing.ts) — Narrowing using strict equality operators (`===`, `!==`).
-  - [`121_truthiness_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/121_truthiness_narrowing.ts) — Filtering out `null`, `undefined`, and falsy values.
-  - [`122_discriminated_switch.ts`](./module-08-union-intersection-dan-type-narrowing/122_discriminated_switch.ts) — Pattern matching discriminated unions via switch statements.
-  - [`123_exhaustive_checks.ts`](./module-08-union-intersection-dan-type-narrowing/123_exhaustive_checks.ts) — Enforcing unhandled case compilation errors with `never`.
-  - [`124_satisfies_operator.ts`](./module-08-union-intersection-dan-type-narrowing/124_satisfies_operator.ts) — Type matching validation while preserving exact literal types.
-  - [`125_type_assertions.ts`](./module-08-union-intersection-dan-type-narrowing/125_type_assertions.ts) — Explicit type overrides with `as Type`.
-  - [`126_const_assertions.ts`](./module-08-union-intersection-dan-type-narrowing/126_const_assertions.ts) — Locking deep literals into readonly primitives via `as const`.
-  - [`127_non_null_assertion.ts`](./module-08-union-intersection-dan-type-narrowing/127_non_null_assertion.ts) — Asserting non-null/non-undefined status via `!`.
-  - [`128_branded_types.ts`](./module-08-union-intersection-dan-type-narrowing/128_branded_types.ts) — Nominal typing simulating distinct types for primitive values.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **100** | [`100_interface_index_signatures.ts`](./module-07-type-aliases-interface-dan-enum/100_interface_index_signatures.ts) | Modeling extensible key-value maps and dynamic dictionaries inside interface contracts | [![Output 100_interface_index_signatures](./module-07-type-aliases-interface-dan-enum/output/100_interface_index_signatures.png)](./module-07-type-aliases-interface-dan-enum/output/100_interface_index_signatures.png) |
+| **101** | [`101_interface_extends.ts`](./module-07-type-aliases-interface-dan-enum/101_interface_extends.ts) | Interface inheritance, multi-interface extension, and structural composition using extends | [![Output 101_interface_extends](./module-07-type-aliases-interface-dan-enum/output/101_interface_extends.png)](./module-07-type-aliases-interface-dan-enum/output/101_interface_extends.png) |
+| **102** | [`102_interface_declaration_merging.ts`](./module-07-type-aliases-interface-dan-enum/102_interface_declaration_merging.ts) | Automatic augmentation and declaration merging of duplicate interface declarations | [![Output 102_interface_declaration_merging](./module-07-type-aliases-interface-dan-enum/output/102_interface_declaration_merging.png)](./module-07-type-aliases-interface-dan-enum/output/102_interface_declaration_merging.png) |
+| **103** | [`103_type_alias_vs_interface.ts`](./module-07-type-aliases-interface-dan-enum/103_type_alias_vs_interface.ts) | Comprehensive architectural comparison, capabilities, and decision criteria for type vs interface | [![Output 103_type_alias_vs_interface](./module-07-type-aliases-interface-dan-enum/output/103_type_alias_vs_interface.png)](./module-07-type-aliases-interface-dan-enum/output/103_type_alias_vs_interface.png) |
+| **104** | [`104_enum_basic.ts`](./module-07-type-aliases-interface-dan-enum/104_enum_basic.ts) | Declaring enumerated collections of named constant values using the enum keyword | [![Output 104_enum_basic](./module-07-type-aliases-interface-dan-enum/output/104_enum_basic.png)](./module-07-type-aliases-interface-dan-enum/output/104_enum_basic.png) |
+| **105** | [`105_numeric_enum.ts`](./module-07-type-aliases-interface-dan-enum/105_numeric_enum.ts) | Auto-incrementing and custom-assigned numeric enums and reverse name-to-value mappings | [![Output 105_numeric_enum](./module-07-type-aliases-interface-dan-enum/output/105_numeric_enum.png)](./module-07-type-aliases-interface-dan-enum/output/105_numeric_enum.png) |
+| **106** | [`106_string_enum.ts`](./module-07-type-aliases-interface-dan-enum/106_string_enum.ts) | Explicit string-valued enums with meaningful serialized runtime values and debugging traces | [![Output 106_string_enum](./module-07-type-aliases-interface-dan-enum/output/106_string_enum.png)](./module-07-type-aliases-interface-dan-enum/output/106_string_enum.png) |
+| **107** | [`107_const_enum.ts`](./module-07-type-aliases-interface-dan-enum/107_const_enum.ts) | Inlined constant enums eliminated during compilation to minimize JavaScript bundle footprint | [![Output 107_const_enum](./module-07-type-aliases-interface-dan-enum/output/107_const_enum.png)](./module-07-type-aliases-interface-dan-enum/output/107_const_enum.png) |
+| **108** | [`108_enum_alternatives.ts`](./module-07-type-aliases-interface-dan-enum/108_enum_alternatives.ts) | Idiomatic, lightweight alternatives to enums using string literal union types and const objects | [![Output 108_enum_alternatives](./module-07-type-aliases-interface-dan-enum/output/108_enum_alternatives.png)](./module-07-type-aliases-interface-dan-enum/output/108_enum_alternatives.png) |
+| **109** | [`109_object_type_composition.ts`](./module-07-type-aliases-interface-dan-enum/109_object_type_composition.ts) | Composing modular, reusable object types via intersection types and interface inheritance | [![Output 109_object_type_composition](./module-07-type-aliases-interface-dan-enum/output/109_object_type_composition.png)](./module-07-type-aliases-interface-dan-enum/output/109_object_type_composition.png) |
+| **110** | [`110_data_modeling.ts`](./module-07-type-aliases-interface-dan-enum/110_data_modeling.ts) | Real-world domain entity modeling combining interfaces, types, enums, and nested relations | [![Output 110_data_modeling](./module-07-type-aliases-interface-dan-enum/output/110_data_modeling.png)](./module-07-type-aliases-interface-dan-enum/output/110_data_modeling.png) |
+| **95** | [`95_type_aliases.ts`](./module-07-type-aliases-interface-dan-enum/95_type_aliases.ts) | Defining custom type identifiers and complex composite structures using the type keyword | [![Output 95_type_aliases](./module-07-type-aliases-interface-dan-enum/output/95_type_aliases.png)](./module-07-type-aliases-interface-dan-enum/output/95_type_aliases.png) |
+| **96** | [`96_interface_basic.ts`](./module-07-type-aliases-interface-dan-enum/96_interface_basic.ts) | Defining structural shape contracts and object blueprint specifications using interface | [![Output 96_interface_basic](./module-07-type-aliases-interface-dan-enum/output/96_interface_basic.png)](./module-07-type-aliases-interface-dan-enum/output/96_interface_basic.png) |
+| **97** | [`97_interface_optional_properties.ts`](./module-07-type-aliases-interface-dan-enum/97_interface_optional_properties.ts) | Marking non-mandatory object properties in interfaces using the optional (?) modifier | [![Output 97_interface_optional_properties](./module-07-type-aliases-interface-dan-enum/output/97_interface_optional_properties.png)](./module-07-type-aliases-interface-dan-enum/output/97_interface_optional_properties.png) |
+| **98** | [`98_interface_readonly_properties.ts`](./module-07-type-aliases-interface-dan-enum/98_interface_readonly_properties.ts) | Enforcing compile-time read-only constraints on interface properties using readonly | [![Output 98_interface_readonly_properties](./module-07-type-aliases-interface-dan-enum/output/98_interface_readonly_properties.png)](./module-07-type-aliases-interface-dan-enum/output/98_interface_readonly_properties.png) |
+| **99** | [`99_interface_function_types.ts`](./module-07-type-aliases-interface-dan-enum/99_interface_function_types.ts) | Describing callable function signatures and method contracts within interface definitions | [![Output 99_interface_function_types](./module-07-type-aliases-interface-dan-enum/output/99_interface_function_types.png)](./module-07-type-aliases-interface-dan-enum/output/99_interface_function_types.png) |
 
-  ![Execution Output: Discriminated Unions](./module-08-union-intersection-dan-type-narrowing/output/113_discriminated_unions.png)
+### Module 08: Union, Intersection, dan Type Narrowing (Unions, Intersections, and Type Narrowing)
 
----
+- **Pedagogical Tier:** Tier 2: Data Modeling, Composite Structures, and Type Narrowing
+- **Pedagogical Level:** Level 2: Intermediate
+- **Module Overview:** Union types (|), intersection types (&), tagged discriminated unions with discriminant properties, runtime type narrowing strategies, standard type guards (typeof, instanceof, in), custom user-defined type guards, type predicates (is), equality and truthiness narrowing, exhaustive switch matching with never guards, the satisfies operator, type assertions (as), deep immutability via const assertions (as const), non-null assertions (!), and nominal branded types.
+- **Module Directory:** [`./module-08-union-intersection-dan-type-narrowing/`](./module-08-union-intersection-dan-type-narrowing) | **Lessons Count:** 18
 
-### Module 09: Generics and Generic Programming
-- **Module Directory**: [`module-09-generics-dan-pemrograman-generik`](./module-09-generics-dan-pemrograman-generik/README.md)
-- **Pedagogical Scope**: Generic functions, type parameters (`<T>`), constraints (`extends`), generic interfaces, generic classes, generic type aliases, multiple type parameters, default type arguments, key querying (`keyof`), type querying (`typeof`), indexed access types (`T[K]`), generic key constraints, generic factories, collections, callbacks, inference, variance, and generic type guards.
-- **Subtopics & Source Implementations**:
-  - [`129_generic_functions.ts`](./module-09-generics-dan-pemrograman-generik/129_generic_functions.ts) — Reusable functions operating across arbitrary types.
-  - [`130_generic_parameters.ts`](./module-09-generics-dan-pemrograman-generik/130_generic_parameters.ts) — Managing single and multi-type parameters.
-  - [`131_generic_constraints.ts`](./module-09-generics-dan-pemrograman-generik/131_generic_constraints.ts) — Restricting generic type arguments using `extends`.
-  - [`132_generic_interfaces.ts`](./module-09-generics-dan-pemrograman-generik/132_generic_interfaces.ts) — Parameterized interface contracts.
-  - [`133_generic_classes.ts`](./module-09-generics-dan-pemrograman-generik/133_generic_classes.ts) — Reusable generic class data structures.
-  - [`134_generic_type_aliases.ts`](./module-09-generics-dan-pemrograman-generik/134_generic_type_aliases.ts) — Creating flexible parameterized type definitions.
-  - [`135_multiple_type_parameters.ts`](./module-09-generics-dan-pemrograman-generik/135_multiple_type_parameters.ts) — Handling paired and triple type variables (`<T, U, V>`).
-  - [`136_default_generic_parameters.ts`](./module-09-generics-dan-pemrograman-generik/136_default_generic_parameters.ts) — Specifying fallback types (`<T = string>`).
-  - [`137_keyof_operator.ts`](./module-09-generics-dan-pemrograman-generik/137_keyof_operator.ts) — Extracting union of keys from object types.
-  - [`138_typeof_type_operator.ts`](./module-09-generics-dan-pemrograman-generik/138_typeof_type_operator.ts) — Deriving types directly from existing runtime values.
-  - [`139_indexed_access_types.ts`](./module-09-generics-dan-pemrograman-generik/139_indexed_access_types.ts) — Querying specific property types with `T[K]`.
-  - [`140_generic_key_constraints.ts`](./module-09-generics-dan-pemrograman-generik/140_generic_key_constraints.ts) — Enforcing property key constraints (`<K extends keyof T>`).
-  - [`141_generic_factory.ts`](./module-09-generics-dan-pemrograman-generik/141_generic_factory.ts) — Factory functions instantiating classes dynamically.
-  - [`142_generic_collections.ts`](./module-09-generics-dan-pemrograman-generik/142_generic_collections.ts) — Implementing custom Queue and Stack structures.
-  - [`143_generic_callbacks.ts`](./module-09-generics-dan-pemrograman-generik/143_generic_callbacks.ts) — Strongly typing callback arguments generically.
-  - [`144_generic_inference.ts`](./module-09-generics-dan-pemrograman-generik/144_generic_inference.ts) — Automatic deduction of type parameters from call arguments.
-  - [`145_variance_basics.ts`](./module-09-generics-dan-pemrograman-generik/145_variance_basics.ts) — Covariance and contravariance in generic subtyping.
-  - [`146_generic_type_guards.ts`](./module-09-generics-dan-pemrograman-generik/146_generic_type_guards.ts) — Authoring reusable generic type-narrowing functions.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **111** | [`111_union_types.ts`](./module-08-union-intersection-dan-type-narrowing/111_union_types.ts) | Composing flexible types that represent values matching any one of multiple possibilities (|) | [![Output 111_union_types](./module-08-union-intersection-dan-type-narrowing/output/111_union_types.png)](./module-08-union-intersection-dan-type-narrowing/output/111_union_types.png) |
+| **112** | [`112_intersection_types.ts`](./module-08-union-intersection-dan-type-narrowing/112_intersection_types.ts) | Combining multiple distinct type definitions into a single unified composite type (&) | [![Output 112_intersection_types](./module-08-union-intersection-dan-type-narrowing/output/112_intersection_types.png)](./module-08-union-intersection-dan-type-narrowing/output/112_intersection_types.png) |
+| **113** | [`113_discriminated_unions.ts`](./module-08-union-intersection-dan-type-narrowing/113_discriminated_unions.ts) | Tagged discriminated union patterns with literal discriminant properties for safe branching | [![Output 113_discriminated_unions](./module-08-union-intersection-dan-type-narrowing/output/113_discriminated_unions.png)](./module-08-union-intersection-dan-type-narrowing/output/113_discriminated_unions.png) |
+| **114** | [`114_type_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/114_type_narrowing.ts) | Refining broad ambiguous types into specific concrete types through conditional execution logic | [![Output 114_type_narrowing](./module-08-union-intersection-dan-type-narrowing/output/114_type_narrowing.png)](./module-08-union-intersection-dan-type-narrowing/output/114_type_narrowing.png) |
+| **115** | [`115_type_guards.ts`](./module-08-union-intersection-dan-type-narrowing/115_type_guards.ts) | Utilizing built-in runtime type guards (typeof, instanceof) to narrow types within conditional blocks | [![Output 115_type_guards](./module-08-union-intersection-dan-type-narrowing/output/115_type_guards.png)](./module-08-union-intersection-dan-type-narrowing/output/115_type_guards.png) |
+| **116** | [`116_custom_type_guards.ts`](./module-08-union-intersection-dan-type-narrowing/116_custom_type_guards.ts) | Authoring user-defined type guard functions to inspect and validate complex runtime object shapes | [![Output 116_custom_type_guards](./module-08-union-intersection-dan-type-narrowing/output/116_custom_type_guards.png)](./module-08-union-intersection-dan-type-narrowing/output/116_custom_type_guards.png) |
+| **117** | [`117_type_predicates.ts`](./module-08-union-intersection-dan-type-narrowing/117_type_predicates.ts) | Writing explicit type predicate return signatures (parameterName is Type) for custom guards | [![Output 117_type_predicates](./module-08-union-intersection-dan-type-narrowing/output/117_type_predicates.png)](./module-08-union-intersection-dan-type-narrowing/output/117_type_predicates.png) |
+| **118** | [`118_in_operator_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/118_in_operator_narrowing.ts) | Differentiating union object shapes by verifying property presence using the in operator | [![Output 118_in_operator_narrowing](./module-08-union-intersection-dan-type-narrowing/output/118_in_operator_narrowing.png)](./module-08-union-intersection-dan-type-narrowing/output/118_in_operator_narrowing.png) |
+| **119** | [`119_instanceof_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/119_instanceof_narrowing.ts) | Narrowing class hierarchies, custom error instances, and prototype chains with instanceof | [![Output 119_instanceof_narrowing](./module-08-union-intersection-dan-type-narrowing/output/119_instanceof_narrowing.png)](./module-08-union-intersection-dan-type-narrowing/output/119_instanceof_narrowing.png) |
+| **120** | [`120_equality_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/120_equality_narrowing.ts) | Refining types through literal value comparisons using strict equality checks (===, !==) | [![Output 120_equality_narrowing](./module-08-union-intersection-dan-type-narrowing/output/120_equality_narrowing.png)](./module-08-union-intersection-dan-type-narrowing/output/120_equality_narrowing.png) |
+| **121** | [`121_truthiness_narrowing.ts`](./module-08-union-intersection-dan-type-narrowing/121_truthiness_narrowing.ts) | Filtering out null, undefined, 0, empty strings, and falsy values using truthiness evaluation | [![Output 121_truthiness_narrowing](./module-08-union-intersection-dan-type-narrowing/output/121_truthiness_narrowing.png)](./module-08-union-intersection-dan-type-narrowing/output/121_truthiness_narrowing.png) |
+| **122** | [`122_discriminated_switch.ts`](./module-08-union-intersection-dan-type-narrowing/122_discriminated_switch.ts) | Exhaustive pattern matching and branch dispatching over discriminated unions using switch | [![Output 122_discriminated_switch](./module-08-union-intersection-dan-type-narrowing/output/122_discriminated_switch.png)](./module-08-union-intersection-dan-type-narrowing/output/122_discriminated_switch.png) |
+| **123** | [`123_exhaustive_checks.ts`](./module-08-union-intersection-dan-type-narrowing/123_exhaustive_checks.ts) | Enforcing complete case handling at compile time using unassignable never type assertions | [![Output 123_exhaustive_checks](./module-08-union-intersection-dan-type-narrowing/output/123_exhaustive_checks.png)](./module-08-union-intersection-dan-type-narrowing/output/123_exhaustive_checks.png) |
+| **124** | [`124_satisfies_operator.ts`](./module-08-union-intersection-dan-type-narrowing/124_satisfies_operator.ts) | Validating expressions against type contracts without widening inferred types via satisfies | [![Output 124_satisfies_operator](./module-08-union-intersection-dan-type-narrowing/output/124_satisfies_operator.png)](./module-08-union-intersection-dan-type-narrowing/output/124_satisfies_operator.png) |
+| **125** | [`125_type_assertions.ts`](./module-08-union-intersection-dan-type-narrowing/125_type_assertions.ts) | Explicit type casting and override assertions using the as Type syntax | [![Output 125_type_assertions](./module-08-union-intersection-dan-type-narrowing/output/125_type_assertions.png)](./module-08-union-intersection-dan-type-narrowing/output/125_type_assertions.png) |
+| **126** | [`126_const_assertions.ts`](./module-08-union-intersection-dan-type-narrowing/126_const_assertions.ts) | Enforcing deep immutability, literal preservation, and readonly tuples using as const | [![Output 126_const_assertions](./module-08-union-intersection-dan-type-narrowing/output/126_const_assertions.png)](./module-08-union-intersection-dan-type-narrowing/output/126_const_assertions.png) |
+| **127** | [`127_non_null_assertion.ts`](./module-08-union-intersection-dan-type-narrowing/127_non_null_assertion.ts) | Asserting non-null and non-undefined operand status using the postfix exclamation mark (!) operator | [![Output 127_non_null_assertion](./module-08-union-intersection-dan-type-narrowing/output/127_non_null_assertion.png)](./module-08-union-intersection-dan-type-narrowing/output/127_non_null_assertion.png) |
+| **128** | [`128_branded_types.ts`](./module-08-union-intersection-dan-type-narrowing/128_branded_types.ts) | Nominal typing patterns and branded primitive types preventing accidental value substitution | [![Output 128_branded_types](./module-08-union-intersection-dan-type-narrowing/output/128_branded_types.png)](./module-08-union-intersection-dan-type-narrowing/output/128_branded_types.png) |
 
-  ![Execution Output: Generic Constraints](./module-09-generics-dan-pemrograman-generik/output/131_generic_constraints.png)
+### Module 09: Generics dan Pemrograman Generik (Generics and Generic Programming)
 
----
+- **Pedagogical Tier:** Tier 3: Advanced Typing, OOP Architecture, and Metaprogramming
+- **Pedagogical Level:** Level 3: Advanced
+- **Module Overview:** Generic function signatures (<T>), multiple type parameters, type parameter constraints (extends), generic interfaces, generic class definitions, generic type aliases, default type arguments, key query operator (keyof), runtime-to-type capture (typeof), indexed access types (T[K]), generic key constraints, generic constructor factory patterns (new () => T), generic data collection classes, generic callbacks, compiler type inference, type variance foundations, and generic type guards.
+- **Module Directory:** [`./module-09-generics-dan-pemrograman-generik/`](./module-09-generics-dan-pemrograman-generik) | **Lessons Count:** 18
 
-### Module 10: Advanced Types and Type Manipulation
-- **Module Directory**: [`module-10-advanced-types`](./module-10-advanced-types/README.md)
-- **Pedagogical Scope**: Conditional types (`T extends U ? X : Y`), type inference within conditional types using `infer`, mapped types, mapped type modifiers (`+readonly`, `-readonly`, `?`, `-?`), key remapping via `as`, template literal types, recursive JSON types, recursive conditional types, built-in utility types (`Partial`, `Required`, `Readonly`, `Pick`, `Omit`, `Record`, `Exclude`, `Extract`, `NonNullable`, `ReturnType`, `Parameters`, `InstanceType`, `Awaited`), and authoring custom utility types.
-- **Subtopics & Source Implementations**:
-  - [`147_conditional_types.ts`](./module-10-advanced-types/147_conditional_types.ts) — Type selection based on subtyping conditions.
-  - [`148_conditional_type_inference.ts`](./module-10-advanced-types/148_conditional_type_inference.ts) — Extracting nested types conditionally.
-  - [`149_infer_keyword.ts`](./module-10-advanced-types/149_infer_keyword.ts) — Introducing type variables for inference within condition clauses.
-  - [`150_mapped_types.ts`](./module-10-advanced-types/150_mapped_types.ts) — Transforming existing object properties into new shapes.
-  - [`151_mapped_type_modifiers.ts`](./module-10-advanced-types/151_mapped_type_modifiers.ts) — Adding or stripping `readonly` and optional `?` flags.
-  - [`152_key_remapping.ts`](./module-10-advanced-types/152_key_remapping.ts) — Filtering and transforming property names via `as`.
-  - [`153_template_literal_types.ts`](./module-10-advanced-types/153_template_literal_types.ts) — String-level type interpolation and event name schemas.
-  - [`154_recursive_types.ts`](./module-10-advanced-types/154_recursive_types.ts) — Self-referential types modeling JSON trees and linked nodes.
-  - [`155_recursive_conditional_types.ts`](./module-10-advanced-types/155_recursive_conditional_types.ts) — Deep flattening and path resolution at compile time.
-  - [`156_utility_partial.ts`](./module-10-advanced-types/156_utility_partial.ts) — Making all properties optional via `Partial<T>`.
-  - [`157_utility_required.ts`](./module-10-advanced-types/157_utility_required.ts) — Making all properties mandatory via `Required<T>`.
-  - [`158_utility_readonly.ts`](./module-10-advanced-types/158_utility_readonly.ts) — Freezing properties immutably via `Readonly<T>`.
-  - [`159_utility_pick.ts`](./module-10-advanced-types/159_utility_pick.ts) — Selecting a subset of properties via `Pick<T, K>`.
-  - [`160_utility_omit.ts`](./module-10-advanced-types/160_utility_omit.ts) — Dropping specified properties via `Omit<T, K>`.
-  - [`161_utility_record.ts`](./module-10-advanced-types/161_utility_record.ts) — Mapping discrete key unions to value types via `Record<K, T>`.
-  - [`162_utility_exclude_extract.ts`](./module-10-advanced-types/162_utility_exclude_extract.ts) — Filtering union members via `Exclude` and `Extract`.
-  - [`163_utility_nonnullable.ts`](./module-10-advanced-types/163_utility_nonnullable.ts) — Stripping `null` and `undefined` via `NonNullable<T>`.
-  - [`164_utility_returntype.ts`](./module-10-advanced-types/164_utility_returntype.ts) — Extracting return types from function signatures via `ReturnType<T>`.
-  - [`165_utility_parameters.ts`](./module-10-advanced-types/165_utility_parameters.ts) — Extracting function parameter tuples via `Parameters<T>`.
-  - [`166_utility_instance_type.ts`](./module-10-advanced-types/166_utility_instance_type.ts) — Extracting instance types from constructor functions via `InstanceType<T>`.
-  - [`167_utility_awaited.ts`](./module-10-advanced-types/167_utility_awaited.ts) — Unwrapping nested promises via `Awaited<T>`.
-  - [`168_custom_utility_types.ts`](./module-10-advanced-types/168_custom_utility_types.ts) — Building bespoke utility types (`DeepReadonly`, `Nullable`).
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **129** | [`129_generic_functions.ts`](./module-09-generics-dan-pemrograman-generik/129_generic_functions.ts) | Authoring parameterized functions with reusable generic type arguments (<T>) for type safety | [![Output 129_generic_functions](./module-09-generics-dan-pemrograman-generik/output/129_generic_functions.png)](./module-09-generics-dan-pemrograman-generik/output/129_generic_functions.png) |
+| **130** | [`130_generic_parameters.ts`](./module-09-generics-dan-pemrograman-generik/130_generic_parameters.ts) | Managing multiple independent generic type parameters (<T, U, V>) in signatures | [![Output 130_generic_parameters](./module-09-generics-dan-pemrograman-generik/output/130_generic_parameters.png)](./module-09-generics-dan-pemrograman-generik/output/130_generic_parameters.png) |
+| **131** | [`131_generic_constraints.ts`](./module-09-generics-dan-pemrograman-generik/131_generic_constraints.ts) | Restricting allowable generic type arguments using the extends constraint keyword | [![Output 131_generic_constraints](./module-09-generics-dan-pemrograman-generik/output/131_generic_constraints.png)](./module-09-generics-dan-pemrograman-generik/output/131_generic_constraints.png) |
+| **132** | [`132_generic_interfaces.ts`](./module-09-generics-dan-pemrograman-generik/132_generic_interfaces.ts) | Defining flexible, reusable interface contracts parameterized by generic types | [![Output 132_generic_interfaces](./module-09-generics-dan-pemrograman-generik/output/132_generic_interfaces.png)](./module-09-generics-dan-pemrograman-generik/output/132_generic_interfaces.png) |
+| **133** | [`133_generic_classes.ts`](./module-09-generics-dan-pemrograman-generik/133_generic_classes.ts) | Implementing generic class architectures that manage type-parameterized state and operations | [![Output 133_generic_classes](./module-09-generics-dan-pemrograman-generik/output/133_generic_classes.png)](./module-09-generics-dan-pemrograman-generik/output/133_generic_classes.png) |
+| **134** | [`134_generic_type_aliases.ts`](./module-09-generics-dan-pemrograman-generik/134_generic_type_aliases.ts) | Parameterized type aliases for modeling generic data containers, wrappers, and responses | [![Output 134_generic_type_aliases](./module-09-generics-dan-pemrograman-generik/output/134_generic_type_aliases.png)](./module-09-generics-dan-pemrograman-generik/output/134_generic_type_aliases.png) |
+| **135** | [`135_multiple_type_parameters.ts`](./module-09-generics-dan-pemrograman-generik/135_multiple_type_parameters.ts) | Coordinating complex multi-type parameter mappings, key-value pairs, and converters | [![Output 135_multiple_type_parameters](./module-09-generics-dan-pemrograman-generik/output/135_multiple_type_parameters.png)](./module-09-generics-dan-pemrograman-generik/output/135_multiple_type_parameters.png) |
+| **136** | [`136_default_generic_parameters.ts`](./module-09-generics-dan-pemrograman-generik/136_default_generic_parameters.ts) | Specifying default fallback types for generic parameters (<T = string>) | [![Output 136_default_generic_parameters](./module-09-generics-dan-pemrograman-generik/output/136_default_generic_parameters.png)](./module-09-generics-dan-pemrograman-generik/output/136_default_generic_parameters.png) |
+| **137** | [`137_keyof_operator.ts`](./module-09-generics-dan-pemrograman-generik/137_keyof_operator.ts) | Extracting a union of property name string/number literals from object types via keyof | [![Output 137_keyof_operator](./module-09-generics-dan-pemrograman-generik/output/137_keyof_operator.png)](./module-09-generics-dan-pemrograman-generik/output/137_keyof_operator.png) |
+| **138** | [`138_typeof_type_operator.ts`](./module-09-generics-dan-pemrograman-generik/138_typeof_type_operator.ts) | Capturing compile-time TypeScript types directly from runtime JavaScript values using typeof | [![Output 138_typeof_type_operator](./module-09-generics-dan-pemrograman-generik/output/138_typeof_type_operator.png)](./module-09-generics-dan-pemrograman-generik/output/138_typeof_type_operator.png) |
+| **139** | [`139_indexed_access_types.ts`](./module-09-generics-dan-pemrograman-generik/139_indexed_access_types.ts) | Looking up specific property types within other types using indexed access notation (T[K]) | [![Output 139_indexed_access_types](./module-09-generics-dan-pemrograman-generik/output/139_indexed_access_types.png)](./module-09-generics-dan-pemrograman-generik/output/139_indexed_access_types.png) |
+| **140** | [`140_generic_key_constraints.ts`](./module-09-generics-dan-pemrograman-generik/140_generic_key_constraints.ts) | Enforcing type-safe dynamic property lookups using generic key constraints (<K extends keyof T>) | [![Output 140_generic_key_constraints](./module-09-generics-dan-pemrograman-generik/output/140_generic_key_constraints.png)](./module-09-generics-dan-pemrograman-generik/output/140_generic_key_constraints.png) |
+| **141** | [`141_generic_factory.ts`](./module-09-generics-dan-pemrograman-generik/141_generic_factory.ts) | Instantiating generic object instances using constructor signature contracts (new () => T) | [![Output 141_generic_factory](./module-09-generics-dan-pemrograman-generik/output/141_generic_factory.png)](./module-09-generics-dan-pemrograman-generik/output/141_generic_factory.png) |
+| **142** | [`142_generic_collections.ts`](./module-09-generics-dan-pemrograman-generik/142_generic_collections.ts) | Building type-safe reusable data collection data structures (Stack, Queue, List) with Generics | [![Output 142_generic_collections](./module-09-generics-dan-pemrograman-generik/output/142_generic_collections.png)](./module-09-generics-dan-pemrograman-generik/output/142_generic_collections.png) |
+| **143** | [`143_generic_callbacks.ts`](./module-09-generics-dan-pemrograman-generik/143_generic_callbacks.ts) | Typing generic event listeners, observer subscriptions, and asynchronous callback pipelines | [![Output 143_generic_callbacks](./module-09-generics-dan-pemrograman-generik/output/143_generic_callbacks.png)](./module-09-generics-dan-pemrograman-generik/output/143_generic_callbacks.png) |
+| **144** | [`144_generic_inference.ts`](./module-09-generics-dan-pemrograman-generik/144_generic_inference.ts) | Relying on compiler generic type argument inference from runtime function invocation arguments | [![Output 144_generic_inference](./module-09-generics-dan-pemrograman-generik/output/144_generic_inference.png)](./module-09-generics-dan-pemrograman-generik/output/144_generic_inference.png) |
+| **145** | [`145_variance_basics.ts`](./module-09-generics-dan-pemrograman-generik/145_variance_basics.ts) | Foundational concepts of covariance, contravariance, and invariance in generic type assignments | [![Output 145_variance_basics](./module-09-generics-dan-pemrograman-generik/output/145_variance_basics.png)](./module-09-generics-dan-pemrograman-generik/output/145_variance_basics.png) |
+| **146** | [`146_generic_type_guards.ts`](./module-09-generics-dan-pemrograman-generik/146_generic_type_guards.ts) | Authoring reusable generic type guard functions that narrow collections and container items | [![Output 146_generic_type_guards](./module-09-generics-dan-pemrograman-generik/output/146_generic_type_guards.png)](./module-09-generics-dan-pemrograman-generik/output/146_generic_type_guards.png) |
 
-  ![Execution Output: Mapped Types](./module-10-advanced-types/output/150_mapped_types.png)
+### Module 10: Advanced Types (Advanced and Mapped Types)
 
----
+- **Pedagogical Tier:** Tier 3: Advanced Typing, OOP Architecture, and Metaprogramming
+- **Pedagogical Level:** Level 3: Advanced
+- **Module Overview:** Conditional type expressions (T extends U ? X : Y), conditional type inference, type pattern matching with the infer keyword, mapped types, mapped type modifiers (+, -, readonly, ?), key remapping via the as clause, template literal string types, recursive type modeling, recursive conditional types, built-in utility types (Partial, Required, Readonly, Pick, Omit, Record, Exclude, Extract, NonNullable, ReturnType, Parameters, InstanceType, Awaited), and custom enterprise utility types.
+- **Module Directory:** [`./module-10-advanced-types/`](./module-10-advanced-types) | **Lessons Count:** 22
 
-### Module 11: Classes and Object-Oriented Programming
-- **Module Directory**: [`module-11-class-dan-object-oriented-programming`](./module-11-class-dan-object-oriented-programming/README.md)
-- **Pedagogical Scope**: Class anatomy, instantiation, methods, constructors, access modifiers (`public`, `private`, `protected`), readonly class fields, parameter properties, getters/setters, static members, abstract classes, abstract methods, inheritance (`extends`), method overriding, interface implementation (`implements`), abstract classes vs interfaces, runtime polymorphism, object composition, aggregation, advanced generic classes, and parameter decorators with metadata reflection.
-- **Subtopics & Source Implementations**:
-  - [`169_class_basic.ts`](./module-11-class-dan-object-oriented-programming/169_class_basic.ts) — Class anatomy, property declarations, and instantiation.
-  - [`170_class_properties.ts`](./module-11-class-dan-object-oriented-programming/170_class_properties.ts) — Initializing instance properties and typing fields.
-  - [`171_class_methods.ts`](./module-11-class-dan-object-oriented-programming/171_class_methods.ts) — Defining instance methods and return types.
-  - [`172_class_constructor.ts`](./module-11-class-dan-object-oriented-programming/172_class_constructor.ts) — Constructors and parameter passing.
-  - [`173_access_modifiers.ts`](./module-11-class-dan-object-oriented-programming/173_access_modifiers.ts) — Encapsulation via `public`, `private`, and `protected`.
-  - [`174_readonly_class_properties.ts`](./module-11-class-dan-object-oriented-programming/174_readonly_class_properties.ts) — Immutable class instance properties.
-  - [`175_parameter_properties.ts`](./module-11-class-dan-object-oriented-programming/175_parameter_properties.ts) — Shorthand property declaration inside constructor signatures.
-  - [`176_getters_setters.ts`](./module-11-class-dan-object-oriented-programming/176_getters_setters.ts) — Encapsulating private fields with `get` and `set` accessors.
-  - [`177_static_members.ts`](./module-11-class-dan-object-oriented-programming/177_static_members.ts) — Class-level static properties and methods.
-  - [`178_abstract_classes.ts`](./module-11-class-dan-object-oriented-programming/178_abstract_classes.ts) — Non-instantiable base blueprints using `abstract class`.
-  - [`179_abstract_methods.ts`](./module-11-class-dan-object-oriented-programming/179_abstract_methods.ts) — Mandatory method signatures for derived subclasses.
-  - [`180_class_inheritance.ts`](./module-11-class-dan-object-oriented-programming/180_class_inheritance.ts) — Extending parent classes and invoking `super()`.
-  - [`181_method_overriding.ts`](./module-11-class-dan-object-oriented-programming/181_method_overriding.ts) — Customizing inherited method implementations.
-  - [`182_implements_keyword.ts`](./module-11-class-dan-object-oriented-programming/182_implements_keyword.ts) — Enforcing interface contracts on class definitions.
-  - [`183_abstract_vs_interface.ts`](./module-11-class-dan-object-oriented-programming/183_abstract_vs_interface.ts) — Architectural comparison of abstract classes and interfaces.
-  - [`184_polymorphism.ts`](./module-11-class-dan-object-oriented-programming/184_polymorphism.ts) — Uniform treatment of diverse subclass instances.
-  - [`185_composition.ts`](./module-11-class-dan-object-oriented-programming/185_composition.ts) — Favoring object composition over class inheritance.
-  - [`186_aggregation.ts`](./module-11-class-dan-object-oriented-programming/186_aggregation.ts) — Modeling weak "has-a" relationships between classes.
-  - [`187_generic_classes_advanced.ts`](./module-11-class-dan-object-oriented-programming/187_generic_classes_advanced.ts) — Generic repositories and multi-type data stores.
-  - [`188_parameter_decorators.ts`](./module-11-class-dan-object-oriented-programming/188_parameter_decorators.ts) — Applying decorators and reflecting metadata.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **147** | [`147_conditional_types.ts`](./module-10-advanced-types/147_conditional_types.ts) | Type-level conditional branching logic using ternary type expressions (T extends U ? X : Y) | [![Output 147_conditional_types](./module-10-advanced-types/output/147_conditional_types.png)](./module-10-advanced-types/output/147_conditional_types.png) |
+| **148** | [`148_conditional_type_inference.ts`](./module-10-advanced-types/148_conditional_type_inference.ts) | Extracting and deducing nested types within conditional type branches | [![Output 148_conditional_type_inference](./module-10-advanced-types/output/148_conditional_type_inference.png)](./module-10-advanced-types/output/148_conditional_type_inference.png) |
+| **149** | [`149_infer_keyword.ts`](./module-10-advanced-types/149_infer_keyword.ts) | Dynamic type pattern matching and type extraction using the infer keyword in conditional types | [![Output 149_infer_keyword](./module-10-advanced-types/output/149_infer_keyword.png)](./module-10-advanced-types/output/149_infer_keyword.png) |
+| **150** | [`150_mapped_types.ts`](./module-10-advanced-types/150_mapped_types.ts) | Generating new object types by iterating over and transforming existing property keys ([K in Keys]) | [![Output 150_mapped_types](./module-10-advanced-types/output/150_mapped_types.png)](./module-10-advanced-types/output/150_mapped_types.png) |
+| **151** | [`151_mapped_type_modifiers.ts`](./module-10-advanced-types/151_mapped_type_modifiers.ts) | Adding and stripping readonly and optional (?) modifiers using + and - prefix operators | [![Output 151_mapped_type_modifiers](./module-10-advanced-types/output/151_mapped_type_modifiers.png)](./module-10-advanced-types/output/151_mapped_type_modifiers.png) |
+| **152** | [`152_key_remapping.ts`](./module-10-advanced-types/152_key_remapping.ts) | Transforming, filtering, and remapping property keys in mapped types using the as clause | [![Output 152_key_remapping](./module-10-advanced-types/output/152_key_remapping.png)](./module-10-advanced-types/output/152_key_remapping.png) |
+| **153** | [`153_template_literal_types.ts`](./module-10-advanced-types/153_template_literal_types.ts) | Building type-safe string permutations and event listener types using template literal syntax | [![Output 153_template_literal_types](./module-10-advanced-types/output/153_template_literal_types.png)](./module-10-advanced-types/output/153_template_literal_types.png) |
+| **154** | [`154_recursive_types.ts`](./module-10-advanced-types/154_recursive_types.ts) | Defining self-referential recursive types for modeling trees, JSON documents, and nested nodes | [![Output 154_recursive_types](./module-10-advanced-types/output/154_recursive_types.png)](./module-10-advanced-types/output/154_recursive_types.png) |
+| **155** | [`155_recursive_conditional_types.ts`](./module-10-advanced-types/155_recursive_conditional_types.ts) | Deep nested type flattening and conditional type evaluation over arbitrary nesting depths | [![Output 155_recursive_conditional_types](./module-10-advanced-types/output/155_recursive_conditional_types.png)](./module-10-advanced-types/output/155_recursive_conditional_types.png) |
+| **156** | [`156_utility_partial.ts`](./module-10-advanced-types/156_utility_partial.ts) | Transforming all properties of an object type into optional fields using the Partial<T> utility | [![Output 156_utility_partial](./module-10-advanced-types/output/156_utility_partial.png)](./module-10-advanced-types/output/156_utility_partial.png) |
+| **157** | [`157_utility_required.ts`](./module-10-advanced-types/157_utility_required.ts) | Enforcing all properties of an object type as strictly mandatory using the Required<T> utility | [![Output 157_utility_required](./module-10-advanced-types/output/157_utility_required.png)](./module-10-advanced-types/output/157_utility_required.png) |
+| **158** | [`158_utility_readonly.ts`](./module-10-advanced-types/158_utility_readonly.ts) | Freezing all properties of an object type to prevent mutation using the Readonly<T> utility | [![Output 158_utility_readonly](./module-10-advanced-types/output/158_utility_readonly.png)](./module-10-advanced-types/output/158_utility_readonly.png) |
+| **159** | [`159_utility_pick.ts`](./module-10-advanced-types/159_utility_pick.ts) | Constructing a new type by extracting a designated subset of keys using the Pick<T, K> utility | [![Output 159_utility_pick](./module-10-advanced-types/output/159_utility_pick.png)](./module-10-advanced-types/output/159_utility_pick.png) |
+| **160** | [`160_utility_omit.ts`](./module-10-advanced-types/160_utility_omit.ts) | Constructing a new type by excluding specific designated keys using the Omit<T, K> utility | [![Output 160_utility_omit](./module-10-advanced-types/output/160_utility_omit.png)](./module-10-advanced-types/output/160_utility_omit.png) |
+| **161** | [`161_utility_record.ts`](./module-10-advanced-types/161_utility_record.ts) | Constructing typed dictionary maps with designated key types and value types via Record<K, T> | [![Output 161_utility_record](./module-10-advanced-types/output/161_utility_record.png)](./module-10-advanced-types/output/161_utility_record.png) |
+| **162** | [`162_utility_exclude_extract.ts`](./module-10-advanced-types/162_utility_exclude_extract.ts) | Filtering union types using the Exclude<T, U> and Extract<T, U> standard utility types | [![Output 162_utility_exclude_extract](./module-10-advanced-types/output/162_utility_exclude_extract.png)](./module-10-advanced-types/output/162_utility_exclude_extract.png) |
+| **163** | [`163_utility_nonnullable.ts`](./module-10-advanced-types/163_utility_nonnullable.ts) | Stripping null and undefined variants from a union type using the NonNullable<T> utility | [![Output 163_utility_nonnullable](./module-10-advanced-types/output/163_utility_nonnullable.png)](./module-10-advanced-types/output/163_utility_nonnullable.png) |
+| **164** | [`164_utility_returntype.ts`](./module-10-advanced-types/164_utility_returntype.ts) | Extracting the return type of any callable function type using the ReturnType<T> utility | [![Output 164_utility_returntype](./module-10-advanced-types/output/164_utility_returntype.png)](./module-10-advanced-types/output/164_utility_returntype.png) |
+| **165** | [`165_utility_parameters.ts`](./module-10-advanced-types/165_utility_parameters.ts) | Extracting the parameter types of a callable function as a tuple using Parameters<T> | [![Output 165_utility_parameters](./module-10-advanced-types/output/165_utility_parameters.png)](./module-10-advanced-types/output/165_utility_parameters.png) |
+| **166** | [`166_utility_instance_type.ts`](./module-10-advanced-types/166_utility_instance_type.ts) | Extracting the instance type produced by a constructor function using InstanceType<T> | [![Output 166_utility_instance_type](./module-10-advanced-types/output/166_utility_instance_type.png)](./module-10-advanced-types/output/166_utility_instance_type.png) |
+| **167** | [`167_utility_awaited.ts`](./module-10-advanced-types/167_utility_awaited.ts) | Recursively unwrapping nested Promise types to extract underlying resolved values with Awaited<T> | [![Output 167_utility_awaited](./module-10-advanced-types/output/167_utility_awaited.png)](./module-10-advanced-types/output/167_utility_awaited.png) |
+| **168** | [`168_custom_utility_types.ts`](./module-10-advanced-types/168_custom_utility_types.ts) | Designing advanced custom utility types combining mapped, conditional, and recursive types | [![Output 168_custom_utility_types](./module-10-advanced-types/output/168_custom_utility_types.png)](./module-10-advanced-types/output/168_custom_utility_types.png) |
 
-  ![Execution Output: Class Inheritance and Polymorphism](./module-11-class-dan-object-oriented-programming/output/180_class_inheritance.png)
+### Module 11: Class dan Object-Oriented Programming (Classes and Object-Oriented Programming (OOP))
 
----
+- **Pedagogical Tier:** Tier 3: Advanced Typing, OOP Architecture, and Metaprogramming
+- **Pedagogical Level:** Level 3: Advanced
+- **Module Overview:** Class syntax and object instantiation, class field definitions, typed methods, constructor initialization, access modifier encapsulation (public, private, protected), readonly class properties, concise parameter properties, getters and setters, static members, abstract classes and abstract method contracts, class inheritance (extends, super), method overriding, interface implementation (implements), polymorphism, object composition and aggregation, advanced generic classes, and parameter decorators with reflection metadata.
+- **Module Directory:** [`./module-11-class-dan-object-oriented-programming/`](./module-11-class-dan-object-oriented-programming) | **Lessons Count:** 20
 
-### Module 12: Modules and Project Management
-- **Module Directory**: [`module-12-modules-dan-pengelolaan-proyek`](./module-12-modules-dan-pengelolaan-proyek/README.md)
-- **Pedagogical Scope**: ECMAScript Modules (named and default exports/imports, namespace imports, re-exports), dynamic `import()`, module resolution algorithms, module augmentation, declaration merging, ambient modules (`declare module`), type declaration files (`.d.ts`), global declarations (`declare global`), legacy namespaces, project references, path mapping aliases, and compiler configuration.
-- **Subtopics & Source Implementations**:
-  - [`189_es_module_exports.ts`](./module-12-modules-dan-pengelolaan-proyek/189_es_module_exports.ts) — Exporting named variables, types, and functions.
-  - [`190_default_exports.ts`](./module-12-modules-dan-pengelolaan-proyek/190_default_exports.ts) — Defining primary default module exports.
-  - [`191_named_imports.ts`](./module-12-modules-dan-pengelolaan-proyek/191_named_imports.ts) — Importing specific named members.
-  - [`192_default_imports.ts`](./module-12-modules-dan-pengelolaan-proyek/192_default_imports.ts) — Consuming default module exports.
-  - [`193_namespace_imports.ts`](./module-12-modules-dan-pengelolaan-proyek/193_namespace_imports.ts) — Bundling module contents under namespace aliases (`import * as`).
-  - [`194_re_exports.ts`](./module-12-modules-dan-pengelolaan-proyek/194_re_exports.ts) — Aggregating and re-exporting modules in barrel files.
-  - [`195_dynamic_import.ts`](./module-12-modules-dan-pengelolaan-proyek/195_dynamic_import.ts) — Asynchronous on-demand module loading via `import()`.
-  - [`196_module_resolution.ts`](./module-12-modules-dan-pengelolaan-proyek/196_module_resolution.ts) — Classic vs Node vs Bundler resolution mechanisms.
-  - [`197_module_augmentation.ts`](./module-12-modules-dan-pengelolaan-proyek/197_module_augmentation.ts) — Extending existing external third-party module types.
-  - [`198_declaration_merging.ts`](./module-12-modules-dan-pengelolaan-proyek/198_declaration_merging.ts) — Advanced declaration merging patterns.
-  - [`199_ambient_modules.ts`](./module-12-modules-dan-pengelolaan-proyek/199_ambient_modules.ts) — Typing untyped JavaScript libraries with `declare module`.
-  - [`200_declaration_files.ts`](./module-12-modules-dan-pengelolaan-proyek/200_declaration_files.ts) — Structuring `.d.ts` type definition files.
-  - [`201_global_declarations.ts`](./module-12-modules-dan-pengelolaan-proyek/201_global_declarations.ts) — Extending global scope types via `declare global`.
-  - [`202_namespace_basic.ts`](./module-12-modules-dan-pengelolaan-proyek/202_namespace_basic.ts) — TypeScript internal namespaces and legacy scoping.
-  - [`203_project_references.ts`](./module-12-modules-dan-pengelolaan-proyek/203_project_references.ts) — Monorepo builds and composite project configurations.
-  - [`204_path_aliases.ts`](./module-12-modules-dan-pengelolaan-proyek/204_path_aliases.ts) — Cleaner imports using tsconfig `paths` aliases (`@/`).
-  - [`205_tsconfig_basic.ts`](./module-12-modules-dan-pengelolaan-proyek/205_tsconfig_basic.ts) — Core options in `tsconfig.json`.
-  - [`206_compiler_options.ts`](./module-12-modules-dan-pengelolaan-proyek/206_compiler_options.ts) — Advanced compiler flags (`strict`, `noImplicitAny`, `skipLibCheck`).
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **169** | [`169_class_basic.ts`](./module-11-class-dan-object-oriented-programming/169_class_basic.ts) | Class definitions, object instantiation, field initialization, and instance creation | [![Output 169_class_basic](./module-11-class-dan-object-oriented-programming/output/169_class_basic.png)](./module-11-class-dan-object-oriented-programming/output/169_class_basic.png) |
+| **170** | [`170_class_properties.ts`](./module-11-class-dan-object-oriented-programming/170_class_properties.ts) | Class field declarations, default initializers, and static type annotations | [![Output 170_class_properties](./module-11-class-dan-object-oriented-programming/output/170_class_properties.png)](./module-11-class-dan-object-oriented-programming/output/170_class_properties.png) |
+| **171** | [`171_class_methods.ts`](./module-11-class-dan-object-oriented-programming/171_class_methods.ts) | Defining instance member methods, parameter typings, and method return contracts | [![Output 171_class_methods](./module-11-class-dan-object-oriented-programming/output/171_class_methods.png)](./module-11-class-dan-object-oriented-programming/output/171_class_methods.png) |
+| **172** | [`172_class_constructor.ts`](./module-11-class-dan-object-oriented-programming/172_class_constructor.ts) | Constructor method parameters, initialization logic, and instance creation lifecycle | [![Output 172_class_constructor](./module-11-class-dan-object-oriented-programming/output/172_class_constructor.png)](./module-11-class-dan-object-oriented-programming/output/172_class_constructor.png) |
+| **173** | [`173_access_modifiers.ts`](./module-11-class-dan-object-oriented-programming/173_access_modifiers.ts) | Encapsulation boundaries using public, private, and protected visibility modifiers | [![Output 173_access_modifiers](./module-11-class-dan-object-oriented-programming/output/173_access_modifiers.png)](./module-11-class-dan-object-oriented-programming/output/173_access_modifiers.png) |
+| **174** | [`174_readonly_class_properties.ts`](./module-11-class-dan-object-oriented-programming/174_readonly_class_properties.ts) | Enforcing write-once constructor initialization on class fields using readonly | [![Output 174_readonly_class_properties](./module-11-class-dan-object-oriented-programming/output/174_readonly_class_properties.png)](./module-11-class-dan-object-oriented-programming/output/174_readonly_class_properties.png) |
+| **175** | [`175_parameter_properties.ts`](./module-11-class-dan-object-oriented-programming/175_parameter_properties.ts) | Concise property declaration and assignment directly inside constructor parameter signatures | [![Output 175_parameter_properties](./module-11-class-dan-object-oriented-programming/output/175_parameter_properties.png)](./module-11-class-dan-object-oriented-programming/output/175_parameter_properties.png) |
+| **176** | [`176_getters_setters.ts`](./module-11-class-dan-object-oriented-programming/176_getters_setters.ts) | Encapsulated property reading and mutation validation using get and set accessors | [![Output 176_getters_setters](./module-11-class-dan-object-oriented-programming/output/176_getters_setters.png)](./module-11-class-dan-object-oriented-programming/output/176_getters_setters.png) |
+| **177** | [`177_static_members.ts`](./module-11-class-dan-object-oriented-programming/177_static_members.ts) | Class-level static properties, utility methods, and static initialization blocks | [![Output 177_static_members](./module-11-class-dan-object-oriented-programming/output/177_static_members.png)](./module-11-class-dan-object-oriented-programming/output/177_static_members.png) |
+| **178** | [`178_abstract_classes.ts`](./module-11-class-dan-object-oriented-programming/178_abstract_classes.ts) | Defining non-instantiable base architectural blueprints using the abstract class keyword | [![Output 178_abstract_classes](./module-11-class-dan-object-oriented-programming/output/178_abstract_classes.png)](./module-11-class-dan-object-oriented-programming/output/178_abstract_classes.png) |
+| **179** | [`179_abstract_methods.ts`](./module-11-class-dan-object-oriented-programming/179_abstract_methods.ts) | Declaring mandatory polymorphic method contracts that must be implemented by derived subclasses | [![Output 179_abstract_methods](./module-11-class-dan-object-oriented-programming/output/179_abstract_methods.png)](./module-11-class-dan-object-oriented-programming/output/179_abstract_methods.png) |
+| **180** | [`180_class_inheritance.ts`](./module-11-class-dan-object-oriented-programming/180_class_inheritance.ts) | Subclass specialization, parent class extension (extends), and super constructor invocation | [![Output 180_class_inheritance](./module-11-class-dan-object-oriented-programming/output/180_class_inheritance.png)](./module-11-class-dan-object-oriented-programming/output/180_class_inheritance.png) |
+| **181** | [`181_method_overriding.ts`](./module-11-class-dan-object-oriented-programming/181_method_overriding.ts) | Overriding inherited parent class methods in subclasses with specialized behavior | [![Output 181_method_overriding](./module-11-class-dan-object-oriented-programming/output/181_method_overriding.png)](./module-11-class-dan-object-oriented-programming/output/181_method_overriding.png) |
+| **182** | [`182_implements_keyword.ts`](./module-11-class-dan-object-oriented-programming/182_implements_keyword.ts) | Enforcing structural interface contracts onto class implementations using implements | [![Output 182_implements_keyword](./module-11-class-dan-object-oriented-programming/output/182_implements_keyword.png)](./module-11-class-dan-object-oriented-programming/output/182_implements_keyword.png) |
+| **183** | [`183_abstract_vs_interface.ts`](./module-11-class-dan-object-oriented-programming/183_abstract_vs_interface.ts) | Architectural comparison, trade-offs, and design guidelines for abstract classes vs interfaces | [![Output 183_abstract_vs_interface](./module-11-class-dan-object-oriented-programming/output/183_abstract_vs_interface.png)](./module-11-class-dan-object-oriented-programming/output/183_abstract_vs_interface.png) |
+| **184** | [`184_polymorphism.ts`](./module-11-class-dan-object-oriented-programming/184_polymorphism.ts) | Runtime polymorphic method dispatching across inherited class hierarchies | [![Output 184_polymorphism](./module-11-class-dan-object-oriented-programming/output/184_polymorphism.png)](./module-11-class-dan-object-oriented-programming/output/184_polymorphism.png) |
+| **185** | [`185_composition.ts`](./module-11-class-dan-object-oriented-programming/185_composition.ts) | Favoring object composition and delegation over class inheritance for modular software design | [![Output 185_composition](./module-11-class-dan-object-oriented-programming/output/185_composition.png)](./module-11-class-dan-object-oriented-programming/output/185_composition.png) |
+| **186** | [`186_aggregation.ts`](./module-11-class-dan-object-oriented-programming/186_aggregation.ts) | Modeling loose whole-part associations and managing independent object lifecycles | [![Output 186_aggregation](./module-11-class-dan-object-oriented-programming/output/186_aggregation.png)](./module-11-class-dan-object-oriented-programming/output/186_aggregation.png) |
+| **187** | [`187_generic_classes_advanced.ts`](./module-11-class-dan-object-oriented-programming/187_generic_classes_advanced.ts) | Advanced generic class architectures with type parameter constraints and factory patterns | [![Output 187_generic_classes_advanced](./module-11-class-dan-object-oriented-programming/output/187_generic_classes_advanced.png)](./module-11-class-dan-object-oriented-programming/output/187_generic_classes_advanced.png) |
+| **188** | [`188_parameter_decorators.ts`](./module-11-class-dan-object-oriented-programming/188_parameter_decorators.ts) | Metaprogramming with experimental decorators and parameter reflection metadata introspection | [![Output 188_parameter_decorators](./module-11-class-dan-object-oriented-programming/output/188_parameter_decorators.png)](./module-11-class-dan-object-oriented-programming/output/188_parameter_decorators.png) |
 
-  ![Execution Output: ES Module Exports](./module-12-modules-dan-pengelolaan-proyek/output/189_es_module_exports.png)
+### Module 12: Modules dan Pengelolaan Proyek (Modules, Project References, and Configuration)
 
----
+- **Pedagogical Tier:** Tier 3: Advanced Typing, OOP Architecture, and Metaprogramming
+- **Pedagogical Level:** Level 3: Advanced
+- **Module Overview:** ECMAScript Modules (ESM) named and default exports, named and default imports, namespace imports (import * as), re-exports (export *), dynamic asynchronous imports (import()), module resolution algorithms, module augmentation, declaration merging across files, ambient modules (declare module), type declaration files (.d.ts), global scope augmentation (declare global), namespaces, TypeScript project references, path mapping aliases in tsconfig.json, compiler options, and project configuration.
+- **Module Directory:** [`./module-12-modules-dan-pengelolaan-proyek/`](./module-12-modules-dan-pengelolaan-proyek) | **Lessons Count:** 18
 
-### Module 13: Asynchronous Programming and Error Handling
-- **Module Directory**: [`module-13-asynchronous-programming-dan-error-handling`](./module-13-asynchronous-programming-dan-error-handling/README.md)
-- **Pedagogical Scope**: Asynchronous callbacks, Promises, Promise typing (`Promise<T>`), promise chaining with `.then()`/`.catch()`, concurrent combinators (`Promise.all`, `allSettled`, `race`), modern `async/await`, async error handling with `try/catch/finally`, async return types, generic promises, async iterators/generators (`for await...of`), `AbortController`, Fetch API (GET/POST requests with typed DTOs), exponential retry patterns, custom domain errors, and the functional `Result<T, E>` pattern.
-- **Subtopics & Source Implementations**:
-  - [`207_callback_functions.ts`](./module-13-asynchronous-programming-dan-error-handling/207_callback_functions.ts) — Asynchronous callback execution and callback hell pitfalls.
-  - [`208_promise_basic.ts`](./module-13-asynchronous-programming-dan-error-handling/208_promise_basic.ts) — Creating, resolving, and rejecting Promises.
-  - [`209_promise_types.ts`](./module-13-asynchronous-programming-dan-error-handling/209_promise_types.ts) — Strongly typing Promise resolutions and rejections.
-  - [`210_promise_then_catch.ts`](./module-13-asynchronous-programming-dan-error-handling/210_promise_then_catch.ts) — Chaining asynchronous tasks with `.then()`, `.catch()`, and `.finally()`.
-  - [`211_promise_all.ts`](./module-13-asynchronous-programming-dan-error-handling/211_promise_all.ts) — Concurrent promise execution failing fast on any rejection.
-  - [`212_promise_all_settled.ts`](./module-13-asynchronous-programming-dan-error-handling/212_promise_all_settled.ts) — Awaiting multiple promises while inspecting individual status.
-  - [`213_promise_race.ts`](./module-13-asynchronous-programming-dan-error-handling/213_promise_race.ts) — Returning the earliest settled promise.
-  - [`214_async_functions.ts`](./module-13-asynchronous-programming-dan-error-handling/214_async_functions.ts) — Modern `async` function syntax and return behavior.
-  - [`215_await_keyword.ts`](./module-13-asynchronous-programming-dan-error-handling/215_await_keyword.ts) — Sequential asynchronous execution with `await`.
-  - [`216_async_error_handling.ts`](./module-13-asynchronous-programming-dan-error-handling/216_async_error_handling.ts) — Handling async errors safely using `try...catch` blocks.
-  - [`217_async_return_types.ts`](./module-13-asynchronous-programming-dan-error-handling/217_async_return_types.ts) — Enforcing explicit `Promise<T>` return types.
-  - [`218_generic_promises.ts`](./module-13-asynchronous-programming-dan-error-handling/218_generic_promises.ts) — Authoring reusable generic asynchronous utilities.
-  - [`219_async_iterators.ts`](./module-13-asynchronous-programming-dan-error-handling/219_async_iterators.ts) — Consuming asynchronous data streams with `Symbol.asyncIterator`.
-  - [`220_async_generators.ts`](./module-13-asynchronous-programming-dan-error-handling/220_async_generators.ts) — Generating paginated stream items via `async function*`.
-  - [`221_abort_controller.ts`](./module-13-asynchronous-programming-dan-error-handling/221_abort_controller.ts) — Cancelling long-running network operations with `AbortSignal`.
-  - [`222_fetch_api.ts`](./module-13-asynchronous-programming-dan-error-handling/222_fetch_api.ts) — Typed HTTP requests using native Fetch.
-  - [`223_fetch_get_request.ts`](./module-13-asynchronous-programming-dan-error-handling/223_fetch_get_request.ts) — Fetching and deserializing JSON payloads into typed interfaces.
-  - [`224_fetch_post_request.ts`](./module-13-asynchronous-programming-dan-error-handling/224_fetch_post_request.ts) — Submitting typed POST request bodies.
-  - [`225_api_response_types.ts`](./module-13-asynchronous-programming-dan-error-handling/225_api_response_types.ts) — Generic response envelopes (`ApiResponse<T>`).
-  - [`226_async_retry.ts`](./module-13-asynchronous-programming-dan-error-handling/226_async_retry.ts) — Exponential backoff retry strategies for flaky I/O.
-  - [`227_error_classification.ts`](./module-13-asynchronous-programming-dan-error-handling/227_error_classification.ts) — Defining custom domain error class hierarchies.
-  - [`228_result_type_pattern.ts`](./module-13-asynchronous-programming-dan-error-handling/228_result_type_pattern.ts) — Functional error handling using `Result<T, E> = Ok<T> | Err<E>`.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **189** | [`189_es_module_exports.ts`](./module-12-modules-dan-pengelolaan-proyek/189_es_module_exports.ts) | Modular code organization using ECMAScript named exports for functions, types, and constants | [![Output 189_es_module_exports](./module-12-modules-dan-pengelolaan-proyek/output/189_es_module_exports.png)](./module-12-modules-dan-pengelolaan-proyek/output/189_es_module_exports.png) |
+| **190** | [`190_default_exports.ts`](./module-12-modules-dan-pengelolaan-proyek/190_default_exports.ts) | Single primary entity export conventions from modules using export default | [![Output 190_default_exports](./module-12-modules-dan-pengelolaan-proyek/output/190_default_exports.png)](./module-12-modules-dan-pengelolaan-proyek/output/190_default_exports.png) |
+| **191** | [`191_named_imports.ts`](./module-12-modules-dan-pengelolaan-proyek/191_named_imports.ts) | Consuming specific exported items from internal and external modules using named imports | [![Output 191_named_imports](./module-12-modules-dan-pengelolaan-proyek/output/191_named_imports.png)](./module-12-modules-dan-pengelolaan-proyek/output/191_named_imports.png) |
+| **192** | [`192_default_imports.ts`](./module-12-modules-dan-pengelolaan-proyek/192_default_imports.ts) | Importing default exported entities from external libraries and internal files | [![Output 192_default_imports](./module-12-modules-dan-pengelolaan-proyek/output/192_default_imports.png)](./module-12-modules-dan-pengelolaan-proyek/output/192_default_imports.png) |
+| **193** | [`193_namespace_imports.ts`](./module-12-modules-dan-pengelolaan-proyek/193_namespace_imports.ts) | Bundling all exported module members into a single namespace object using import * as | [![Output 193_namespace_imports](./module-12-modules-dan-pengelolaan-proyek/output/193_namespace_imports.png)](./module-12-modules-dan-pengelolaan-proyek/output/193_namespace_imports.png) |
+| **194** | [`194_re_exports.ts`](./module-12-modules-dan-pengelolaan-proyek/194_re_exports.ts) | Aggregating and forwarding exports across subdirectories via barrel re-exports (export *) | [![Output 194_re_exports](./module-12-modules-dan-pengelolaan-proyek/output/194_re_exports.png)](./module-12-modules-dan-pengelolaan-proyek/output/194_re_exports.png) |
+| **195** | [`195_dynamic_import.ts`](./module-12-modules-dan-pengelolaan-proyek/195_dynamic_import.ts) | Asynchronous on-demand module loading at runtime using dynamic import() expressions | [![Output 195_dynamic_import](./module-12-modules-dan-pengelolaan-proyek/output/195_dynamic_import.png)](./module-12-modules-dan-pengelolaan-proyek/output/195_dynamic_import.png) |
+| **196** | [`196_module_resolution.ts`](./module-12-modules-dan-pengelolaan-proyek/196_module_resolution.ts) | TypeScript module resolution algorithms and strategies (node, bundler, nodenext) | [![Output 196_module_resolution](./module-12-modules-dan-pengelolaan-proyek/output/196_module_resolution.png)](./module-12-modules-dan-pengelolaan-proyek/output/196_module_resolution.png) |
+| **197** | [`197_module_augmentation.ts`](./module-12-modules-dan-pengelolaan-proyek/197_module_augmentation.ts) | Extending and patching external third-party module typings via module augmentation | [![Output 197_module_augmentation](./module-12-modules-dan-pengelolaan-proyek/output/197_module_augmentation.png)](./module-12-modules-dan-pengelolaan-proyek/output/197_module_augmentation.png) |
+| **198** | [`198_declaration_merging.ts`](./module-12-modules-dan-pengelolaan-proyek/198_declaration_merging.ts) | Advanced declaration merging across interfaces, namespaces, and classes in multi-file projects | [![Output 198_declaration_merging](./module-12-modules-dan-pengelolaan-proyek/output/198_declaration_merging.png)](./module-12-modules-dan-pengelolaan-proyek/output/198_declaration_merging.png) |
+| **199** | [`199_ambient_modules.ts`](./module-12-modules-dan-pengelolaan-proyek/199_ambient_modules.ts) | Declaring ambient type definitions for untyped legacy JavaScript packages using declare module | [![Output 199_ambient_modules](./module-12-modules-dan-pengelolaan-proyek/output/199_ambient_modules.png)](./module-12-modules-dan-pengelolaan-proyek/output/199_ambient_modules.png) |
+| **200** | [`200_declaration_files.ts`](./module-12-modules-dan-pengelolaan-proyek/200_declaration_files.ts) | Authoring and structuring TypeScript declaration files (.d.ts) for library distribution | [![Output 200_declaration_files](./module-12-modules-dan-pengelolaan-proyek/output/200_declaration_files.png)](./module-12-modules-dan-pengelolaan-proyek/output/200_declaration_files.png) |
+| **201** | [`201_global_declarations.ts`](./module-12-modules-dan-pengelolaan-proyek/201_global_declarations.ts) | Augmenting global execution scope objects and browser/Node.js window types via declare global | [![Output 201_global_declarations](./module-12-modules-dan-pengelolaan-proyek/output/201_global_declarations.png)](./module-12-modules-dan-pengelolaan-proyek/output/201_global_declarations.png) |
+| **202** | [`202_namespace_basic.ts`](./module-12-modules-dan-pengelolaan-proyek/202_namespace_basic.ts) | Organizing internal code identifiers and preventing global collisions using namespaces | [![Output 202_namespace_basic](./module-12-modules-dan-pengelolaan-proyek/output/202_namespace_basic.png)](./module-12-modules-dan-pengelolaan-proyek/output/202_namespace_basic.png) |
+| **203** | [`203_project_references.ts`](./module-12-modules-dan-pengelolaan-proyek/203_project_references.ts) | Multi-project compilation, monorepo architectures, and sub-project builds via Project References | [![Output 203_project_references](./module-12-modules-dan-pengelolaan-proyek/output/203_project_references.png)](./module-12-modules-dan-pengelolaan-proyek/output/203_project_references.png) |
+| **204** | [`204_path_aliases.ts`](./module-12-modules-dan-pengelolaan-proyek/204_path_aliases.ts) | Configuring clean module import path mapping aliases in tsconfig.json (paths) | [![Output 204_path_aliases](./module-12-modules-dan-pengelolaan-proyek/output/204_path_aliases.png)](./module-12-modules-dan-pengelolaan-proyek/output/204_path_aliases.png) |
+| **205** | [`205_tsconfig_basic.ts`](./module-12-modules-dan-pengelolaan-proyek/205_tsconfig_basic.ts) | Foundational compiler options in tsconfig.json (target, module, lib, strict, outDir) | [![Output 205_tsconfig_basic](./module-12-modules-dan-pengelolaan-proyek/output/205_tsconfig_basic.png)](./module-12-modules-dan-pengelolaan-proyek/output/205_tsconfig_basic.png) |
+| **206** | [`206_compiler_options.ts`](./module-12-modules-dan-pengelolaan-proyek/206_compiler_options.ts) | Advanced TypeScript compiler flags for type checking, emit behavior, and performance optimization | [![Output 206_compiler_options](./module-12-modules-dan-pengelolaan-proyek/output/206_compiler_options.png)](./module-12-modules-dan-pengelolaan-proyek/output/206_compiler_options.png) |
 
-  ![Execution Output: Async Functions and Await](./module-13-asynchronous-programming-dan-error-handling/output/214_async_functions.png)
+### Module 13: Asynchronous Programming dan Error Handling (Asynchronous Programming and Error Handling)
 
----
+- **Pedagogical Tier:** Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems
+- **Pedagogical Level:** Level 4: Professional & Full-Stack
+- **Module Overview:** Asynchronous callbacks, Promise initialization and typing (Promise<T>), Promise chaining (.then(), .catch(), .finally()), Promise combinators (Promise.all, Promise.allSettled, Promise.race), async/await syntax, asynchronous error handling with try/catch, async return signatures, generic promise wrappers, async iterators (Symbol.asyncIterator), async generators, request cancellation with AbortController, Fetch API integration for GET and POST requests, API response typing, async retry strategies with exponential backoff, custom error class hierarchies, and functional error modeling with the Result<T, E> pattern.
+- **Module Directory:** [`./module-13-asynchronous-programming-dan-error-handling/`](./module-13-asynchronous-programming-dan-error-handling) | **Lessons Count:** 22
 
-### Module 14: Browser DOM and Frontend TypeScript
-- **Module Directory**: [`module-14-browser-dom-dan-frontend-typescript`](./module-14-browser-dom-dan-frontend-typescript/README.md)
-- **Pedagogical Scope**: DOM element querying, typed DOM element hierarchies (`HTMLElement`, `HTMLInputElement`, `HTMLButtonElement`), text/HTML manipulation, attribute binding, CSS class management, element creation, strongly typed event listeners (`MouseEvent`, `KeyboardEvent`), form input types, programmatic client-side form validation, `FormData`, Web Storage (`localStorage`, `sessionStorage`), URL APIs, `IntersectionObserver`, `MutationObserver`, Web Workers, WebSockets, HTML5 Canvas, and native browser ES modules.
-- **Subtopics & Source Implementations**:
-  - [`229_dom_element_selection.ts`](./module-14-browser-dom-dan-frontend-typescript/229_dom_element_selection.ts) — Querying elements via `querySelector` and `getElementById`.
-  - [`230_dom_element_types.ts`](./module-14-browser-dom-dan-frontend-typescript/230_dom_element_types.ts) — Casting and verifying typed HTML element specializations.
-  - [`231_dom_text_content.ts`](./module-14-browser-dom-dan-frontend-typescript/231_dom_text_content.ts) — Updating text content securely avoiding XSS risks.
-  - [`232_dom_attributes.ts`](./module-14-browser-dom-dan-frontend-typescript/232_dom_attributes.ts) — Reading and setting element attributes safely.
-  - [`233_dom_class_list.ts`](./module-14-browser-dom-dan-frontend-typescript/233_dom_class_list.ts) — Managing CSS classes using `classList`.
-  - [`234_dom_create_element.ts`](./module-14-browser-dom-dan-frontend-typescript/234_dom_create_element.ts) — Dynamically creating and appending DOM tree elements.
-  - [`235_dom_event_listener.ts`](./module-14-browser-dom-dan-frontend-typescript/235_dom_event_listener.ts) — Registering typed event callbacks.
-  - [`236_dom_event_types.ts`](./module-14-browser-dom-dan-frontend-typescript/236_dom_event_types.ts) — Handling specific event properties (`MouseEvent`, `KeyboardEvent`).
-  - [`237_form_input_types.ts`](./module-14-browser-dom-dan-frontend-typescript/237_form_input_types.ts) — Reading typed values from text, number, and checkbox inputs.
-  - [`238_form_validation.ts`](./module-14-browser-dom-dan-frontend-typescript/238_form_validation.ts) — Client-side form validation logic with error state tracking.
-  - [`239_form_data.ts`](./module-14-browser-dom-dan-frontend-typescript/239_form_data.ts) — Serializing form entries with the `FormData` API.
-  - [`240_local_storage.ts`](./module-14-browser-dom-dan-frontend-typescript/240_local_storage.ts) — Type-safe wrapper for persistent `localStorage`.
-  - [`241_session_storage.ts`](./module-14-browser-dom-dan-frontend-typescript/241_session_storage.ts) — Session-scoped data caching via `sessionStorage`.
-  - [`242_url_api.ts`](./module-14-browser-dom-dan-frontend-typescript/242_url_api.ts) — Manipulating query strings with `URL` and `URLSearchParams`.
-  - [`243_intersection_observer.ts`](./module-14-browser-dom-dan-frontend-typescript/243_intersection_observer.ts) — Observing element visibility for lazy loading.
-  - [`244_mutation_observer.ts`](./module-14-browser-dom-dan-frontend-typescript/244_mutation_observer.ts) — Listening to DOM subtree alterations.
-  - [`245_web_workers.ts`](./module-14-browser-dom-dan-frontend-typescript/245_web_workers.ts) — Offloading CPU tasks to background Web Workers with typed messages.
-  - [`246_web_socket.ts`](./module-14-browser-dom-dan-frontend-typescript/246_web_socket.ts) — Real-time bidirectional client communication over WebSockets.
-  - [`247_canvas_api.ts`](./module-14-browser-dom-dan-frontend-typescript/247_canvas_api.ts) — 2D graphics rendering via `HTMLCanvasElement` context.
-  - [`248_browser_modules.ts`](./module-14-browser-dom-dan-frontend-typescript/248_browser_modules.ts) — Loading native ES modules in modern browser runtimes.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **207** | [`207_callback_functions.ts`](./module-13-asynchronous-programming-dan-error-handling/207_callback_functions.ts) | Asynchronous execution flow, callback conventions, and callback pyramid mitigation | [![Output 207_callback_functions](./module-13-asynchronous-programming-dan-error-handling/output/207_callback_functions.png)](./module-13-asynchronous-programming-dan-error-handling/output/207_callback_functions.png) |
+| **208** | [`208_promise_basic.ts`](./module-13-asynchronous-programming-dan-error-handling/208_promise_basic.ts) | Initializing, resolving, rejecting, and consuming basic JavaScript Promise objects | [![Output 208_promise_basic](./module-13-asynchronous-programming-dan-error-handling/output/208_promise_basic.png)](./module-13-asynchronous-programming-dan-error-handling/output/208_promise_basic.png) |
+| **209** | [`209_promise_types.ts`](./module-13-asynchronous-programming-dan-error-handling/209_promise_types.ts) | Strongly typed Promise resolution values and generic Promise<T> return contracts | [![Output 209_promise_types](./module-13-asynchronous-programming-dan-error-handling/output/209_promise_types.png)](./module-13-asynchronous-programming-dan-error-handling/output/209_promise_types.png) |
+| **210** | [`210_promise_then_catch.ts`](./module-13-asynchronous-programming-dan-error-handling/210_promise_then_catch.ts) | Composing asynchronous operation chains using .then(), .catch(), and .finally() handlers | [![Output 210_promise_then_catch](./module-13-asynchronous-programming-dan-error-handling/output/210_promise_then_catch.png)](./module-13-asynchronous-programming-dan-error-handling/output/210_promise_then_catch.png) |
+| **211** | [`211_promise_all.ts`](./module-13-asynchronous-programming-dan-error-handling/211_promise_all.ts) | Coordinating concurrent parallel asynchronous tasks and short-circuit rejection with Promise.all() | [![Output 211_promise_all](./module-13-asynchronous-programming-dan-error-handling/output/211_promise_all.png)](./module-13-asynchronous-programming-dan-error-handling/output/211_promise_all.png) |
+| **212** | [`212_promise_all_settled.ts`](./module-13-asynchronous-programming-dan-error-handling/212_promise_all_settled.ts) | Inspecting comprehensive outcomes of multiple promises using Promise.allSettled() | [![Output 212_promise_all_settled](./module-13-asynchronous-programming-dan-error-handling/output/212_promise_all_settled.png)](./module-13-asynchronous-programming-dan-error-handling/output/212_promise_all_settled.png) |
+| **213** | [`213_promise_race.ts`](./module-13-asynchronous-programming-dan-error-handling/213_promise_race.ts) | Competitive asynchronous execution and request timeout handling using Promise.race() | [![Output 213_promise_race](./module-13-asynchronous-programming-dan-error-handling/output/213_promise_race.png)](./module-13-asynchronous-programming-dan-error-handling/output/213_promise_race.png) |
+| **214** | [`214_async_functions.ts`](./module-13-asynchronous-programming-dan-error-handling/214_async_functions.ts) | Authoring asynchronous subroutines with clear sequential syntax using the async keyword | [![Output 214_async_functions](./module-13-asynchronous-programming-dan-error-handling/output/214_async_functions.png)](./module-13-asynchronous-programming-dan-error-handling/output/214_async_functions.png) |
+| **215** | [`215_await_keyword.ts`](./module-13-asynchronous-programming-dan-error-handling/215_await_keyword.ts) | Suspending execution until Promise resolution and unwrapping values using the await operator | [![Output 215_await_keyword](./module-13-asynchronous-programming-dan-error-handling/output/215_await_keyword.png)](./module-13-asynchronous-programming-dan-error-handling/output/215_await_keyword.png) |
+| **216** | [`216_async_error_handling.ts`](./module-13-asynchronous-programming-dan-error-handling/216_async_error_handling.ts) | Robust error handling in asynchronous workflows using try...catch...finally blocks | [![Output 216_async_error_handling](./module-13-asynchronous-programming-dan-error-handling/output/216_async_error_handling.png)](./module-13-asynchronous-programming-dan-error-handling/output/216_async_error_handling.png) |
+| **217** | [`217_async_return_types.ts`](./module-13-asynchronous-programming-dan-error-handling/217_async_return_types.ts) | Proper type annotations for asynchronous functions returning Promise wrapped values | [![Output 217_async_return_types](./module-13-asynchronous-programming-dan-error-handling/output/217_async_return_types.png)](./module-13-asynchronous-programming-dan-error-handling/output/217_async_return_types.png) |
+| **218** | [`218_generic_promises.ts`](./module-13-asynchronous-programming-dan-error-handling/218_generic_promises.ts) | Building reusable generic asynchronous data loaders and typed network client wrappers | [![Output 218_generic_promises](./module-13-asynchronous-programming-dan-error-handling/output/218_generic_promises.png)](./module-13-asynchronous-programming-dan-error-handling/output/218_generic_promises.png) |
+| **219** | [`219_async_iterators.ts`](./module-13-asynchronous-programming-dan-error-handling/219_async_iterators.ts) | Consuming asynchronous data streams using Symbol.asyncIterator and for await...of loops | [![Output 219_async_iterators](./module-13-asynchronous-programming-dan-error-handling/output/219_async_iterators.png)](./module-13-asynchronous-programming-dan-error-handling/output/219_async_iterators.png) |
+| **220** | [`220_async_generators.ts`](./module-13-asynchronous-programming-dan-error-handling/220_async_generators.ts) | Authoring asynchronous generator functions yielding streamed data values over time | [![Output 220_async_generators](./module-13-asynchronous-programming-dan-error-handling/output/220_async_generators.png)](./module-13-asynchronous-programming-dan-error-handling/output/220_async_generators.png) |
+| **221** | [`221_abort_controller.ts`](./module-13-asynchronous-programming-dan-error-handling/221_abort_controller.ts) | Canceling ongoing asynchronous operations, timeouts, and network requests using AbortController | [![Output 221_abort_controller](./module-13-asynchronous-programming-dan-error-handling/output/221_abort_controller.png)](./module-13-asynchronous-programming-dan-error-handling/output/221_abort_controller.png) |
+| **222** | [`222_fetch_api.ts`](./module-13-asynchronous-programming-dan-error-handling/222_fetch_api.ts) | Performing strongly typed HTTP networking requests using the modern standard Fetch API | [![Output 222_fetch_api](./module-13-asynchronous-programming-dan-error-handling/output/222_fetch_api.png)](./module-13-asynchronous-programming-dan-error-handling/output/222_fetch_api.png) |
+| **223** | [`223_fetch_get_request.ts`](./module-13-asynchronous-programming-dan-error-handling/223_fetch_get_request.ts) | Sending HTTP GET requests, verifying response status, and deserializing typed JSON payloads | [![Output 223_fetch_get_request](./module-13-asynchronous-programming-dan-error-handling/output/223_fetch_get_request.png)](./module-13-asynchronous-programming-dan-error-handling/output/223_fetch_get_request.png) |
+| **224** | [`224_fetch_post_request.ts`](./module-13-asynchronous-programming-dan-error-handling/224_fetch_post_request.ts) | Transmitting structured JSON payloads via HTTP POST requests with designated request headers | [![Output 224_fetch_post_request](./module-13-asynchronous-programming-dan-error-handling/output/224_fetch_post_request.png)](./module-13-asynchronous-programming-dan-error-handling/output/224_fetch_post_request.png) |
+| **225** | [`225_api_response_types.ts`](./module-13-asynchronous-programming-dan-error-handling/225_api_response_types.ts) | Modeling multi-status REST API response payloads and standardized response wrappers | [![Output 225_api_response_types](./module-13-asynchronous-programming-dan-error-handling/output/225_api_response_types.png)](./module-13-asynchronous-programming-dan-error-handling/output/225_api_response_types.png) |
+| **226** | [`226_async_retry.ts`](./module-13-asynchronous-programming-dan-error-handling/226_async_retry.ts) | Implementing resilient asynchronous retry algorithms with exponential backoff for flaky operations | [![Output 226_async_retry](./module-13-asynchronous-programming-dan-error-handling/output/226_async_retry.png)](./module-13-asynchronous-programming-dan-error-handling/output/226_async_retry.png) |
+| **227** | [`227_error_classification.ts`](./module-13-asynchronous-programming-dan-error-handling/227_error_classification.ts) | Designing custom domain error class hierarchies inheriting from the native Error class | [![Output 227_error_classification](./module-13-asynchronous-programming-dan-error-handling/output/227_error_classification.png)](./module-13-asynchronous-programming-dan-error-handling/output/227_error_classification.png) |
+| **228** | [`228_result_type_pattern.ts`](./module-13-asynchronous-programming-dan-error-handling/228_result_type_pattern.ts) | Modeling expected failures without throwing exceptions using the functional Result<T, E> pattern | [![Output 228_result_type_pattern](./module-13-asynchronous-programming-dan-error-handling/output/228_result_type_pattern.png)](./module-13-asynchronous-programming-dan-error-handling/output/228_result_type_pattern.png) |
 
-  ![Execution Output: DOM Element Types](./module-14-browser-dom-dan-frontend-typescript/output/230_dom_element_types.png)
+### Module 14: Browser, DOM, dan Frontend TypeScript (Browser, DOM, and Frontend TypeScript)
 
----
+- **Pedagogical Tier:** Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems
+- **Pedagogical Level:** Level 4: Professional & Full-Stack
+- **Module Overview:** Document Object Model (DOM) node selection (getElementById, querySelector), DOM element type hierarchies (HTMLElement, HTMLInputElement), text content manipulation, typed attribute operations, dynamic CSS class manipulation (classList), programmatic element creation, typed event listeners and event objects (MouseEvent, KeyboardEvent), form input controls and client-side validation, FormData handling, Web Storage APIs (localStorage, sessionStorage), URL and URLSearchParams APIs, IntersectionObserver, MutationObserver, Web Workers, client WebSockets, Canvas 2D graphics, and modular frontend compilation.
+- **Module Directory:** [`./module-14-browser-dom-dan-frontend-typescript/`](./module-14-browser-dom-dan-frontend-typescript) | **Lessons Count:** 20
 
-### Module 15: Node.js and Backend TypeScript
-- **Module Directory**: [`module-15-node-js-dan-backend-typescript`](./module-15-node-js-dan-backend-typescript/README.md)
-- **Pedagogical Scope**: Node.js backend execution, process object inspection, CLI argument parsing (`process.argv`), asynchronous file system I/O with `fs/promises`, cross-platform path resolution via `path`, environment variable handling (`process.env`), native HTTP server creation (`http.createServer`), HTTP client requests, stream pipelines (`Readable`, `Writable`, `pipe`), event-driven architecture using `EventEmitter`, cryptographic hashing and UUID generation via `crypto`, worker threads, child process execution, `@types/node` definitions, and CommonJS vs ESM module interoperability.
-- **Subtopics & Source Implementations**:
-  - [`249_node_hello_world.ts`](./module-15-node-js-dan-backend-typescript/249_node_hello_world.ts) — Node.js runtime environment verification and global objects.
-  - [`250_node_process.ts`](./module-15-node-js-dan-backend-typescript/250_node_process.ts) — Inspecting platform metrics, memory usage, and PID.
-  - [`251_node_command_line.ts`](./module-15-node-js-dan-backend-typescript/251_node_command_line.ts) — Parsing CLI flags and positional arguments from `process.argv`.
-  - [`252_node_file_read.ts`](./module-15-node-js-dan-backend-typescript/252_node_file_read.ts) — Asynchronous file reading using `fs/promises`.
-  - [`253_node_file_write.ts`](./module-15-node-js-dan-backend-typescript/253_node_file_write.ts) — Writing and appending typed data to disk files.
-  - [`254_node_path.ts`](./module-15-node-js-dan-backend-typescript/254_node_path.ts) — Resolving and normalizing cross-platform file paths with `path`.
-  - [`255_node_environment.ts`](./module-15-node-js-dan-backend-typescript/255_node_environment.ts) — Reading and validating environment variables from `process.env`.
-  - [`256_node_http_server.ts`](./module-15-node-js-dan-backend-typescript/256_node_http_server.ts) — Creating a typed HTTP server using native Node.js APIs.
-  - [`257_node_http_client.ts`](./module-15-node-js-dan-backend-typescript/257_node_http_client.ts) — Issuing outgoing HTTP requests with native modules.
-  - [`258_node_streams.ts`](./module-15-node-js-dan-backend-typescript/258_node_streams.ts) — Pipelining large data chunks using Readable and Writable streams.
-  - [`259_node_events.ts`](./module-15-node-js-dan-backend-typescript/259_node_events.ts) — Building typed event-driven workflows with `EventEmitter`.
-  - [`260_node_crypto.ts`](./module-15-node-js-dan-backend-typescript/260_node_crypto.ts) — Generating SHA-256 hashes, random bytes, and UUIDs with `crypto`.
-  - [`261_node_worker_threads.ts`](./module-15-node-js-dan-backend-typescript/261_node_worker_threads.ts) — Parallel CPU computations with Node.js worker threads.
-  - [`262_node_child_process.ts`](./module-15-node-js-dan-backend-typescript/262_node_child_process.ts) — Spawning and executing OS shell commands via `child_process`.
-  - [`263_node_types.ts`](./module-15-node-js-dan-backend-typescript/263_node_types.ts) — Leveraging `@types/node` for Buffers and system interfaces.
-  - [`264_node_module_system.ts`](./module-15-node-js-dan-backend-typescript/264_node_module_system.ts) — Comparing CommonJS `require()` and ES Modules `import`.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **229** | [`229_dom_element_selection.ts`](./module-14-browser-dom-dan-frontend-typescript/229_dom_element_selection.ts) | Selecting DOM tree nodes using getElementById, querySelector, and querySelectorAll | [![Output 229_dom_element_selection](./module-14-browser-dom-dan-frontend-typescript/output/229_dom_element_selection.png)](./module-14-browser-dom-dan-frontend-typescript/output/229_dom_element_selection.png) |
+| **230** | [`230_dom_element_types.ts`](./module-14-browser-dom-dan-frontend-typescript/230_dom_element_types.ts) | Navigating DOM type hierarchies (Node, Element, HTMLElement, HTMLButtonElement, HTMLInputElement) | [![Output 230_dom_element_types](./module-14-browser-dom-dan-frontend-typescript/output/230_dom_element_types.png)](./module-14-browser-dom-dan-frontend-typescript/output/230_dom_element_types.png) |
+| **231** | [`231_dom_text_content.ts`](./module-14-browser-dom-dan-frontend-typescript/231_dom_text_content.ts) | Reading and updating element text content safely using textContent and innerText | [![Output 231_dom_text_content](./module-14-browser-dom-dan-frontend-typescript/output/231_dom_text_content.png)](./module-14-browser-dom-dan-frontend-typescript/output/231_dom_text_content.png) |
+| **232** | [`232_dom_attributes.ts`](./module-14-browser-dom-dan-frontend-typescript/232_dom_attributes.ts) | Setting, retrieving, and removing DOM node attributes with type safety (setAttribute, getAttribute) | [![Output 232_dom_attributes](./module-14-browser-dom-dan-frontend-typescript/output/232_dom_attributes.png)](./module-14-browser-dom-dan-frontend-typescript/output/232_dom_attributes.png) |
+| **233** | [`233_dom_class_list.ts`](./module-14-browser-dom-dan-frontend-typescript/233_dom_class_list.ts) | Dynamic CSS class manipulation using classList.add, classList.remove, and classList.toggle | [![Output 233_dom_class_list](./module-14-browser-dom-dan-frontend-typescript/output/233_dom_class_list.png)](./module-14-browser-dom-dan-frontend-typescript/output/233_dom_class_list.png) |
+| **234** | [`234_dom_create_element.ts`](./module-14-browser-dom-dan-frontend-typescript/234_dom_create_element.ts) | Programmatically creating, styling, and appending typed DOM elements to the document tree | [![Output 234_dom_create_element](./module-14-browser-dom-dan-frontend-typescript/output/234_dom_create_element.png)](./module-14-browser-dom-dan-frontend-typescript/output/234_dom_create_element.png) |
+| **235** | [`235_dom_event_listener.ts`](./module-14-browser-dom-dan-frontend-typescript/235_dom_event_listener.ts) | Registering strongly typed event listener callbacks using addEventListener | [![Output 235_dom_event_listener](./module-14-browser-dom-dan-frontend-typescript/output/235_dom_event_listener.png)](./module-14-browser-dom-dan-frontend-typescript/output/235_dom_event_listener.png) |
+| **236** | [`236_dom_event_types.ts`](./module-14-browser-dom-dan-frontend-typescript/236_dom_event_types.ts) | Typing specific browser event objects (MouseEvent, KeyboardEvent, FocusEvent, SubmitEvent) | [![Output 236_dom_event_types](./module-14-browser-dom-dan-frontend-typescript/output/236_dom_event_types.png)](./module-14-browser-dom-dan-frontend-typescript/output/236_dom_event_types.png) |
+| **237** | [`237_form_input_types.ts`](./module-14-browser-dom-dan-frontend-typescript/237_form_input_types.ts) | Extracting typed values from HTML input elements, radio buttons, checkboxes, and select dropdowns | [![Output 237_form_input_types](./module-14-browser-dom-dan-frontend-typescript/output/237_form_input_types.png)](./module-14-browser-dom-dan-frontend-typescript/output/237_form_input_types.png) |
+| **238** | [`238_form_validation.ts`](./module-14-browser-dom-dan-frontend-typescript/238_form_validation.ts) | Client-side HTML form validation, input sanitization, and real-time error messaging | [![Output 238_form_validation](./module-14-browser-dom-dan-frontend-typescript/output/238_form_validation.png)](./module-14-browser-dom-dan-frontend-typescript/output/238_form_validation.png) |
+| **239** | [`239_form_data.ts`](./module-14-browser-dom-dan-frontend-typescript/239_form_data.ts) | Extracting and serializing form data submissions using the browser FormData API | [![Output 239_form_data](./module-14-browser-dom-dan-frontend-typescript/output/239_form_data.png)](./module-14-browser-dom-dan-frontend-typescript/output/239_form_data.png) |
+| **240** | [`240_local_storage.ts`](./module-14-browser-dom-dan-frontend-typescript/240_local_storage.ts) | Persistent client-side key-value storage with serialization and type safety using localStorage | [![Output 240_local_storage](./module-14-browser-dom-dan-frontend-typescript/output/240_local_storage.png)](./module-14-browser-dom-dan-frontend-typescript/output/240_local_storage.png) |
+| **241** | [`241_session_storage.ts`](./module-14-browser-dom-dan-frontend-typescript/241_session_storage.ts) | Managing temporary session-scoped client-side storage states using sessionStorage | [![Output 241_session_storage](./module-14-browser-dom-dan-frontend-typescript/output/241_session_storage.png)](./module-14-browser-dom-dan-frontend-typescript/output/241_session_storage.png) |
+| **242** | [`242_url_api.ts`](./module-14-browser-dom-dan-frontend-typescript/242_url_api.ts) | Parsing, constructing, and manipulating URLs and search query parameters via URL and URLSearchParams | [![Output 242_url_api](./module-14-browser-dom-dan-frontend-typescript/output/242_url_api.png)](./module-14-browser-dom-dan-frontend-typescript/output/242_url_api.png) |
+| **243** | [`243_intersection_observer.ts`](./module-14-browser-dom-dan-frontend-typescript/243_intersection_observer.ts) | Asynchronously detecting element visibility and viewport intersection via IntersectionObserver | [![Output 243_intersection_observer](./module-14-browser-dom-dan-frontend-typescript/output/243_intersection_observer.png)](./module-14-browser-dom-dan-frontend-typescript/output/243_intersection_observer.png) |
+| **244** | [`244_mutation_observer.ts`](./module-14-browser-dom-dan-frontend-typescript/244_mutation_observer.ts) | Monitoring DOM tree mutations, child list modifications, and attribute changes with MutationObserver | [![Output 244_mutation_observer](./module-14-browser-dom-dan-frontend-typescript/output/244_mutation_observer.png)](./module-14-browser-dom-dan-frontend-typescript/output/244_mutation_observer.png) |
+| **245** | [`245_web_workers.ts`](./module-14-browser-dom-dan-frontend-typescript/245_web_workers.ts) | Offloading CPU-heavy background tasks to separate browser threads using typed Web Workers | [![Output 245_web_workers](./module-14-browser-dom-dan-frontend-typescript/output/245_web_workers.png)](./module-14-browser-dom-dan-frontend-typescript/output/245_web_workers.png) |
+| **246** | [`246_web_socket.ts`](./module-14-browser-dom-dan-frontend-typescript/246_web_socket.ts) | Establishing real-time bidirectional client-server communication using the WebSocket API | [![Output 246_web_socket](./module-14-browser-dom-dan-frontend-typescript/output/246_web_socket.png)](./module-14-browser-dom-dan-frontend-typescript/output/246_web_socket.png) |
+| **247** | [`247_canvas_api.ts`](./module-14-browser-dom-dan-frontend-typescript/247_canvas_api.ts) | Drawing 2D vector shapes, paths, text, and raster graphics on HTML5 Canvas using CanvasRenderingContext2D | [![Output 247_canvas_api](./module-14-browser-dom-dan-frontend-typescript/output/247_canvas_api.png)](./module-14-browser-dom-dan-frontend-typescript/output/247_canvas_api.png) |
+| **248** | [`248_browser_modules.ts`](./module-14-browser-dom-dan-frontend-typescript/248_browser_modules.ts) | Compiling, bundling, and running modular TypeScript scripts natively in modern web browsers | [![Output 248_browser_modules](./module-14-browser-dom-dan-frontend-typescript/output/248_browser_modules.png)](./module-14-browser-dom-dan-frontend-typescript/output/248_browser_modules.png) |
 
-  ![Execution Output: Node HTTP Server](./module-15-node-js-dan-backend-typescript/output/256_node_http_server.png)
+### Module 15: Node.js dan Backend TypeScript (Node.js and Backend TypeScript)
 
----
+- **Pedagogical Tier:** Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems
+- **Pedagogical Level:** Level 4: Professional & Full-Stack
+- **Module Overview:** Node.js backend execution runtime, process metadata and memory inspection, CLI argument parsing (process.argv), asynchronous file I/O operations (fs.promises), cross-platform path management (path), typed environment variables (process.env), native HTTP web server construction, outbound HTTP client requests, stream data pipelines (Readable, Writable), event-driven architectures (EventEmitter), cryptographic hashing and tokens (crypto), multithreaded worker threads, child process execution, Node.js ambient type definitions (@types/node), and Node.js module interop.
+- **Module Directory:** [`./module-15-node-js-dan-backend-typescript/`](./module-15-node-js-dan-backend-typescript) | **Lessons Count:** 16
 
-### Module 16: APIs, Databases, and Frameworks
-- **Module Directory**: [`module-16-api-database-dan-framework`](./module-16-api-database-dan-framework/README.md)
-- **Pedagogical Scope**: REST API contracts (DTOs & standardized envelopes), input validation, RFC 7807 problem details, typed Express.js application servers, route modularization (`Router`), custom middleware pipelines (structured logging, auth guards), controller separation, complete CRUD REST APIs, database connection pooling concepts, repository pattern, SQL query result typing, Prisma ORM client concepts, Prisma CRUD, schema validation with Zod (`z.infer`), NestJS decorator controllers, NestJS services, dependency injection, and NestJS REST architectures.
-- **Subtopics & Source Implementations**:
-  - [`265_rest_api_types.ts`](./module-16-api-database-dan-framework/265_rest_api_types.ts) — Modeling DTOs and standard REST API response envelopes.
-  - [`266_api_request_validation.ts`](./module-16-api-database-dan-framework/266_api_request_validation.ts) — Validating request bodies and query parameters.
-  - [`267_api_error_responses.ts`](./module-16-api-database-dan-framework/267_api_error_responses.ts) — Formatting standard API error payloads following RFC 7807.
-  - [`268_express_server.ts`](./module-16-api-database-dan-framework/268_express_server.ts) — Initializing a typed web server with Express.js.
-  - [`269_express_routes.ts`](./module-16-api-database-dan-framework/269_express_routes.ts) — Modularizing endpoint definitions with `express.Router()`.
-  - [`270_express_middleware.ts`](./module-16-api-database-dan-framework/270_express_middleware.ts) — Implementing typed middleware for request logging and guards.
-  - [`271_express_controllers.ts`](./module-16-api-database-dan-framework/271_express_controllers.ts) — Separating request routing from business controller logic.
-  - [`272_express_rest_api.ts`](./module-16-api-database-dan-framework/272_express_rest_api.ts) — Building a comprehensive CRUD REST API service with Express.
-  - [`273_database_connection.ts`](./module-16-api-database-dan-framework/273_database_connection.ts) — Managing typed database connection pools and lifecycle.
-  - [`274_database_repository.ts`](./module-16-api-database-dan-framework/274_database_repository.ts) — Implementing the Repository Pattern for data abstraction.
-  - [`275_sql_query_types.ts`](./module-16-api-database-dan-framework/275_sql_query_types.ts) — Typing SQL relational table records and query results.
-  - [`276_prisma_client.ts`](./module-16-api-database-dan-framework/276_prisma_client.ts) — Interfacing with Prisma ORM generated types and client.
-  - [`277_prisma_crud.ts`](./module-16-api-database-dan-framework/277_prisma_crud.ts) — Executing type-safe CRUD operations with Prisma.
-  - [`278_zod_validation.ts`](./module-16-api-database-dan-framework/278_zod_validation.ts) — Runtime schema validation and TypeScript type inference via `z.infer`.
-  - [`279_nestjs_controller.ts`](./module-16-api-database-dan-framework/279_nestjs_controller.ts) — NestJS controller architecture with class decorators (`@Controller`, `@Get`).
-  - [`280_nestjs_service.ts`](./module-16-api-database-dan-framework/280_nestjs_service.ts) — Injectable business services using `@Injectable()`.
-  - [`281_nestjs_dependency_injection.ts`](./module-16-api-database-dan-framework/281_nestjs_dependency_injection.ts) — Inversion of Control and dependency injection in NestJS.
-  - [`282_nestjs_rest_api.ts`](./module-16-api-database-dan-framework/282_nestjs_rest_api.ts) — End-to-end NestJS modular REST API architecture.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **249** | [`249_node_hello_world.ts`](./module-15-node-js-dan-backend-typescript/249_node_hello_world.ts) | First backend Node.js script execution, runtime environment, and console printing | [![Output 249_node_hello_world](./module-15-node-js-dan-backend-typescript/output/249_node_hello_world.png)](./module-15-node-js-dan-backend-typescript/output/249_node_hello_world.png) |
+| **250** | [`250_node_process.ts`](./module-15-node-js-dan-backend-typescript/250_node_process.ts) | Inspecting process metadata, runtime memory metrics, CPU architecture, and process exit codes | [![Output 250_node_process](./module-15-node-js-dan-backend-typescript/output/250_node_process.png)](./module-15-node-js-dan-backend-typescript/output/250_node_process.png) |
+| **251** | [`251_node_command_line.ts`](./module-15-node-js-dan-backend-typescript/251_node_command_line.ts) | Parsing, typing, and validating command-line flags and parameters from process.argv | [![Output 251_node_command_line](./module-15-node-js-dan-backend-typescript/output/251_node_command_line.png)](./module-15-node-js-dan-backend-typescript/output/251_node_command_line.png) |
+| **252** | [`252_node_file_read.ts`](./module-15-node-js-dan-backend-typescript/252_node_file_read.ts) | Reading local text files asynchronously using the Node.js File System promises API (fs.promises) | [![Output 252_node_file_read](./module-15-node-js-dan-backend-typescript/output/252_node_file_read.png)](./module-15-node-js-dan-backend-typescript/output/252_node_file_read.png) |
+| **253** | [`253_node_file_write.ts`](./module-15-node-js-dan-backend-typescript/253_node_file_write.ts) | Writing, appending, and persisting structured file data to local disk with error handling | [![Output 253_node_file_write](./module-15-node-js-dan-backend-typescript/output/253_node_file_write.png)](./module-15-node-js-dan-backend-typescript/output/253_node_file_write.png) |
+| **254** | [`254_node_path.ts`](./module-15-node-js-dan-backend-typescript/254_node_path.ts) | Cross-platform file path resolution, path normalization, joining, and parsing with node:path | [![Output 254_node_path](./module-15-node-js-dan-backend-typescript/output/254_node_path.png)](./module-15-node-js-dan-backend-typescript/output/254_node_path.png) |
+| **255** | [`255_node_environment.ts`](./module-15-node-js-dan-backend-typescript/255_node_environment.ts) | Accessing, parsing, and enforcing types on system environment variables via process.env | [![Output 255_node_environment](./module-15-node-js-dan-backend-typescript/output/255_node_environment.png)](./module-15-node-js-dan-backend-typescript/output/255_node_environment.png) |
+| **256** | [`256_node_http_server.ts`](./module-15-node-js-dan-backend-typescript/256_node_http_server.ts) | Constructing native HTTP web servers and routing requests using the core node:http module | [![Output 256_node_http_server](./module-15-node-js-dan-backend-typescript/output/256_node_http_server.png)](./module-15-node-js-dan-backend-typescript/output/256_node_http_server.png) |
+| **257** | [`257_node_http_client.ts`](./module-15-node-js-dan-backend-typescript/257_node_http_client.ts) | Dispatching outbound HTTP network requests using native Node.js networking modules | [![Output 257_node_http_client](./module-15-node-js-dan-backend-typescript/output/257_node_http_client.png)](./module-15-node-js-dan-backend-typescript/output/257_node_http_client.png) |
+| **258** | [`258_node_streams.ts`](./module-15-node-js-dan-backend-typescript/258_node_streams.ts) | High-performance streaming I/O data pipelines using Node.js Readable and Writable streams | [![Output 258_node_streams](./module-15-node-js-dan-backend-typescript/output/258_node_streams.png)](./module-15-node-js-dan-backend-typescript/output/258_node_streams.png) |
+| **259** | [`259_node_events.ts`](./module-15-node-js-dan-backend-typescript/259_node_events.ts) | Building event-driven application architectures using the core Node.js EventEmitter class | [![Output 259_node_events](./module-15-node-js-dan-backend-typescript/output/259_node_events.png)](./module-15-node-js-dan-backend-typescript/output/259_node_events.png) |
+| **260** | [`260_node_crypto.ts`](./module-15-node-js-dan-backend-typescript/260_node_crypto.ts) | Cryptographic hashing, HMAC token generation, and secure random byte generation with node:crypto | [![Output 260_node_crypto](./module-15-node-js-dan-backend-typescript/output/260_node_crypto.png)](./module-15-node-js-dan-backend-typescript/output/260_node_crypto.png) |
+| **261** | [`261_node_worker_threads.ts`](./module-15-node-js-dan-backend-typescript/261_node_worker_threads.ts) | Parallel CPU-bound multithreaded compute pipelines using Node.js worker_threads | [![Output 261_node_worker_threads](./module-15-node-js-dan-backend-typescript/output/261_node_worker_threads.png)](./module-15-node-js-dan-backend-typescript/output/261_node_worker_threads.png) |
+| **262** | [`262_node_child_process.ts`](./module-15-node-js-dan-backend-typescript/262_node_child_process.ts) | Spawning external CLI commands, subshells, and child processes using node:child_process | [![Output 262_node_child_process](./module-15-node-js-dan-backend-typescript/output/262_node_child_process.png)](./module-15-node-js-dan-backend-typescript/output/262_node_child_process.png) |
+| **263** | [`263_node_types.ts`](./module-15-node-js-dan-backend-typescript/263_node_types.ts) | Leveraging @types/node type definition packages for Node.js standard library APIs | [![Output 263_node_types](./module-15-node-js-dan-backend-typescript/output/263_node_types.png)](./module-15-node-js-dan-backend-typescript/output/263_node_types.png) |
+| **264** | [`264_node_module_system.ts`](./module-15-node-js-dan-backend-typescript/264_node_module_system.ts) | Interoperability between Node.js CommonJS (require) and modern ECMAScript Modules (ESM) | [![Output 264_node_module_system](./module-15-node-js-dan-backend-typescript/output/264_node_module_system.png)](./module-15-node-js-dan-backend-typescript/output/264_node_module_system.png) |
 
-  ![Execution Output: Zod Runtime Schema Validation](./module-16-api-database-dan-framework/output/278_zod_validation.png)
+### Module 16: API, Database, dan Framework (APIs, Databases, and Enterprise Frameworks)
 
----
+- **Pedagogical Tier:** Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems
+- **Pedagogical Level:** Level 4: Professional & Full-Stack
+- **Module Overview:** REST API contract design with DTOs and standardized response wrappers, request validation pipelines, RFC 7807 compliant error format standards, Express 5 server initialization and typed route handlers, modular Express routers, custom middleware pipelines (request logging and auth guards), controller separation, complete CRUD REST APIs with Express, database connection management and connection pools, Repository Pattern architecture, typed SQL query result sets, Prisma Client ORM workflows, Prisma CRUD operations, runtime schema validation and static inference with Zod (z.infer), NestJS decorator-based controllers, @Injectable() service layers, Dependency Injection (DI) architectures, and NestJS REST API implementations.
+- **Module Directory:** [`./module-16-api-database-dan-framework/`](./module-16-api-database-dan-framework) | **Lessons Count:** 18
 
-### Module 17: Testing, Tooling, and Application Security
-- **Module Directory**: [`module-17-testing-tooling-dan-keamanan`](./module-17-testing-tooling-dan-keamanan/README.md)
-- **Pedagogical Scope**: Unit testing, testing with Vitest, Jest matchers, mock functions (spies and stubs), integration testing, REST API endpoint testing, test fixtures and mock data factories, compile-time type testing (`expectTypeOf`), code quality enforcement with ESLint, automatic formatting with Prettier, npm package management, strictly typed environment variables, secure input validation (directory traversal prevention), XSS defense, JWT authentication data modeling, and Role-Based Access Control (RBAC).
-- **Subtopics & Source Implementations**:
-  - [`283_typescript_unit_testing.ts`](./module-17-testing-tooling-dan-keamanan/283_typescript_unit_testing.ts) — Unit testing fundamentals and assertion verification.
-  - [`284_vitest_basic.ts`](./module-17-testing-tooling-dan-keamanan/284_vitest_basic.ts) — Fast modern testing using Vitest runner.
-  - [`285_jest_basic.ts`](./module-17-testing-tooling-dan-keamanan/285_jest_basic.ts) — Test suites, assertions, and matchers with Jest.
-  - [`286_mock_functions.ts`](./module-17-testing-tooling-dan-keamanan/286_mock_functions.ts) — Isolating dependencies with function spies, mocks, and stubs.
-  - [`287_integration_testing.ts`](./module-17-testing-tooling-dan-keamanan/287_integration_testing.ts) — Testing multi-component integration workflows.
-  - [`288_api_testing.ts`](./module-17-testing-tooling-dan-keamanan/288_api_testing.ts) — Automated HTTP endpoint testing and status validation.
-  - [`289_test_fixtures.ts`](./module-17-testing-tooling-dan-keamanan/289_test_fixtures.ts) — Generating deterministic test fixtures and mock factories.
-  - [`290_type_testing.ts`](./module-17-testing-tooling-dan-keamanan/290_type_testing.ts) — Compile-time static type testing and type equality assertions.
-  - [`291_eslint_typescript.ts`](./module-17-testing-tooling-dan-keamanan/291_eslint_typescript.ts) — Static code analysis and rule enforcement with ESLint.
-  - [`292_prettier_typescript.ts`](./module-17-testing-tooling-dan-keamanan/292_prettier_typescript.ts) — Consistent code formatting with Prettier.
-  - [`293_npm_package_management.ts`](./module-17-testing-tooling-dan-keamanan/293_npm_package_management.ts) — Managing semver dependencies and lockfile integrity.
-  - [`294_environment_configuration.ts`](./module-17-testing-tooling-dan-keamanan/294_environment_configuration.ts) — Type-safe environment variable validation schemas.
-  - [`295_secure_input_validation.ts`](./module-17-testing-tooling-dan-keamanan/295_secure_input_validation.ts) — Defensive input sanitization preventing path traversal attacks.
-  - [`296_xss_prevention.ts`](./module-17-testing-tooling-dan-keamanan/296_xss_prevention.ts) — HTML escaping and Cross-Site Scripting (XSS) mitigation.
-  - [`297_authentication_types.ts`](./module-17-testing-tooling-dan-keamanan/297_authentication_types.ts) — Modeling JWT token payloads, claims, and verification contracts.
-  - [`298_authorization_types.ts`](./module-17-testing-tooling-dan-keamanan/298_authorization_types.ts) — Implementing Role-Based Access Control (RBAC) permission guards.
-- **Verified Execution Preview**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **265** | [`265_rest_api_types.ts`](./module-16-api-database-dan-framework/265_rest_api_types.ts) | Designing strongly typed REST API Data Transfer Objects (DTOs) and standardized response wrappers | [![Output 265_rest_api_types](./module-16-api-database-dan-framework/output/265_rest_api_types.png)](./module-16-api-database-dan-framework/output/265_rest_api_types.png) |
+| **266** | [`266_api_request_validation.ts`](./module-16-api-database-dan-framework/266_api_request_validation.ts) | Validating incoming API request payload structures, email formats, and string lengths | [![Output 266_api_request_validation](./module-16-api-database-dan-framework/output/266_api_request_validation.png)](./module-16-api-database-dan-framework/output/266_api_request_validation.png) |
+| **267** | [`267_api_error_responses.ts`](./module-16-api-database-dan-framework/267_api_error_responses.ts) | Standardizing RFC 7807 compliant problem details and API error response schemas | [![Output 267_api_error_responses](./module-16-api-database-dan-framework/output/267_api_error_responses.png)](./module-16-api-database-dan-framework/output/267_api_error_responses.png) |
+| **268** | [`268_express_server.ts`](./module-16-api-database-dan-framework/268_express_server.ts) | Bootstrapping typed Express web application instances, middleware chains, and HTTP listeners | [![Output 268_express_server](./module-16-api-database-dan-framework/output/268_express_server.png)](./module-16-api-database-dan-framework/output/268_express_server.png) |
+| **269** | [`269_express_routes.ts`](./module-16-api-database-dan-framework/269_express_routes.ts) | Modularizing route definitions and URL parameter extraction using Express Router | [![Output 269_express_routes](./module-16-api-database-dan-framework/output/269_express_routes.png)](./module-16-api-database-dan-framework/output/269_express_routes.png) |
+| **270** | [`270_express_middleware.ts`](./module-16-api-database-dan-framework/270_express_middleware.ts) | Developing custom Express middleware functions for request logging, timing, and security headers | [![Output 270_express_middleware](./module-16-api-database-dan-framework/output/270_express_middleware.png)](./module-16-api-database-dan-framework/output/270_express_middleware.png) |
+| **271** | [`271_express_controllers.ts`](./module-16-api-database-dan-framework/271_express_controllers.ts) | Architectural separation of routing contracts from business controller handler logic | [![Output 271_express_controllers](./module-16-api-database-dan-framework/output/271_express_controllers.png)](./module-16-api-database-dan-framework/output/271_express_controllers.png) |
+| **272** | [`272_express_rest_api.ts`](./module-16-api-database-dan-framework/272_express_rest_api.ts) | Building an end-to-end CRUD REST API service handling entity lifecycles with Express | [![Output 272_express_rest_api](./module-16-api-database-dan-framework/output/272_express_rest_api.png)](./module-16-api-database-dan-framework/output/272_express_rest_api.png) |
+| **273** | [`273_database_connection.ts`](./module-16-api-database-dan-framework/273_database_connection.ts) | Simulating relational database connection pool lifecycles, health checks, and state transitions | [![Output 273_database_connection](./module-16-api-database-dan-framework/output/273_database_connection.png)](./module-16-api-database-dan-framework/output/273_database_connection.png) |
+| **274** | [`274_database_repository.ts`](./module-16-api-database-dan-framework/274_database_repository.ts) | Implementing the Repository Pattern for abstracting persistent database storage operations | [![Output 274_database_repository](./module-16-api-database-dan-framework/output/274_database_repository.png)](./module-16-api-database-dan-framework/output/274_database_repository.png) |
+| **275** | [`275_sql_query_types.ts`](./module-16-api-database-dan-framework/275_sql_query_types.ts) | Typing relational SQL query results, raw table records, and joined entity datasets | [![Output 275_sql_query_types](./module-16-api-database-dan-framework/output/275_sql_query_types.png)](./module-16-api-database-dan-framework/output/275_sql_query_types.png) |
+| **276** | [`276_prisma_client.ts`](./module-16-api-database-dan-framework/276_prisma_client.ts) | Exploring Prisma Client architecture, schema models, and auto-generated database client types | [![Output 276_prisma_client](./module-16-api-database-dan-framework/output/276_prisma_client.png)](./module-16-api-database-dan-framework/output/276_prisma_client.png) |
+| **277** | [`277_prisma_crud.ts`](./module-16-api-database-dan-framework/277_prisma_crud.ts) | Modeling typed CRUD database operations using Prisma ORM repository methods | [![Output 277_prisma_crud](./module-16-api-database-dan-framework/output/277_prisma_crud.png)](./module-16-api-database-dan-framework/output/277_prisma_crud.png) |
+| **278** | [`278_zod_validation.ts`](./module-16-api-database-dan-framework/278_zod_validation.ts) | Runtime schema validation and automated static TypeScript type inference using Zod (z.infer) | [![Output 278_zod_validation](./module-16-api-database-dan-framework/output/278_zod_validation.png)](./module-16-api-database-dan-framework/output/278_zod_validation.png) |
+| **279** | [`279_nestjs_controller.ts`](./module-16-api-database-dan-framework/279_nestjs_controller.ts) | Building declarative HTTP controllers using NestJS routing decorators (@Controller, @Get, @Post) | [![Output 279_nestjs_controller](./module-16-api-database-dan-framework/output/279_nestjs_controller.png)](./module-16-api-database-dan-framework/output/279_nestjs_controller.png) |
+| **280** | [`280_nestjs_service.ts`](./module-16-api-database-dan-framework/280_nestjs_service.ts) | Designing business service layers marked with @Injectable() in NestJS enterprise architectures | [![Output 280_nestjs_service](./module-16-api-database-dan-framework/output/280_nestjs_service.png)](./module-16-api-database-dan-framework/output/280_nestjs_service.png) |
+| **281** | [`281_nestjs_dependency_injection.ts`](./module-16-api-database-dan-framework/281_nestjs_dependency_injection.ts) | Inverting dependencies and configuring Dependency Injection (DI) containers and providers | [![Output 281_nestjs_dependency_injection](./module-16-api-database-dan-framework/output/281_nestjs_dependency_injection.png)](./module-16-api-database-dan-framework/output/281_nestjs_dependency_injection.png) |
+| **282** | [`282_nestjs_rest_api.ts`](./module-16-api-database-dan-framework/282_nestjs_rest_api.ts) | Constructing cohesive multi-layered enterprise REST API architectures with NestJS patterns | [![Output 282_nestjs_rest_api](./module-16-api-database-dan-framework/output/282_nestjs_rest_api.png)](./module-16-api-database-dan-framework/output/282_nestjs_rest_api.png) |
 
-  ![Execution Output: Unit Testing](./module-17-testing-tooling-dan-keamanan/output/283_typescript_unit_testing.png)
+### Module 17: Testing, Tooling, dan Keamanan (Testing, Tooling, and Application Security)
 
----
+- **Pedagogical Tier:** Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems
+- **Pedagogical Level:** Level 4: Professional & Full-Stack
+- **Module Overview:** Unit testing principles, modern test execution with Vitest (describe, it, expect), test assertions and matchers with Jest, mock functions (spies and stubs), integration testing methodologies, API endpoint testing, test fixtures and data factories, compile-time static type testing (type assertions), static code analysis with ESLint TypeScript rules, automated code formatting with Prettier, npm package management and lockfile auditing, strongly typed environment configuration loaders, defensive input validation against path traversal attacks, Cross-Site Scripting (XSS) input sanitization, JWT authentication claim modeling, and Role-Based Access Control (RBAC) authorization guards.
+- **Module Directory:** [`./module-17-testing-tooling-dan-keamanan/`](./module-17-testing-tooling-dan-keamanan) | **Lessons Count:** 16
 
-### Module 18: Practical Capstone Projects
-- **Module Directory**: [`module-18-proyek-praktik-typescript`](./module-18-proyek-praktik-typescript/README.md)
-- **Pedagogical Scope**: Comprehensive synthesis of all 17 preceding curriculum modules into two complete, production-grade applications demonstrating Clean Architecture, domain entity modeling, computational algorithms, state mutation guards, and error resilience.
-- **Subtopics & Source Implementations**:
-  - [`299_student_management_project.ts`](./module-18-proyek-praktik-typescript/299_student_management_project.ts) — **Capstone Project 1: Student Management System**. Implements an academic grading and transcript platform featuring OOP classes, typed student entities, credit weight (SKS) conversions, Grade Point Average (GPA / IPK) calculations, graduation honors evaluation (*Cumlaude*, *Very Satisfactory*, *Satisfactory*), and automated academic transcript printing.
-  - [`300_fullstack_task_manager_project.ts`](./module-18-proyek-praktik-typescript/300_fullstack_task_manager_project.ts) — **Capstone Project 2: Full-Stack Task Manager**. Implements an enterprise layered architecture (Controller, Service, Repository, DTOs, and Analytics Dashboard). Features discrete status enums (`TODO`, `IN_PROGRESS`, `IN_REVIEW`, `DONE`), functional `Result<T, E>` error handling, business mutation guards preventing invalid state transitions, input validation, and sprint productivity analytics.
-- **Verified Execution Previews**:
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **283** | [`283_typescript_unit_testing.ts`](./module-17-testing-tooling-dan-keamanan/283_typescript_unit_testing.ts) | Writing isolated unit tests and custom assertion harnesses for pure business functions | [![Output 283_typescript_unit_testing](./module-17-testing-tooling-dan-keamanan/output/283_typescript_unit_testing.png)](./module-17-testing-tooling-dan-keamanan/output/283_typescript_unit_testing.png) |
+| **284** | [`284_vitest_basic.ts`](./module-17-testing-tooling-dan-keamanan/284_vitest_basic.ts) | Modern fast unit testing workflows using Vitest test blocks (describe, it, expect) | [![Output 284_vitest_basic](./module-17-testing-tooling-dan-keamanan/output/284_vitest_basic.png)](./module-17-testing-tooling-dan-keamanan/output/284_vitest_basic.png) |
+| **285** | [`285_jest_basic.ts`](./module-17-testing-tooling-dan-keamanan/285_jest_basic.ts) | Validating functional logic and state mutations using Jest matchers and assertions | [![Output 285_jest_basic](./module-17-testing-tooling-dan-keamanan/output/285_jest_basic.png)](./module-17-testing-tooling-dan-keamanan/output/285_jest_basic.png) |
+| **286** | [`286_mock_functions.ts`](./module-17-testing-tooling-dan-keamanan/286_mock_functions.ts) | Isolating side-effects using mock functions, spies, and argument call verification | [![Output 286_mock_functions](./module-17-testing-tooling-dan-keamanan/output/286_mock_functions.png)](./module-17-testing-tooling-dan-keamanan/output/286_mock_functions.png) |
+| **287** | [`287_integration_testing.ts`](./module-17-testing-tooling-dan-keamanan/287_integration_testing.ts) | Testing multi-component workflows, service boundaries, and database repositories | [![Output 287_integration_testing](./module-17-testing-tooling-dan-keamanan/output/287_integration_testing.png)](./module-17-testing-tooling-dan-keamanan/output/287_integration_testing.png) |
+| **288** | [`288_api_testing.ts`](./module-17-testing-tooling-dan-keamanan/288_api_testing.ts) | Writing automated HTTP API endpoint integration tests with simulated requests and assertions | [![Output 288_api_testing](./module-17-testing-tooling-dan-keamanan/output/288_api_testing.png)](./module-17-testing-tooling-dan-keamanan/output/288_api_testing.png) |
+| **289** | [`289_test_fixtures.ts`](./module-17-testing-tooling-dan-keamanan/289_test_fixtures.ts) | Managing reproducible test fixtures, seed data, and mock entity factories for tests | [![Output 289_test_fixtures](./module-17-testing-tooling-dan-keamanan/output/289_test_fixtures.png)](./module-17-testing-tooling-dan-keamanan/output/289_test_fixtures.png) |
+| **290** | [`290_type_testing.ts`](./module-17-testing-tooling-dan-keamanan/290_type_testing.ts) | Performing static compile-time type testing and assignment verification without runtime overhead | [![Output 290_type_testing](./module-17-testing-tooling-dan-keamanan/output/290_type_testing.png)](./module-17-testing-tooling-dan-keamanan/output/290_type_testing.png) |
+| **291** | [`291_eslint_typescript.ts`](./module-17-testing-tooling-dan-keamanan/291_eslint_typescript.ts) | Enforcing static code quality, type-aware linting, and stylistic standards with ESLint | [![Output 291_eslint_typescript](./module-17-testing-tooling-dan-keamanan/output/291_eslint_typescript.png)](./module-17-testing-tooling-dan-keamanan/output/291_eslint_typescript.png) |
+| **292** | [`292_prettier_typescript.ts`](./module-17-testing-tooling-dan-keamanan/292_prettier_typescript.ts) | Automating consistent code formatting and style rules using Prettier configuration | [![Output 292_prettier_typescript](./module-17-testing-tooling-dan-keamanan/output/292_prettier_typescript.png)](./module-17-testing-tooling-dan-keamanan/output/292_prettier_typescript.png) |
+| **293** | [`293_npm_package_management.ts`](./module-17-testing-tooling-dan-keamanan/293_npm_package_management.ts) | Managing dependency lifecycles, semantic versioning, and npm lockfile security auditing | [![Output 293_npm_package_management](./module-17-testing-tooling-dan-keamanan/output/293_npm_package_management.png)](./module-17-testing-tooling-dan-keamanan/output/293_npm_package_management.png) |
+| **294** | [`294_environment_configuration.ts`](./module-17-testing-tooling-dan-keamanan/294_environment_configuration.ts) | Validating and parsing strongly typed environment variables at application startup | [![Output 294_environment_configuration](./module-17-testing-tooling-dan-keamanan/output/294_environment_configuration.png)](./module-17-testing-tooling-dan-keamanan/output/294_environment_configuration.png) |
+| **295** | [`295_secure_input_validation.ts`](./module-17-testing-tooling-dan-keamanan/295_secure_input_validation.ts) | Defensive input validation and path traversal attack prevention on file system operations | [![Output 295_secure_input_validation](./module-17-testing-tooling-dan-keamanan/output/295_secure_input_validation.png)](./module-17-testing-tooling-dan-keamanan/output/295_secure_input_validation.png) |
+| **296** | [`296_xss_prevention.ts`](./module-17-testing-tooling-dan-keamanan/296_xss_prevention.ts) | Sanitizing user inputs and escaping HTML entities to prevent Cross-Site Scripting (XSS) attacks | [![Output 296_xss_prevention](./module-17-testing-tooling-dan-keamanan/output/296_xss_prevention.png)](./module-17-testing-tooling-dan-keamanan/output/296_xss_prevention.png) |
+| **297** | [`297_authentication_types.ts`](./module-17-testing-tooling-dan-keamanan/297_authentication_types.ts) | Modeling authentication tokens, JWT payload claims, and session credential types | [![Output 297_authentication_types](./module-17-testing-tooling-dan-keamanan/output/297_authentication_types.png)](./module-17-testing-tooling-dan-keamanan/output/297_authentication_types.png) |
+| **298** | [`298_authorization_types.ts`](./module-17-testing-tooling-dan-keamanan/298_authorization_types.ts) | Implementing Role-Based Access Control (RBAC) permission checking and authorization guards | [![Output 298_authorization_types](./module-17-testing-tooling-dan-keamanan/output/298_authorization_types.png)](./module-17-testing-tooling-dan-keamanan/output/298_authorization_types.png) |
 
-  ![Execution Output: Student Management System Capstone](./module-18-proyek-praktik-typescript/output/299_student_management_project.png)
+### Module 18: Proyek Praktik TypeScript (Practical Capstone Projects)
 
-  ![Execution Output: Full-Stack Task Manager Capstone](./module-18-proyek-praktik-typescript/output/300_fullstack_task_manager_project.png)
+- **Pedagogical Tier:** Tier 4: Enterprise Backends, Tooling, Security, and Full-Stack Systems
+- **Pedagogical Level:** Level 4: Professional & Full-Stack
+- **Module Overview:** Full-scale capstone software systems consolidating the entire 18-module TypeScript curriculum into enterprise-grade applications: (1) an Object-Oriented Academic Student Management System with course enrollment, credit weighting, automated GPA calculation, honors classifications (Cum Laude, Magna Cum Laude), and formal academic transcript generation; and (2) an enterprise-style Full-Stack Task Manager Application featuring multi-tier Clean Architecture (Controllers, Services, Repositories, DTOs, functional Result<T, E> error handling, state transition guards, and sprint productivity analytics dashboards).
+- **Module Directory:** [`./module-18-proyek-praktik-typescript/`](./module-18-proyek-praktik-typescript) | **Lessons Count:** 2
 
----
+| Lesson | Source Code | Pedagogical Concept & Scope | Verified Execution Output |
+| :---: | :--- | :--- | :---: |
+| **299** | [`299_student_management_project.ts`](./module-18-proyek-praktik-typescript/299_student_management_project.ts) | Enterprise Academic Student Management System with OOP architecture, credit weighting, GPA calculation, honors classification, and transcript generation | [![Output 299_student_management_project](./module-18-proyek-praktik-typescript/output/299_student_management_project.png)](./module-18-proyek-praktik-typescript/output/299_student_management_project.png) |
+| **300** | [`300_fullstack_task_manager_project.ts`](./module-18-proyek-praktik-typescript/300_fullstack_task_manager_project.ts) | Enterprise Full-Stack Task Manager Application with multi-tier Clean Architecture (Controllers, Services, Repositories, DTOs, Result pattern, and sprint analytics) | [![Output 300_fullstack_task_manager_project](./module-18-proyek-praktik-typescript/output/300_fullstack_task_manager_project.png)](./module-18-proyek-praktik-typescript/output/300_fullstack_task_manager_project.png) |
 
 ## Exercises & Practice
 
-The curriculum integrates practical programming challenges at every stage of the learning progression. Rather than abstract theoretical snippets, each of the 300 lesson files is structured as an interactive, executable practice implementation:
+Practical application and problem-solving exercises are integrated directly throughout the curriculum across four key pedagogical areas:
 
-- **Self-Contained Coding Scenarios**: Each lesson file contains a concrete problem statement, typed data contracts, implementation logic, and console verification displays.
-- **Progressive Problem Solving**: Lessons begin with guided demonstrations and progress into algorithmic implementations, such as prime number sieves ([`57_prime_number.ts`](./module-04-perulangan-dan-kontrol-alur/57_prime_number.ts)), Fibonacci series generators ([`58_fibonacci_loop.ts`](./module-04-perulangan-dan-kontrol-alur/58_fibonacci_loop.ts)), generic queue and stack collections ([`142_generic_collections.ts`](./module-09-generics-dan-pemrograman-generik/142_generic_collections.ts)), and custom utility type builders ([`168_custom_utility_types.ts`](./module-10-advanced-types/168_custom_utility_types.ts)).
-- **Integrated Capstone Challenges**:
-  - **Academic Transcript & GPA Engine** ([`299_student_management_project.ts`](./module-18-proyek-praktik-typescript/299_student_management_project.ts)): Practice modeling complex entity relationships, credit-weighted averages, and formal formatting.
-  - **Layered Clean Architecture Task Manager** ([`300_fullstack_task_manager_project.ts`](./module-18-proyek-praktik-typescript/300_fullstack_task_manager_project.ts)): Practice structuring controllers, service layers, in-memory repository abstractions, functional error modeling with `Result<T, E>`, and data metrics aggregation.
+### 1. Algorithmic Patterns & Iterative Logic (Module 04)
+Master core computing algorithms, state accumulators, and mathematical sequences implemented with static type contracts:
+- **Number Pattern Generators:** Multi-dimensional pyramid and triangle generators using nested loops ([`55_number_patterns.ts`](./module-04-perulangan-dan-kontrol-alur/55_number_patterns.ts)).
+- **Iterative Factorials:** Mathematical factorial computation algorithm with typed accumulator bounds ([`56_factorial_loop.ts`](./module-04-perulangan-dan-kontrol-alur/56_factorial_loop.ts)).
+- **Prime Number Filtering:** Divisibility checking and prime number sequence determination ([`57_prime_number.ts`](./module-04-perulangan-dan-kontrol-alur/57_prime_number.ts)).
+- **Fibonacci Sequence Generator:** Iterative Fibonacci sequence generation with accumulator state management ([`58_fibonacci_loop.ts`](./module-04-perulangan-dan-kontrol-alur/58_fibonacci_loop.ts)).
 
----
+### 2. Advanced Type Challenges & Generic Data Structures (Modules 08, 09, & 10)
+Solve sophisticated type-level challenges and construct reusable generic collections:
+- **Nominal Branded Typing:** Preventing accidental value substitution with branded type brands ([`128_branded_types.ts`](./module-08-union-intersection-dan-type-narrowing/128_branded_types.ts)).
+- **Generic Constructor Factories:** Instantiating parameterized instances via constructor signatures ([`141_generic_factory.ts`](./module-09-generics-dan-pemrograman-generik/141_generic_factory.ts)).
+- **Generic Collections (Stack & Queue):** Type-safe, reusable data collection classes built from scratch ([`142_generic_collections.ts`](./module-09-generics-dan-pemrograman-generik/142_generic_collections.ts)).
+- **Recursive Conditional Types:** Deep nested type flattening and arbitrary-depth type unpacking ([`155_recursive_conditional_types.ts`](./module-10-advanced-types/155_recursive_conditional_types.ts)).
+- **Custom Enterprise Utility Types:** Synthesizing complex utility types combining mapped, conditional, and template literal types ([`168_custom_utility_types.ts`](./module-10-advanced-types/168_custom_utility_types.ts)).
+
+### 3. Software Verification & Defensive Security Harnesses (Module 17)
+Hands-on practice validating application correctness and implementing defensive security controls:
+- **Custom Assertion Test Harness:** Isolated unit testing framework verifying expected outputs against actual results ([`283_typescript_unit_testing.ts`](./module-17-testing-tooling-dan-keamanan/283_typescript_unit_testing.ts)).
+- **Vitest Modern Test Suites:** Unit testing using `describe`, `it`, and `expect` matchers ([`284_vitest_basic.ts`](./module-17-testing-tooling-dan-keamanan/284_vitest_basic.ts)).
+- **Jest Functional Assertions:** Verifying financial ledger account balances and state mutations ([`285_jest_basic.ts`](./module-17-testing-tooling-dan-keamanan/285_jest_basic.ts)).
+- **Mock Functions & Spies:** Isolating service side-effects and asserting invocation counts and parameters ([`286_mock_functions.ts`](./module-17-testing-tooling-dan-keamanan/286_mock_functions.ts)).
+- **Compile-Time Static Type Testing:** Validating type assignability and type contracts without runtime overhead ([`290_type_testing.ts`](./module-17-testing-tooling-dan-keamanan/290_type_testing.ts)).
+- **Path Traversal Security Guard:** Defensive path normalization preventing unauthorized directory traversal ([`295_secure_input_validation.ts`](./module-17-testing-tooling-dan-keamanan/295_secure_input_validation.ts)).
+- **XSS Sanitization Engine:** Escaping untrusted user inputs to neutralize Cross-Site Scripting threats ([`296_xss_prevention.ts`](./module-17-testing-tooling-dan-keamanan/296_xss_prevention.ts)).
+
+### 4. Enterprise Capstone Projects (Module 18)
+Module 18 culminates in two comprehensive, end-to-end practical software systems:
+1. [`299_student_management_project.ts`](./module-18-proyek-praktik-typescript/299_student_management_project.ts): Full-scale Academic Student Management System featuring Object-Oriented design, credit weighting (SKS), automated GPA calculation, honours predicate evaluations (Cum Laude, Magna Cum Laude), and formal academic transcript generation.
+2. [`300_fullstack_task_manager_project.ts`](./module-18-proyek-praktik-typescript/300_fullstack_task_manager_project.ts): Enterprise Full-Stack Task Manager Application architected with multi-tiered Clean Architecture (Controllers, Services, Repositories, DTOs, functional `Result<T, E>` error handling, state transition guards, and sprint productivity analytics dashboards).
 
 ## Code Execution & Expected Output
 
-All lesson files are designed to be executed directly from the project root using the `tsx` runtime. This eliminates the need for separate manual build steps or temporary JavaScript artifact folders.
-
-### Universal Execution Command
-Run any lesson by providing its relative path to `npx tsx`:
+### High-Speed Direct Execution via tsx
+Every lesson in this repository is designed to be executed directly from your terminal using `tsx` without a manual build step:
 ```bash
-npx tsx <module-folder>/<lesson-file>.ts
+cd module-01-pengenalan-typescript-dan-struktur-program
+npx tsx 01_hello_world.ts
 ```
 
-*Example:*
+### Ahead-of-Time Compilation via tsc
+To verify type checking across all files and compile the curriculum to JavaScript:
 ```bash
-npx tsx module-08-union-intersection-dan-type-narrowing/113_discriminated_unions.ts
+npx tsc --noEmit
 ```
+*(Runs the TypeScript compiler in type-check mode without emitting `.js` files)*
 
-### Standardized Output Anatomy
-Every lesson outputs a clean, structured terminal transcript demarcated by descriptive headers:
-```text
-=== Discriminated Unions pada TypeScript ===
-Memproses Notifikasi Email: Mengirim email ke user@example.com dengan subjek 'Halo'
-Memproses Notifikasi SMS: Mengirim SMS ke +628123456789
-Memproses Push Notification: Push ke device dev-9876
-```
-
-### Verifying Results
-To confirm your code produces the intended output, compare your local terminal stdout against the verified capture located in that module's `output/` directory:
+### Passing Command-Line Arguments
+For lessons demonstrating command-line parameter handling, such as [`251_node_command_line.ts`](./module-15-node-js-dan-backend-typescript/251_node_command_line.ts), supply arguments directly after the script name:
 ```bash
-# Path pattern to official execution capture
-<module-folder>/output/<lesson-file>.png
+cd module-15-node-js-dan-backend-typescript
+npx tsx 251_node_command_line.ts --mode=production --port=8080 --verbose
 ```
 
----
+### Asynchronous & Event-Driven Workflows
+Asynchronous lessons (Modules 13, 14, 15, and 16) demonstrate non-blocking I/O and Promise resolution. When running these lessons, synchronous output displays immediately, followed by resolved asynchronous microtasks and timer callbacks:
+```bash
+cd module-13-asynchronous-programming-dan-error-handling
+npx tsx 211_promise_all.ts
+```
+
+### Interpreting Execution Screenshots
+Each module directory contains an `output/` subfolder holding verified `.png` captures of the actual terminal output produced by executing each specific lesson. Use these screenshots to:
+- Confirm that your local runtime output matches the verified reference output byte-for-byte.
+- Verify complex terminal formatting, structured JSON output, and tabular summaries.
+- Cross-check the execution sequence of asynchronous operations against the JavaScript Event Loop.
+- Observe intentional error reporting, stack traces, and validation rejection notices.
 
 ## Learning Resources & References
 
-Explore these official references and documentation to deepen your knowledge of TypeScript and related technologies:
+To deepen your knowledge of TypeScript, static typing, and backend software engineering, consult these official documentation portals and reference materials:
 
-- **Official TypeScript Documentation**: [typescriptlang.org/docs](https://www.typescriptlang.org/docs/)
-- **The TypeScript Handbook**: [typescriptlang.org/docs/handbook/intro.html](https://www.typescriptlang.org/docs/handbook/intro.html)
-- **TypeScript Official GitHub Repository & Issue Tracker**: [github.com/microsoft/TypeScript](https://github.com/microsoft/TypeScript)
-- **Node.js Official Documentation**: [nodejs.org/en/docs](https://nodejs.org/en/docs/)
-- **Express.js Documentation**: [expressjs.com](https://expressjs.com/)
-- **Zod Schema Validation Documentation**: [zod.dev](https://zod.dev/)
-- **Vitest Testing Guide**: [vitest.dev/guide](https://vitest.dev/guide/)
-- **Jest Testing Framework Documentation**: [jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started)
-
----
+- **Official TypeScript Documentation:** [typescriptlang.org/docs](https://www.typescriptlang.org/docs/) — The authoritative reference for TypeScript syntax, compiler options, and handbook guides.
+- **TypeScript Handbook:** [typescriptlang.org/docs/handbook/intro.html](https://www.typescriptlang.org/docs/handbook/intro.html) — Comprehensive guide covering basic types, narrowing, object types, and generics.
+- **TypeScript TSConfig Reference:** [typescriptlang.org/tsconfig](https://www.typescriptlang.org/tsconfig) — Complete documentation for every configuration flag in `tsconfig.json`.
+- **Node.js Official Documentation:** [nodejs.org/docs/latest/api/](https://nodejs.org/docs/latest/api/) — API reference for Node.js core modules (`fs`, `path`, `events`, `http`, `crypto`, `worker_threads`).
+- **Express.js Documentation:** [expressjs.com](https://expressjs.com/) — Official documentation for routing, middleware pipelines, and web APIs with Express.
+- **Zod Schema Documentation:** [zod.dev](https://zod.dev/) — Definitive documentation for TypeScript-first runtime schema declaration and validation.
+- **MDN Web Docs (TypeScript & JavaScript):** [developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) — Standard reference for ECMAScript specifications, browser DOM, and Web APIs.
 
 ## Troubleshooting
 
-Common environment and execution questions, along with their verified solutions:
+Common environment issues and their verified solutions:
 
-### 1. Windows PowerShell Script Execution Policy Error (`PSSecurityException`)
-**Symptom:** Running `npx tsx ...` in PowerShell fails with:
-`File C:\Program Files\nodejs\npx.ps1 cannot be loaded because running scripts is disabled on this system.`
-
-**Solution:**
-On Windows, PowerShell restricts unsigned script execution by default. You can resolve this using either of the following approaches:
-- **Option A (Invoke through cmd.exe or npx.cmd):**
+### 1. PowerShell Script Execution Policy Error with `npm` or `npx`
+- **Cause:** Windows PowerShell restricts executing unsigned script files (`npm.ps1`, `npx.ps1`) under default execution policies (`UnauthorizedAccess`).
+- **Fix:** Execute commands using the `.cmd` extension explicitly (e.g., `npm.cmd install` or `npx.cmd tsx <filename>.ts`), or adjust the execution policy for your current user session:
   ```powershell
-  cmd /c npx tsx <module-folder>/<lesson-file>.ts
-  ```
-  or:
-  ```powershell
-  npx.cmd tsx <module-folder>/<lesson-file>.ts
-  ```
-- **Option B (Update PowerShell Execution Policy for Current User):**
-  ```powershell
-  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
   ```
 
-### 2. Missing Dependencies Error (`Cannot find package 'tsx'` or `Cannot find module 'express'`)
-**Symptom:** Running a lesson throws `ERR_MODULE_NOT_FOUND` for packages like `tsx`, `express`, or `zod`.
+### 2. `Error: Cannot find module 'express'` or `Cannot find module 'zod'`
+- **Cause:** Optional project dependencies have not been installed in the repository root before executing Module 16 or 18 lessons.
+- **Fix:** Navigate to the repository root directory and install dependencies:
+  ```bash
+  cd "TypeScript-Learning-Modules"
+  npm install
+  ```
 
-**Solution:**
-Ensure you have installed the repository dependencies from the root directory:
-```bash
-npm install
-```
+### 3. `'node'` or `'npx'` is not recognized as an internal or external command
+- **Cause:** Node.js is not installed or its binary directory has not been added to your system `PATH` environment variable.
+- **Fix:** Download and install the latest LTS release from [nodejs.org](https://nodejs.org/). During installation, verify that the "Add to PATH" option is checked, then restart your terminal.
 
-### 3. Module Resolution & TypeScript Decorator Warnings
-**Symptom:** Experimental decorator warnings or path resolution issues during custom modifications.
+### 4. Special Characters or Emojis Rendering Incorrectly in Windows Console
+- **Cause:** Default Windows Command Prompt code page (CP1252 or OEM 437) does not render UTF-8 encoded characters properly.
+- **Fix:** Switch your console code page to UTF-8 before running lessons:
+  ```powershell
+  chcp 65001
+  ```
 
-**Solution:**
-The root [`tsconfig.json`](./tsconfig.json) is already pre-configured with `experimentalDecorators: true`, `emitDecoratorMetadata: true`, and `moduleResolution: "bundler"`. Ensure your IDE is using the workspace's TypeScript version located in `node_modules/typescript`.
-
----
+### 5. `TS2304: Cannot find name 'process'` or `Cannot find name 'document'`
+- **Cause:** Missing ambient type definitions or missing library flags in `tsconfig.json` (`@types/node` or `"lib": ["DOM"]`).
+- **Fix:** Ensure `@types/node` is installed (`npm install -D @types/node`) and verify that `tsconfig.json` contains `"lib": ["ES2022", "DOM", "DOM.Iterable"]`.
 
 ## License
 
 Please see the [LICENSE](./LICENSE) file for the terms and conditions governing the use, modification, and distribution of this project.
-
----
 
 ## Author & Contact
 
